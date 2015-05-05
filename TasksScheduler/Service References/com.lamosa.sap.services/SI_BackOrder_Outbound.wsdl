@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="http://lamosa.com/A2A/PedidoSugerido" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_BackOrder_Outbound" targetNamespace="http://lamosa.com/A2A/PedidoSugerido" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_BackOrder_Outbound" />
+  <wsdl:types>
+    <xsd:schema xmlns="http://lamosa.com/A2A/PedidoSugerido" targetNamespace="http://lamosa.com/A2A/PedidoSugerido" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_BackOrder_response" type="p1:DT_BackOrder_response" />
+      <xsd:element name="MT_BackOrder_request" type="p1:DT_BackOrder_request" />
+      <xsd:complexType name="DT_BackOrder_response">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">9dacc453532c11e39e6d0000005f609a</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="CompayId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">eaa50c36532c11e3af50d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="CustomerId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">eaa50c37532c11e3ae8bd4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="ERROR" type="xsd:string" />
+          <xsd:element name="Stores">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">eaa50c3a532c11e3bee3d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" name="Store">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">eaa50c39532c11e3b64fd4bed9766645</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element name="StoreId" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">eaa50c38532c11e3c6ebd4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="Items">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">eaa52652532c11e3c398d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" name="Item">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">eaa52651532c11e3b6f0d4bed9766645</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element name="ItemId" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">eaa50c3b532c11e3a13ed4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="ItemCustomerId" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">eaa5264c532c11e3aad4d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="ItemDesc" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">eaa5264d532c11e39dfcd4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="InventoryPending" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">eaa5264e532c11e3a3a2d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="UnitOfMeasure" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">eaa5264f532c11e3b6fed4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="ConvertionValue" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">eaa52650532c11e392cdd4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_BackOrder_request">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">782a8a1e532c11e3920a0000005f609a</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="CompayId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c47613d1532c11e395a7d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="CustomerId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c4763774532c11e39257d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="Stores">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c4763777532c11e3a362d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" name="Store">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c4763776532c11e39e06d4bed9766645</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element name="StoreId" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">c4763775532c11e39569d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="Items">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c476377a532c11e3a693d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" name="Item">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c4763779532c11e3885fd4bed9766645</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element name="ItemId" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">c4763778532c11e38819d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_BackOrder_request">
+    <wsdl:documentation />
+    <wsdl:part name="MT_BackOrder_request" element="p1:MT_BackOrder_request" />
+  </wsdl:message>
+  <wsdl:message name="MT_BackOrder_response">
+    <wsdl:documentation />
+    <wsdl:part name="MT_BackOrder_response" element="p1:MT_BackOrder_response" />
+  </wsdl:message>
+  <wsdl:portType name="SI_BackOrder_Outbound">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_BackOrder_Outbound">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_BackOrder_Outbound" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_BackOrder_request" />
+      <wsdl:output message="p1:MT_BackOrder_response" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_BackOrder_OutboundBinding" type="p1:SI_BackOrder_Outbound">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_BackOrder_Outbound">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_BackOrder_OutboundService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_BackOrder_OutboundBinding">
+      <address location="http://lapddc01.lamosa.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=PED_SU_DEV&amp;receiverParty=&amp;receiverService=&amp;interface=SI_BackOrder_Outbound&amp;interfaceNamespace=http%3A%2F%2Flamosa.com%2FA2A%2FPedidoSugerido" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_BackOrder_OutboundBinding">
+      <address location="https://lapddc01.lamosa.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=PED_SU_DEV&amp;receiverParty=&amp;receiverService=&amp;interface=SI_BackOrder_Outbound&amp;interfaceNamespace=http%3A%2F%2Flamosa.com%2FA2A%2FPedidoSugerido" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

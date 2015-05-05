@@ -1,0 +1,141 @@
+﻿body 
+{
+	margin:1px; 
+	background-position:top left;
+    background-color:#FFF; 
+    background-repeat:repeat-x;
+}
+
+#navcontainer { width: 160px; }
+
+#navcontainer ul
+{
+	margin-left: 0;
+	padding-left: 0;
+	list-style-type: none;
+	font-family: Arial;
+}
+
+#navcontainer a
+{
+	display: block;
+	padding: 3px;
+	width: 160px;
+	border-bottom: 1px solid #eee;
+	
+}
+
+#navcontainer a:link, #navlist a:visited, .label
+{
+	font-size:13px;
+	font-weight:bold;
+	color: #000;
+	text-decoration: none;
+}
+
+#navcontainer a:hover, .label:hover
+{
+	background-color: #eee;
+	color: #000;
+}
+.justify
+{
+text-align: justify;
+}
+ .Header1
+{
+  width:694px;
+  background-image: url('../Imagenes/lamosaP_2.jpg');
+  background-repeat:no-repeat;
+  height:69px;
+ }
+  
+
+ .Header2
+{
+ background-image: url('../Imagenes/pantalla_02.jpg');
+ height:19px;
+ color:White;
+ text-align:right;
+ width:330px;
+
+ }
+  .Header2Lamosa
+{
+ background-image: url('../Imagenes/pantallaLamD.png');
+ height:19px;
+ color:White;
+ text-align:right;
+ width:330px;
+
+ }
+  .Header3
+{
+ background-image: url('../Imagenes/pantalla_change.png');
+ background-repeat:repeat-x;
+ height:50px;
+ font-weight:bold;
+ font-family:Arial;
+ font-size:10px;
+  width:280px;
+ 
+ }
+ 
+ .Header4
+{
+  background-image: url('../Imagenes/pantalla_04.jpg');
+ }
+
+
+  .HeaderText
+{
+ font-weight: normal;
+ font-size:10px;
+ }
+ .Header2Text
+{
+ color:White;
+ text-align:right;
+ font-family:Arial;
+ font-size:10px;
+ }
+  .ComboHeader3
+{
+ color:Black;
+ text-align:Left;
+ font-family:Arial;
+ font-size:12px;
+ width:120px;
+ height:20px;
+ }
+ td.leftarea
+{
+
+	
+}
+ .Header1DSB
+{
+  width:694px;
+  background-image: url('../Imagenes/pantalla_01.jpg');
+  height:39px;
+ }
+ .Header2DSB
+{
+ background-image: url('../Imagenes/pantalla_02.jpg');
+ height:19px;
+ color:White;
+ text-align:right;
+ width:330px;
+
+ }
+ .Header3DSB
+{
+ background-image: url('../Imagenes/pantalla_03.png');
+ background-repeat:repeat-x;
+ height:20px;
+ font-weight:bold;
+ font-family:Arial;
+ font-size:10px;
+ width:330px;
+ text-align:right;
+ 

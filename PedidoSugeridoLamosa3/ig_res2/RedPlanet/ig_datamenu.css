@@ -1,0 +1,587 @@
+/**************************** VERTICAL (Default / No suffixes) *************************************************/
+.igdm_RedPlanetControlVertical 
+{
+	background-color: white;
+	cursor: default;
+	float:left;
+	/*border: solid 1px;*/
+	white-space: nowrap; /* do not get text wrapped within the menu item*/
+	font-family:Verdana,Arial,Lucida Grande,Lucida Sans Unicode,Lucida,Helvetica,Sans-serif;	
+	background-image: url(images/igdm_ControlBackground.png);
+	background-repeat: repeat-x;	
+	background-position: top;
+	background-color: #EEEEEE;
+	border: 0px none;
+	overflow: hidden;
+}
+
+/*
+ Main Control CSS class when it's disabled
+*/
+.igdm_RedPlanetControlVerticalDisabled
+{
+	
+}
+
+/*
+ Main Control CSS class when it's active 
+*/
+.igdm_RedPlanetControlVerticalActive
+{
+
+}
+
+/******************************** ROOT ELEMENTS ***************************************************/
+.igdm_RedPlanetMenuGroupVerticalRoot
+{
+	/*border: 1px solid #000;*/ /* puts a black border around the menu blocks */
+	background-color: Transparent; /* makes the menu blocks mint green - a bg-color MUST be included for IE to work properly! */
+	padding-left: 0px; /* stops the usual indent from ul */
+	cursor: default; /* gives an arrow cursor */
+	margin-left: 0px; /* Opera 7 final's margin and margin-box model cause problems */
+	list-style-type: none; /* removes the bullet points */
+	padding-top: 0px;
+	margin: 0px; /* Opera 7 puts large spacings between li elements */
+	/* position: relative; */ /* makes the menu blocks be positioned relative to their parent menu item                                       the lack of offset makes these appear normal, but it will make a difference                                       to the absolutely positioned child blocks */
+	color: #000; /* sets the default font colour to black */
+}
+
+.igdm_RedPlanetMenuItemVerticalRoot
+{
+	font-size: 10px;
+	color: #333333;
+	padding: 6px;
+	padding-left: 12px;
+	padding-right: 30px;
+}
+
+.igdm_RedPlanetMenuItemVerticalIcon
+{
+	clear: none;
+	padding-right: 6px;
+	text-align: left;
+	vertical-align: middle;
+	border: 0px none;
+}
+
+ 
+.igdm_RedPlanetMenuItemVerticalRootLink
+{
+	display: block;
+	text-decoration: none;
+	font-family:Verdana,Arial,Lucida Grande,Lucida Sans Unicode,Lucida,Helvetica,Sans-serif;	
+	font-size: 12px;
+	cursor: default; 
+	color: #333333;
+}
+
+.igdm_RedPlanetMenuItemVerticalRootSelected
+{
+	background-color: #666666;
+}
+
+.igdm_RedPlanetMenuItemVerticalRootSelected > a
+{
+	color: #FFFFFF;
+}
+
+.igdm_RedPlanetMenuItemVerticalRootActive
+{
+	background-image: url(images/igdm_RootHover.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #7D0000;
+}
+
+.igdm_RedPlanetMenuItemVerticalRootActive > a
+{
+	color: #FFFFFF;
+}
+
+.igdm_RedPlanetMenuItemVerticalRootHover
+{
+	background-image: url(images/igdm_RootHover.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #7D0000;
+}
+
+.igdm_RedPlanetMenuItemVerticalRootHover > a
+{
+	color: #FFFFFF;
+}
+
+.igdm_RedPlanetMenuItemVerticalRootDisabled > a
+{
+	color: #AAAAAA;
+}
+
+/********************************** END ROOT ELEMENTS *********************************************/
+
+/****************************** MenuGroup (UL) ELEMENTS (SubMenu) *********************************/
+/* UL (List) */
+.igdm_RedPlanetMenuGroupVertical
+{
+	/*border: 1px solid #000;*/ /* puts a black border around the menu blocks */
+	background-color: #FEFEFE; 
+	padding-left: 0px; /* stops the usual indent from ul */
+	cursor: default; /* gives an arrow cursor */
+	margin-left: 0px; /* Opera 7 final's margin and margin-box model cause problems */
+	list-style-type: none; /* removes the bullet points */
+	padding-top: 0px;
+	margin: 0px; /* Opera 7 puts large spacings between li elements */
+	border: 1px solid #CCCCCC;
+	color:Black;
+}
+
+/**************************** END Menu Group Elemnts ********************************************/
+
+/************ MenuItem elements (single menu item - LI (base element) has > a > span) ***********/
+/* List Item (Li) */
+.igdm_RedPlanetMenuItemVertical
+{
+	margin: 0px; /* Opera 7 puts large spacings between li elements */
+	color: #333; /* sets the default font colour to white */
+	background: Transparent none repeat scroll 0 0;
+	padding: 5px;
+	padding-right: 30px;
+}
+
+.igdm_RedPlanetMenuItemVerticalLink
+{
+	display: block;
+	text-decoration: none;
+	font-family:Verdana,Arial,Lucida Grande,Lucida Sans Unicode,Lucida,Helvetica,Sans-serif;	
+	font-size: 12px;
+	cursor: default; 
+	color: #333;
+}
+
+.igdm_RedPlanetMenuItemVertical.igdm_RedPlanetMenuItemVerticalParent
+{
+	background-image: url(images/igwdm_SubMenuIndicator.gif);
+	background-repeat:no-repeat;
+	background-position:center right;
+}
+
+/* List Item (Li) that is a parent of a menu which will appear on the bottom */
+.igdm_RedPlanetMenuItemVerticalParent
+{
+}
+
+.igdm_RedPlanetMenuItemVerticalParentLink
+{
+	display: block;
+	text-decoration: none;
+	font-family:Verdana,Arial,Lucida Grande,Lucida Sans Unicode,Lucida,Helvetica,Sans-serif;	
+	font-size: 12px;
+	cursor: default; 
+	color: #333;
+}
+
+.igdm_RedPlanetMenuItemVerticalSelected.igdm_RedPlanetMenuItemVerticalParent
+{
+	background-image: url(images/igdm_ItemHoverParent.png);
+	background-repeat: repeat-x;
+	background-position: center right;
+	background-color: #7D0000;
+}
+
+.igdm_RedPlanetMenuItemVerticalActive.igdm_RedPlanetMenuItemVerticalParent
+{
+	background-image: url(images/igdm_ItemHoverParent.png);
+	background-repeat: repeat-x;
+	background-position: center right;
+	background-color: #7D0000;
+}
+
+.igdm_RedPlanetMenuItemVerticalHover.igdm_RedPlanetMenuItemVerticalParent
+{
+	background-image: url(images/igdm_ItemHoverParent.png);
+	background-repeat: repeat-x;
+	background-position: center right;
+	background-color: #7D0000;
+}
+
+/* List Item (Li) */
+.igdm_RedPlanetMenuItemVerticalSelected
+{
+	margin: 0px; /* Opera 7 puts large spacings between li elements */
+	color: #FFFFFF; /* sets the default font colour to white */
+	background-image: url(images/igdm_ItemHover.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #7D0000;
+	font-weight: normal;
+}
+
+.igdm_RedPlanetMenuItemVerticalSelected > a
+{
+	color: #FFFFFF;
+}
+
+/* List Item (Li) */
+.igdm_RedPlanetMenuItemVerticalActive
+{
+	margin: 0px; /* Opera 7 puts large spacings between li elements */
+	color: #FFFFFF; /* sets the default font colour to white */
+	background-image: url(images/igdm_ItemHover.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #7D0000;
+	font-weight: normal;
+}
+
+.igdm_RedPlanetMenuItemVerticalActive > a
+{
+	color: #FFFFFF;
+}
+
+/* List Item (Li) */
+.igdm_RedPlanetMenuItemVerticalHover
+{
+	margin: 0px; /* Opera 7 puts large spacings between li elements */
+	color: #FFFFFF; /* sets the default font colour to white */
+	background-image: url(images/igdm_ItemHover.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #7D0000;
+	font-weight: normal;
+}
+
+.igdm_RedPlanetMenuItemVerticalHover > a
+{
+	color: #FFFFFF;
+}
+
+/* List Item (Li) */
+.igdm_RedPlanetMenuItemVerticalDisabled > a
+{
+	color: #CCCCCC;
+}
+
+/* List Item (LI) no inner content */
+.igdm_RedPlanetMenuItemVerticalSeparator
+{
+	display: block;
+	height: 1px !important;
+	height: 1px;
+	width: 100%;
+	border: 0px none;
+	padding: 0px;
+	margin: 0px auto;
+	background-color: #CCCCCC;
+	position: absolute;
+	clear: both;
+}
+
+/************************************************************************************************\
+|********************** Horizontal / Suffixed with "Horizontal" *********************************|
+\************************************************************************************************/
+.igdm_RedPlanetControlHorizontal
+{
+	background-color: white;
+	cursor: default;
+	float:left;
+	/*border: solid 1px;*/
+	white-space: nowrap; /* do not get text wrapped within the menu item*/
+	font-family:Verdana,Arial,Lucida Grande,Lucida Sans Unicode,Lucida,Helvetica,Sans-serif;	
+	background-image: url(images/igdm_ControlBackground.png);
+	background-repeat: repeat-x;	
+	background-position: top;
+	background-color: #EEEEEE;
+	border: 0px none;
+	overflow: hidden;
+}
+
+/*
+ Main Control CSS class when it's disabled
+*/
+.igdm_RedPlanetControlHorizontalDisabled
+{
+	
+}
+
+.igdm_RedPlanetControlHorizontalActive
+{
+
+}
+
+/************** End Main Control Definitions ********************/
+
+/******************************** ROOT ELEMENTS - Group and Item ***************************************/
+/** Definitions for Root elements should be always before definitions of subElements **/
+.igdm_RedPlanetMenuGroupHorizontalRoot
+{
+	/*border: 1px solid #000;*/ /* puts a black border around the menu blocks */
+	background-color: #8aa; /* makes the menu blocks mint green - a bg-color MUST be included for IE to work properly! */
+	padding-left: 0px; /* stops the usual indent from ul */
+	cursor: default; /* gives an arrow cursor */
+	margin-left: 0px; /* Opera 7 final's margin and margin-box model cause problems */
+	list-style-type: none; /* removes the bullet points */
+	padding-top: 0px;
+	margin: 0px; /* Opera 7 puts large spacings between li elements */
+	/* position: relative; */ /* makes the menu blocks be positioned relative to their parent menu item                                       the lack of offset makes these appear normal, but it will make a difference                                       to the absolutely positioned child blocks */
+	color: #000; /* sets the default font colour to black */
+}
+
+.igdm_RedPlanetMenuItemHorizontalRoot
+{
+	float: left; /* Required to implement horizontal orientation of menu */
+	font-size: 10px;
+	color: #fff;
+	padding: 6px;
+	padding-left: 12px;
+}
+
+.igdm_RedPlanetMenuItemHorizontalIcon
+{
+	clear: none;
+	padding-right: 6px;
+	text-align: left;
+	vertical-align: middle;
+	border: 0px none;
+}
+
+.igdm_RedPlanetMenuItemHorizontalRootLink
+{
+	display: block;
+	text-decoration: none;
+	font-family:Verdana,Arial,Lucida Grande,Lucida Sans Unicode,Lucida,Helvetica,Sans-serif;	
+	font-size: 12px;
+	cursor: default; 
+	color: #333333;
+}
+
+.igdm_RedPlanetMenuItemHorizontalRootSelected
+{
+	background-color: #666666;
+}
+
+.igdm_RedPlanetMenuItemHorizontalRootSelected > a
+{
+	color: #FFFFFF;
+}
+
+.igdm_RedPlanetMenuItemHorizontalRootActive
+{
+	background-image: url(images/igdm_RootHover.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #7D0000;
+}
+
+.igdm_RedPlanetMenuItemHorizontalRootActive > a
+{
+	color: #FFFFFF;
+}
+
+.igdm_RedPlanetMenuItemHorizontalRootHover
+{
+	background-image: url(images/igdm_RootHover.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #7D0000;
+	color: #FFFFFF;
+}
+
+.igdm_RedPlanetMenuItemHorizontalRootHover > a
+{
+	color: #FFFFFF;
+}
+
+.igdm_RedPlanetMenuItemHorizontalRootDisabled
+{
+	float: left; /* Required to implement horizontal orientation of menu */	
+}
+
+.igdm_RedPlanetMenuItemHorizontalRootDisabled > a
+{
+	color: #AAAAAA;
+}
+
+/********************************** END ROOT ELEMENTS *********************************************/
+
+/****************************** MenuGroup (UL) ELEMENTS (SubMenu) *********************************/
+/* UL (List) */
+.igdm_RedPlanetMenuGroupHorizontal
+{
+	/*border: 1px solid #000;*/ /* puts a black border around the menu blocks */
+	background-color: #FEFEFE; 
+	padding-left: 0px; /* stops the usual indent from ul */
+	cursor: default; /* gives an arrow cursor */
+	margin-left: 0px; /* Opera 7 final's margin and margin-box model cause problems */
+	list-style-type: none; /* removes the bullet points */
+	padding-top: 0px;
+	margin: 0px; /* Opera 7 puts large spacings between li elements */
+	border: 1px solid #CCCCCC;
+	color:Black;
+}
+
+/**************************** END Menu Group Elemnts ********************************************/
+
+/************ MenuItem elements (single menu item - LI (base element) has > a > span) ***********/
+/* List Item (Li) */
+.igdm_RedPlanetMenuItemHorizontal
+{
+	margin: 0px; /* Opera 7 puts large spacings between li elements */
+	color: #333; /* sets the default font colour to white */
+	background: Transparent none repeat scroll 0 0;
+	padding: 5px;
+	padding-right: 30px;
+}
+
+.igdm_RedPlanetMenuItemHorizontalLink
+{
+	display: block;
+	text-decoration: none;
+	font-family:Verdana,Arial,Lucida Grande,Lucida Sans Unicode,Lucida,Helvetica,Sans-serif;	
+	font-size: 12px;
+	cursor: default; 
+	color: #333;
+}
+
+.igdm_RedPlanetMenuItemHorizontal.igdm_RedPlanetMenuItemHorizontalParent
+{
+	background-image: url(images/igwdm_SubMenuIndicator.gif);
+	background-repeat:no-repeat;
+	background-position:center right;
+}
+
+/* List Item (Li) that is a parent of a menu which will appear on the bottom */
+.igdm_RedPlanetMenuItemHorizontalParent
+{
+	margin: 0px; /* Opera 7 puts large spacings between li elements */
+	font-weight: normal;
+}
+
+.igdm_RedPlanetMenuItemHorizontalParentLink
+{
+	display: block;
+	text-decoration: none;
+	font-family:Verdana,Arial,Lucida Grande,Lucida Sans Unicode,Lucida,Helvetica,Sans-serif;	
+	font-size: 12px;
+	cursor: default; 
+	color: #333;
+}
+
+.igdm_RedPlanetMenuItemHorizontalSelected.igdm_RedPlanetMenuItemHorizontalParent
+{
+	background-image: url(images/igdm_ItemHoverParent.png);
+	background-repeat: repeat-x;
+	background-position: center right;
+	background-color: #7D0000;
+}
+
+.igdm_RedPlanetMenuItemHorizontalActive.igdm_RedPlanetMenuItemHorizontalParent
+{
+	background-image: url(images/igdm_ItemHoverParent.png);
+	background-repeat: repeat-x;
+	background-position: center right;
+	background-color: #7D0000;
+}
+
+.igdm_RedPlanetMenuItemHorizontalHover.igdm_RedPlanetMenuItemHorizontalParent
+{
+	background-image: url(images/igdm_ItemHoverParent.png);
+	background-repeat: repeat-x;
+	background-position: center right;
+	background-color: #7D0000;
+}
+
+/* List Item (Li) */
+.igdm_RedPlanetMenuItemHorizontalSelected
+{
+	margin: 0px; /* Opera 7 puts large spacings between li elements */
+	color: #FFFFFF; /* sets the default font colour to white */
+	background-image: url(images/igdm_ItemHover.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #7D0000;
+	font-weight: normal;
+}
+
+.igdm_RedPlanetMenuItemHorizontalSelected > a
+{
+	color: #FFFFFF;
+}
+
+/* List Item (Li) */
+.igdm_RedPlanetMenuItemHorizontalActive
+{
+	margin: 0px; /* Opera 7 puts large spacings between li elements */
+	color: #FFFFFF; /* sets the default font colour to white */
+	background-image: url(images/igdm_ItemHover.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #7D0000;
+	font-weight: normal;
+}
+
+.igdm_RedPlanetMenuItemHorizontalActive > a
+{
+	color: #FFFFFF;
+}
+
+/* List Item (Li) */
+.igdm_RedPlanetMenuItemHorizontalHover
+{
+	margin: 0px; /* Opera 7 puts large spacings between li elements */
+	color: #FFFFFF; /* sets the default font colour to white */
+	background-image: url(images/igdm_ItemHover.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #7D0000;
+	font-weight: normal;
+}
+
+.igdm_RedPlanetMenuItemHorizontalHover > a
+{
+	color: #FFFFFF;
+}
+
+/* List Item (Li) */
+.igdm_RedPlanetMenuItemHorizontalDisabled > a
+{
+	color: #CCCCCC;
+}
+
+/* List Item (LI) no inner content */
+.igdm_RedPlanetMenuItemHorizontalSeparator
+{
+
+	display: block;
+	width: 1px !important;
+	width: 1px;
+	height: 100%;
+	border: 0px none;
+	padding: 0px;
+	margin: 0px auto;
+	background-color: #CCCCCC;
+}
+
+
+/* Scrolling container - DIV */
+.igdm_RedPlanetMenuScrollContainerHorizontal
+{
+}
+
+/* Left scrolling element for root level items Horizontal orientation - DIV */
+.igdm_RedPlanetMenuScrollerRootLeft
+{
+}
+
+/* Right scrolling element for root level items Horizontal orientation - DIV */
+.igdm_RedPlanetMenuScrollerRootRight
+{
+}
+
+/* Left scrolling element for non-root level items Horizontal orientation - DIV */
+.igdm_RedPlanetMenuScrollerLeft
+{
+}
+
+/* Right scrolling element for non-root level items Horizontal orientation - DIV */
+.igdm_RedPlanetMenuScrollerRight
+{
+}

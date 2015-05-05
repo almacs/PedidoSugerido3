@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TasksScheduler", "TasksScheduler\TasksScheduler.csproj", "{7F34864F-A958-4AE0-87A3-964F073F66C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PedidoSugeridoLamosa3", "PedidoSugeridoLamosa3\PedidoSugeridoLamosa3.csproj", "{CF61BB21-9691-45EC-9851-6E7ACB9E908F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{7B5F2208-02B1-4382-BF62-6C369CED86C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F34864F-A958-4AE0-87A3-964F073F66C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F34864F-A958-4AE0-87A3-964F073F66C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F34864F-A958-4AE0-87A3-964F073F66C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F34864F-A958-4AE0-87A3-964F073F66C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF61BB21-9691-45EC-9851-6E7ACB9E908F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF61BB21-9691-45EC-9851-6E7ACB9E908F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF61BB21-9691-45EC-9851-6E7ACB9E908F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF61BB21-9691-45EC-9851-6E7ACB9E908F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B5F2208-02B1-4382-BF62-6C369CED86C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5F2208-02B1-4382-BF62-6C369CED86C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5F2208-02B1-4382-BF62-6C369CED86C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5F2208-02B1-4382-BF62-6C369CED86C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

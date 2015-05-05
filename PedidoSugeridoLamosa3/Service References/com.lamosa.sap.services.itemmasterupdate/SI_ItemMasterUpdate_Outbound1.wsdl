@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="http://lamosa.com/A2A/PedidoSugerido" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_ItemMasterUpdate_Outbound" targetNamespace="http://lamosa.com/A2A/PedidoSugerido" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_ItemMasterUpdate_Outbound" />
+  <wsdl:types>
+    <xsd:schema xmlns="http://lamosa.com/A2A/PedidoSugerido" targetNamespace="http://lamosa.com/A2A/PedidoSugerido" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_ItemMasterUpdate_request" type="p1:DT_ItemMasterUpdate_request" />
+      <xsd:element name="MT_ItemMasterUpdate_response" type="p1:DT_ItemMasterUpdate_response" />
+      <xsd:complexType name="DT_ItemMasterUpdate_response">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">6ab9a74e53d211e384460000005f609a</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="Processed" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_ItemMasterUpdate_request">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">147a2a2453d211e3ce320000005f609a</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="CompayId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">50815ddd53d211e3830cd4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="CustomerId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">50815dde53d211e39864d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="Items">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">50815de453d211e3bab8d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" name="Item">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">50815de353d211e3c50fd4bed9766645</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element name="ItemId" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">50815de253d211e3b495d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="ItemCustomerId" type="xsd:string" />
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_ItemMasterUpdate_request">
+    <wsdl:documentation />
+    <wsdl:part name="MT_ItemMasterUpdate_request" element="p1:MT_ItemMasterUpdate_request" />
+  </wsdl:message>
+  <wsdl:message name="MT_ItemMasterUpdate_response">
+    <wsdl:documentation />
+    <wsdl:part name="MT_ItemMasterUpdate_response" element="p1:MT_ItemMasterUpdate_response" />
+  </wsdl:message>
+  <wsdl:portType name="SI_ItemMasterUpdate_Outbound">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_ItemMasterUpdate_Outbound">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_ItemMasterUpdate_Outbound" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_ItemMasterUpdate_request" />
+      <wsdl:output message="p1:MT_ItemMasterUpdate_response" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_ItemMasterUpdate_OutboundBinding" type="p1:SI_ItemMasterUpdate_Outbound">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_ItemMasterUpdate_Outbound">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_ItemMasterUpdate_OutboundService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_ItemMasterUpdate_OutboundBinding">
+      <address location="http://lapddc01.lamosa.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=PED_SU_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_ItemMasterUpdate_Outbound&amp;interfaceNamespace=http%3A%2F%2Flamosa.com%2FA2A%2FPedidoSugerido" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_ItemMasterUpdate_OutboundBinding">
+      <address location="https://lapddc01.lamosa.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=PED_SU_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_ItemMasterUpdate_Outbound&amp;interfaceNamespace=http%3A%2F%2Flamosa.com%2FA2A%2FPedidoSugerido" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

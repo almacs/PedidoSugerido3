@@ -1,0 +1,135 @@
+.igwv_RedPlanetControl
+{
+	border-width:0px;
+	margin-top:2px;
+	color:#9C2131;
+}
+
+
+.igwv_RedPlanetCaptionHeader
+{
+	background-color:White;
+	background-repeat:repeat-x;
+	background-position:bottom ;
+	background-image: url(images/button_bg2.png);
+	font-size:11px;
+	font-family: Arial, Helvetica, sans-serif;
+	border-color:Silver;
+	border-width:1px 1px 0px 1px;
+	border-style:solid solid solid solid;
+	padding-top:3px;
+	padding-bottom:2px;
+	line-height: 16px;
+	height: 31;
+	color:Black;
+	text-align:center;
+}
+
+
+.igwv_RedPlanetDayHeader
+{
+	background-color:White;
+	background-repeat:repeat-x;
+	background-position:center ;
+	background-image: url(images/gridbg.gif);
+	font-size:8pt;
+	font-family: Arial, Helvetica, sans-serif;
+	padding:0px 2px 0px 0px;
+	height: 18px;
+	cursor:default;
+	color:Black;
+	text-align:right;
+}
+
+
+.igwv_RedPlanetDay
+{
+	background-repeat:repeat-x;
+	background-position:bottom bottom ;
+	background-image: url(images/bg.gif);
+	font-size:8pt;
+	font-family: Arial, Helvetica, sans-serif;
+	border-top:solid 1px LightGrey;
+	overflow-x: hidden;
+	cursor:hand;
+}
+
+
+.igwv_RedPlanetAppointment
+{
+	margin:0px 1px 0px 1px;
+	padding:2px;
+	line-height: 150%;
+	white-space: nowrap;
+	cursor:pointer;
+	color:#A10000;
+}
+
+
+.igwv_RedPlanetAllDayEvent
+{
+	background-color:#FAFAFA;
+	border:solid 1px Silver;
+}
+
+
+.igwv_RedPlanetNavigationButton
+{
+	background-color:Transparent;
+	border-width:0px;
+	width: 17px;
+	cursor:hand;
+	vertical-align:middle;
+}
+
+
+.igwv_RedPlanetDayArea
+{
+	border:solid 1px Silver;
+}
+
+
+.igwv_RedPlanetTodayHeader
+{
+	background-color:White;
+	background-repeat:repeat-x;
+	background-position:top ;
+	background-image: url(images/header_large2.gif);
+	color:White;
+}
+
+
+.igwv_RedPlanetToday
+{
+}
+
+
+.igwv_RedPlanetSelectedAppointment
+{
+	background-color:#DAEAFF;
+	margin-top:1px;
+	margin-right:1px;
+	margin-left:1px;
+	padding:1px;
+	cursor:pointer;
+	color:Black;
+}
+
+
+.igwv_RedPlanetActiveDayHeader
+{
+	background-color:White;
+	background-repeat:repeat-x;
+	background-position:top ;
+	background-image: url(images/header_large2.gif);
+	color:White;
+}
+
+
+.igwv_RedPlanetActiveDay
+{
+	background-color:White;
+	background-image:none;
+}
+
+

@@ -1,0 +1,2361 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF61BB21-9691-45EC-9851-6E7ACB9E908F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PedidoSugeridoLamosa</RootNamespace>
+    <AssemblyName>PedidoSugeridoLamosa</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.VSDesigner, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.Web.jQuery.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.Web.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.Documents.Core.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.Documents.Excel.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.Documents.IO.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.Documents.Reports.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.Documents.Word.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.Misc.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.Shared.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebCalcManager.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebChart.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebGauge.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebGrid.DocumentExport.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebGrid.ExcelExport.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebGrid.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebListbar.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebNavigator.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebTab.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebToolbar.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.WebCombo.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.WebDataInput.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.WebDateChooser.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.WebHtmlEditor.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.WebNavBar.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.WebResizingExtender.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.WebSchedule.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.WebScheduleDataProvider.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.WebSpellChecker.v11.1, Version=11.1.20111.2020, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Estiloscss\Estilos.css" />
+    <Content Include="Estiloscss\EstiloTooltip.css" />
+    <Content Include="Estiloscss\htmlTabControl.css" />
+    <Content Include="Estiloscss\menu.css" />
+    <Content Include="Estiloscss\menu_Lamosa.css" />
+    <Content Include="Estiloscss\pro-line-down-fly\1241863.js" />
+    <Content Include="Estiloscss\pro-line-down-fly\1242022.js" />
+    <Content Include="Estiloscss\pro-line-down-fly\ads.htm" />
+    <Content Include="Estiloscss\pro-line-down-fly\ads_002.htm" />
+    <Content Include="Estiloscss\pro-line-down-fly\ads_data\abg-en-100c-000000.png" />
+    <Content Include="Estiloscss\pro-line-down-fly\ads_data\graphics.js" />
+    <Content Include="Estiloscss\pro-line-down-fly\ads_data\sma8.js" />
+    <Content Include="Estiloscss\pro-line-down-fly\ads_data\TemplateAdRenderer.swf" />
+    <Content Include="Estiloscss\pro-line-down-fly\ads_data_002\abg-en-100c-000000.png" />
+    <Content Include="Estiloscss\pro-line-down-fly\ads_data_002\graphics.js" />
+    <Content Include="Estiloscss\pro-line-down-fly\ads_data_002\sma8.js" />
+    <Content Include="Estiloscss\pro-line-down-fly\bsa.js" />
+    <Content Include="Estiloscss\pro-line-down-fly\default.css" />
+    <Content Include="Estiloscss\pro-line-down-fly\expansion_embed.js" />
+    <Content Include="Estiloscss\pro-line-down-fly\fondo_menu.jpg" />
+    <Content Include="Estiloscss\pro-line-down-fly\header.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly\menu3.css" />
+    <Content Include="Estiloscss\pro-line-down-fly\pixel.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly\rss.png" />
+    <Content Include="Estiloscss\pro-line-down-fly\select.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly\select10.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly\select2.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly\select3.GIF" />
+    <Content Include="Estiloscss\pro-line-down-fly\select4.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly\select4.jpg" />
+    <Content Include="Estiloscss\pro-line-down-fly\select5.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly\select6.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly\selectgris.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly\select_porce.png" />
+    <Content Include="Estiloscss\pro-line-down-fly\show_ads.js" />
+    <Content Include="Estiloscss\pro-line-down-fly\s_1e5949aa72023d7e6519f404fd6280d6.js" />
+    <Content Include="Estiloscss\pro-line-down-fly\test_domain.js" />
+    <Content Include="Estiloscss\pro-line-down-fly\trans.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly\transp.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly\urchin.js" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\1241863.js" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\1242022.js" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\ads.htm" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\ads_002.htm" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\ads_data\abg-en-100c-000000.png" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\ads_data\graphics.js" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\ads_data\sma8.js" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\ads_data\TemplateAdRenderer.swf" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\ads_data_002\abg-en-100c-000000.png" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\ads_data_002\graphics.js" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\ads_data_002\sma8.js" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\bsa.js" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\default.css" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\expansion_embed.js" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\fondo_menu.jpg" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\header.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\menu3.css" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\pixel.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\rss.png" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\select.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\select10.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\select2.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\select3.GIF" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\select4.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\select4.jpg" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\select5.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\select6.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\selectgris.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\show_ads.js" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\s_1e5949aa72023d7e6519f404fd6280d6.js" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\test_domain.js" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\trans.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\transp.gif" />
+    <Content Include="Estiloscss\pro-line-down-fly_lamosa\urchin.js" />
+    <Content Include="FuncionesJS\AC_RunActiveContent.js" />
+    <Content Include="FuncionesJS\htmlTabControl.js" />
+    <Content Include="FuncionesJS\jquery-1.4.2.js" />
+    <Content Include="FuncionesJS\menu.js" />
+    <Content Include="FuncionesJS\TabsControlsHidde.js" />
+    <Content Include="FuncionesJS\wz_tooltip.js" />
+    <Content Include="FuncionesJS\wz_tooltipSubDir.js" />
+    <Content Include="ig_res2\Default\ig_calendar.css" />
+    <Content Include="ig_res2\Default\ig_calendar2.css" />
+    <Content Include="ig_res2\Default\ig_calendarview.css" />
+    <Content Include="ig_res2\Default\ig_combo.css" />
+    <Content Include="ig_res2\Default\ig_dataGrid.css" />
+    <Content Include="ig_res2\Default\ig_datamenu.css" />
+    <Content Include="ig_res2\Default\ig_datatree.css" />
+    <Content Include="ig_res2\Default\ig_datechooser.css" />
+    <Content Include="ig_res2\Default\ig_dayview.css" />
+    <Content Include="ig_res2\Default\ig_dialogwindow.css" />
+    <Content Include="ig_res2\Default\ig_dropDown.css" />
+    <Content Include="ig_res2\Default\ig_grid.css" />
+    <Content Include="ig_res2\Default\ig_grid_opt.css" />
+    <Content Include="ig_res2\Default\ig_imageViewer.css" />
+    <Content Include="ig_res2\Default\ig_listbar.css" />
+    <Content Include="ig_res2\Default\ig_menu.css" />
+    <Content Include="ig_res2\Default\ig_monthview.css" />
+    <Content Include="ig_res2\Default\ig_navbar.css" />
+    <Content Include="ig_res2\Default\ig_panel.css" />
+    <Content Include="ig_res2\Default\ig_progressbar.css" />
+    <Content Include="ig_res2\Default\ig_shared.css" />
+    <Content Include="ig_res2\Default\ig_slider.css" />
+    <Content Include="ig_res2\Default\ig_spellCheckerDialog.css" />
+    <Content Include="ig_res2\Default\ig_splitter.css" />
+    <Content Include="ig_res2\Default\ig_tab.css" />
+    <Content Include="ig_res2\Default\ig_textedit.css" />
+    <Content Include="ig_res2\Default\ig_toolbar.css" />
+    <Content Include="ig_res2\Default\ig_tree.css" />
+    <Content Include="ig_res2\Default\ig_weekview.css" />
+    <Content Include="ig_res2\Default\images\ActiveRowSelector.gif" />
+    <Content Include="ig_res2\Default\images\addnewrow.gif" />
+    <Content Include="ig_res2\Default\images\addnewrow_image.gif" />
+    <Content Include="ig_res2\Default\images\add_disabled.gif" />
+    <Content Include="ig_res2\Default\images\add_down.gif" />
+    <Content Include="ig_res2\Default\images\add_hover.gif" />
+    <Content Include="ig_res2\Default\images\add_up.gif" />
+    <Content Include="ig_res2\Default\images\back_horiz.gif" />
+    <Content Include="ig_res2\Default\images\back_vert.gif" />
+    <Content Include="ig_res2\Default\images\buttonBG.png" />
+    <Content Include="ig_res2\Default\images\button_bg.jpg" />
+    <Content Include="ig_res2\Default\images\button_officeBlue.gif" />
+    <Content Include="ig_res2\Default\images\button_officeBlue.png" />
+    <Content Include="ig_res2\Default\images\button_silver.gif" />
+    <Content Include="ig_res2\Default\images\Caption_bg.jpg" />
+    <Content Include="ig_res2\Default\images\dayheader.jpg" />
+    <Content Include="ig_res2\Default\images\day_header.jpg" />
+    <Content Include="ig_res2\Default\images\day_header1.gif" />
+    <Content Include="ig_res2\Default\images\day_header_active.jpg" />
+    <Content Include="ig_res2\Default\images\del_disabled.gif" />
+    <Content Include="ig_res2\Default\images\del_down.gif" />
+    <Content Include="ig_res2\Default\images\del_hover.gif" />
+    <Content Include="ig_res2\Default\images\del_up.gif" />
+    <Content Include="ig_res2\Default\images\downarrows_white.gif" />
+    <Content Include="ig_res2\Default\images\end_disabled.gif" />
+    <Content Include="ig_res2\Default\images\end_down.gif" />
+    <Content Include="ig_res2\Default\images\end_hover.gif" />
+    <Content Include="ig_res2\Default\images\end_up.gif" />
+    <Content Include="ig_res2\Default\images\ff_disabled.gif" />
+    <Content Include="ig_res2\Default\images\ff_down.gif" />
+    <Content Include="ig_res2\Default\images\ff_hover.gif" />
+    <Content Include="ig_res2\Default\images\ff_up.gif" />
+    <Content Include="ig_res2\Default\images\fill_horiz.gif" />
+    <Content Include="ig_res2\Default\images\fill_vert.gif" />
+    <Content Include="ig_res2\Default\images\groupbyHeader.gif" />
+    <Content Include="ig_res2\Default\images\header.gif" />
+    <Content Include="ig_res2\Default\images\header_hover.gif" />
+    <Content Include="ig_res2\Default\images\igdd_DropDownButton.png" />
+    <Content Include="ig_res2\Default\images\igdd_DropDownListContainerBG.png" />
+    <Content Include="ig_res2\Default\images\igdd_ListItemHover.png" />
+    <Content Include="ig_res2\Default\images\igdm_bg_normal.jpg" />
+    <Content Include="ig_res2\Default\images\igdm_ControlBackground.png" />
+    <Content Include="ig_res2\Default\images\igdm_ItemHover.png" />
+    <Content Include="ig_res2\Default\images\igdm_RootHover.png" />
+    <Content Include="ig_res2\Default\images\igdt_Blank.gif" />
+    <Content Include="ig_res2\Default\images\igdt_First.gif" />
+    <Content Include="ig_res2\Default\images\igdt_FirstMinus.gif" />
+    <Content Include="ig_res2\Default\images\igdt_FirstPlus.gif" />
+    <Content Include="ig_res2\Default\images\igdt_folder.gif" />
+    <Content Include="ig_res2\Default\images\igdt_folder_open.gif" />
+    <Content Include="ig_res2\Default\images\igdt_Last.gif" />
+    <Content Include="ig_res2\Default\images\igdt_LastMinus.gif" />
+    <Content Include="ig_res2\Default\images\igdt_LastPlus.gif" />
+    <Content Include="ig_res2\Default\images\igdt_Leaf.gif" />
+    <Content Include="ig_res2\Default\images\igdt_Line.gif" />
+    <Content Include="ig_res2\Default\images\igdt_Middle.gif" />
+    <Content Include="ig_res2\Default\images\igdt_MiddleMinus.gif" />
+    <Content Include="ig_res2\Default\images\igdt_MiddlePlus.gif" />
+    <Content Include="ig_res2\Default\images\igdt_Minus.gif" />
+    <Content Include="ig_res2\Default\images\igdt_Plus.gif" />
+    <Content Include="ig_res2\Default\images\igdt_Single.gif" />
+    <Content Include="ig_res2\Default\images\igdt_SingleMinus.gif" />
+    <Content Include="ig_res2\Default\images\igdt_SinglePlus.gif" />
+    <Content Include="ig_res2\Default\images\igdw_BodyCornerBottomLeft.gif" />
+    <Content Include="ig_res2\Default\images\igdw_BodyCornerBottomRight.gif" />
+    <Content Include="ig_res2\Default\images\igdw_BodyCornerTopLeft.gif" />
+    <Content Include="ig_res2\Default\images\igdw_BodyCornerTopRight.gif" />
+    <Content Include="ig_res2\Default\images\igdw_BodyEdgeBottom.gif" />
+    <Content Include="ig_res2\Default\images\igdw_BodyEdgeTop.gif" />
+    <Content Include="ig_res2\Default\images\igdw_Bottom.gif" />
+    <Content Include="ig_res2\Default\images\igdw_BottomLeft.gif" />
+    <Content Include="ig_res2\Default\images\igdw_BottomRight.gif" />
+    <Content Include="ig_res2\Default\images\igdw_Close.gif" />
+    <Content Include="ig_res2\Default\images\igdw_CloseHover.gif" />
+    <Content Include="ig_res2\Default\images\igdw_CloseMouseDown.gif" />
+    <Content Include="ig_res2\Default\images\igdw_EdgeLeft.gif" />
+    <Content Include="ig_res2\Default\images\igdw_EdgeRight.gif" />
+    <Content Include="ig_res2\Default\images\igdw_HeaderContent.gif" />
+    <Content Include="ig_res2\Default\images\igdw_HeaderCornerLeft.gif" />
+    <Content Include="ig_res2\Default\images\igdw_HeaderCornerRight.gif" />
+    <Content Include="ig_res2\Default\images\igdw_Maximize.gif" />
+    <Content Include="ig_res2\Default\images\igdw_MaximizeHover.gif" />
+    <Content Include="ig_res2\Default\images\igdw_MaximizeMouseDown.gif" />
+    <Content Include="ig_res2\Default\images\igdw_Minimize.gif" />
+    <Content Include="ig_res2\Default\images\igdw_MinimizeHover.gif" />
+    <Content Include="ig_res2\Default\images\igdw_MinimizeMouseDown.gif" />
+    <Content Include="ig_res2\Default\images\igdw_Pin.gif" />
+    <Content Include="ig_res2\Default\images\igdw_PinHover.gif" />
+    <Content Include="ig_res2\Default\images\igdw_PinMouseDown.gif" />
+    <Content Include="ig_res2\Default\images\igdw_ResizingHandle.gif" />
+    <Content Include="ig_res2\Default\images\igdw_Restore.gif" />
+    <Content Include="ig_res2\Default\images\igdw_RestoreHover.gif" />
+    <Content Include="ig_res2\Default\images\igdw_RestoreMouseDown.gif" />
+    <Content Include="ig_res2\Default\images\igdw_top.gif" />
+    <Content Include="ig_res2\Default\images\igdw_topHidden.gif" />
+    <Content Include="ig_res2\Default\images\igdw_TopLeft.gif" />
+    <Content Include="ig_res2\Default\images\igdw_TopLeftHidden.gif" />
+    <Content Include="ig_res2\Default\images\igdw_TopRight.gif" />
+    <Content Include="ig_res2\Default\images\igdw_TopRightHidden.gif" />
+    <Content Include="ig_res2\Default\images\igdw_Unpin.gif" />
+    <Content Include="ig_res2\Default\images\igdw_UnpinHover.gif" />
+    <Content Include="ig_res2\Default\images\igdw_UnpinMouseDown.gif" />
+    <Content Include="ig_res2\Default\images\igg_BottomDragIndicator.png" />
+    <Content Include="ig_res2\Default\images\igg_Filter.gif" />
+    <Content Include="ig_res2\Default\images\igg_FilterApplied.gif" />
+    <Content Include="ig_res2\Default\images\igg_filterrow.gif" />
+    <Content Include="ig_res2\Default\images\igg_header.gif" />
+    <Content Include="ig_res2\Default\images\igg_MiddleDragIndicator.png" />
+    <Content Include="ig_res2\Default\images\igg_rowselector.gif" />
+    <Content Include="ig_res2\Default\images\igg_Selected.gif" />
+    <Content Include="ig_res2\Default\images\igg_sortAsc.gif" />
+    <Content Include="ig_res2\Default\images\igg_sortDesc.gif" />
+    <Content Include="ig_res2\Default\images\igg_TopDragIndicator.png" />
+    <Content Include="ig_res2\Default\images\igiv_CornerBottomLeft.gif" />
+    <Content Include="ig_res2\Default\images\igiv_CornerBottomLeft_Vert.gif" />
+    <Content Include="ig_res2\Default\images\igiv_CornerBottomRight.gif" />
+    <Content Include="ig_res2\Default\images\igiv_CornerBottomRight_Vert.gif" />
+    <Content Include="ig_res2\Default\images\igiv_CornerTopLeft.gif" />
+    <Content Include="ig_res2\Default\images\igiv_CornerTopLeft_Vert.gif" />
+    <Content Include="ig_res2\Default\images\igiv_CornerTopRight.gif" />
+    <Content Include="ig_res2\Default\images\igiv_CornerTopRight_Vert.gif" />
+    <Content Include="ig_res2\Default\images\igiv_EdgeBottom.gif" />
+    <Content Include="ig_res2\Default\images\igiv_EdgeBottom_Vert.gif" />
+    <Content Include="ig_res2\Default\images\igiv_EdgeLeft.gif" />
+    <Content Include="ig_res2\Default\images\igiv_EdgeLeft_Vert.gif" />
+    <Content Include="ig_res2\Default\images\igiv_EdgeRight.gif" />
+    <Content Include="ig_res2\Default\images\igiv_EdgeRight_Vert.gif" />
+    <Content Include="ig_res2\Default\images\igiv_EdgeTop.gif" />
+    <Content Include="ig_res2\Default\images\igiv_EdgeTop_Vert.gif" />
+    <Content Include="ig_res2\Default\images\igiv_H_NextButton.png" />
+    <Content Include="ig_res2\Default\images\igiv_H_NextButtonDisabled.png" />
+    <Content Include="ig_res2\Default\images\igiv_H_NextButtonHover.png" />
+    <Content Include="ig_res2\Default\images\igiv_H_NextButtonPressed.png" />
+    <Content Include="ig_res2\Default\images\igiv_H_PrevButton.png" />
+    <Content Include="ig_res2\Default\images\igiv_H_PrevButtonDisabled.png" />
+    <Content Include="ig_res2\Default\images\igiv_H_PrevButtonHover.png" />
+    <Content Include="ig_res2\Default\images\igiv_H_PrevButtonPressed.png" />
+    <Content Include="ig_res2\Default\images\igiv_V_NextButton.png" />
+    <Content Include="ig_res2\Default\images\igiv_V_NextButtonDisabled.png" />
+    <Content Include="ig_res2\Default\images\igiv_V_NextButtonHover.png" />
+    <Content Include="ig_res2\Default\images\igiv_V_NextButtonPressed.png" />
+    <Content Include="ig_res2\Default\images\igiv_V_PNextButtonPressed.png" />
+    <Content Include="ig_res2\Default\images\igiv_V_PrevButton.png" />
+    <Content Include="ig_res2\Default\images\igiv_V_PrevButtonDisabled.png" />
+    <Content Include="ig_res2\Default\images\igiv_V_PrevButtonHover.png" />
+    <Content Include="ig_res2\Default\images\igiv_V_PrevButtonPressed.png" />
+    <Content Include="ig_res2\Default\images\igpb_horizontalFill.gif" />
+    <Content Include="ig_res2\Default\images\igpb_VerticalFill.gif" />
+    <Content Include="ig_res2\Default\images\igpnl_dwn.gif" />
+    <Content Include="ig_res2\Default\images\igpnl_up.gif" />
+    <Content Include="ig_res2\Default\images\igsch_xpbluedn.gif" />
+    <Content Include="ig_res2\Default\images\igsch_xpblueup.gif" />
+    <Content Include="ig_res2\Default\images\igsli_MinusDisableH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_MinusDisableV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_MinusFocusH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_MinusFocusV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_MinusH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_MinusHoverH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_MinusHoverV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_MinusPressH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_MinusPressV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_MinusV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_PlusDisableH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_PlusDisableV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_PlusFocusH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_PlusFocusV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_PlusH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_PlusHoverH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_PlusHoverV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_PlusPressH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_PlusPressV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_PlusV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_ThumbDisableH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_ThumbDisableV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_ThumbFocusH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_ThumbFocusV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_ThumbH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_ThumbHoverH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_ThumbHoverV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_ThumbPressH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_ThumbPressV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_ThumbV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_TrackEdges.gif" />
+    <Content Include="ig_res2\Default\images\igsli_TrackEdgesV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_TrackFill.gif" />
+    <Content Include="ig_res2\Default\images\igsli_TrackFillV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_TrackValueEdges2H.gif" />
+    <Content Include="ig_res2\Default\images\igsli_TrackValueEdges2V.gif" />
+    <Content Include="ig_res2\Default\images\igsli_TrackValueEdgesH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_TrackValueEdgesV.gif" />
+    <Content Include="ig_res2\Default\images\igsli_TrackValueFill2H.gif" />
+    <Content Include="ig_res2\Default\images\igsli_TrackValueFill2V.gif" />
+    <Content Include="ig_res2\Default\images\igsli_TrackValueFillH.gif" />
+    <Content Include="ig_res2\Default\images\igsli_TrackValueFillV.gif" />
+    <Content Include="ig_res2\Default\images\igspl_CollapseDown.gif" />
+    <Content Include="ig_res2\Default\images\igspl_CollapseDownHover.gif" />
+    <Content Include="ig_res2\Default\images\igspl_CollapseLeft.gif" />
+    <Content Include="ig_res2\Default\images\igspl_CollapseLeftHover.gif" />
+    <Content Include="ig_res2\Default\images\igspl_CollapseRight.gif" />
+    <Content Include="ig_res2\Default\images\igspl_CollapseRightHover.gif" />
+    <Content Include="ig_res2\Default\images\igspl_CollapseUp.gif" />
+    <Content Include="ig_res2\Default\images\igspl_CollapseUpHover.gif" />
+    <Content Include="ig_res2\Default\images\igspl_ExpandDown.gif" />
+    <Content Include="ig_res2\Default\images\igspl_ExpandDownHover.gif" />
+    <Content Include="ig_res2\Default\images\igspl_ExpandLeft.gif" />
+    <Content Include="ig_res2\Default\images\igspl_ExpandLeftHover.gif" />
+    <Content Include="ig_res2\Default\images\igspl_ExpandRight.gif" />
+    <Content Include="ig_res2\Default\images\igspl_ExpandRightHover.gif" />
+    <Content Include="ig_res2\Default\images\igspl_ExpandUp.gif" />
+    <Content Include="ig_res2\Default\images\igspl_ExpandUpHover.gif" />
+    <Content Include="ig_res2\Default\images\igspl_splitHoriz.gif" />
+    <Content Include="ig_res2\Default\images\igspl_splitHorizHover.gif" />
+    <Content Include="ig_res2\Default\images\igspl_splitHorizPressed.gif" />
+    <Content Include="ig_res2\Default\images\igspl_splitVerPressed.gif" />
+    <Content Include="ig_res2\Default\images\igspl_splitVert.gif" />
+    <Content Include="ig_res2\Default\images\igspl_splitVertHover.gif" />
+    <Content Include="ig_res2\Default\images\igspl_splitVertPressed.gif" />
+    <Content Include="ig_res2\Default\images\igwt_tab_hover.jpg" />
+    <Content Include="ig_res2\Default\images\igwt_tab_normal.jpg" />
+    <Content Include="ig_res2\Default\images\igwt_tab_selected.jpg" />
+    <Content Include="ig_res2\Default\images\ig_cal_next.gif" />
+    <Content Include="ig_res2\Default\images\ig_cal_prev.gif" />
+    <Content Include="ig_res2\Default\images\ig_checkbox_off.gif" />
+    <Content Include="ig_res2\Default\images\ig_checkbox_on.gif" />
+    <Content Include="ig_res2\Default\images\ig_checkbox_partial.gif" />
+    <Content Include="ig_res2\Default\images\ig_cmboDown1.png" />
+    <Content Include="ig_res2\Default\images\ig_cmboDown2.png" />
+    <Content Include="ig_res2\Default\images\ig_cmboDownXP1.png" />
+    <Content Include="ig_res2\Default\images\ig_cmboDownXP2.png" />
+    <Content Include="ig_res2\Default\images\ig_edit_0.gif" />
+    <Content Include="ig_res2\Default\images\ig_edit_01.gif" />
+    <Content Include="ig_res2\Default\images\ig_edit_1.gif" />
+    <Content Include="ig_res2\Default\images\ig_edit_11.gif" />
+    <Content Include="ig_res2\Default\images\ig_edit_2.gif" />
+    <Content Include="ig_res2\Default\images\ig_edit_21.gif" />
+    <Content Include="ig_res2\Default\images\ig_menutri.gif" />
+    <Content Include="ig_res2\Default\images\ig_menu_scrolldown.gif" />
+    <Content Include="ig_res2\Default\images\ig_menu_scrolldown_disabled.gif" />
+    <Content Include="ig_res2\Default\images\ig_menu_scrollup.gif" />
+    <Content Include="ig_res2\Default\images\ig_menu_scrollup_disabled.gif" />
+    <Content Include="ig_res2\Default\images\ig_progressIndicator.gif" />
+    <Content Include="ig_res2\Default\images\ig_sched_next.gif" />
+    <Content Include="ig_res2\Default\images\ig_sched_prev.gif" />
+    <Content Include="ig_res2\Default\images\ig_sched_recurrence.gif" />
+    <Content Include="ig_res2\Default\images\ig_sched_reminder.gif" />
+    <Content Include="ig_res2\Default\images\ig_sched_variance.gif" />
+    <Content Include="ig_res2\Default\images\ig_tab_BottomHover.gif" />
+    <Content Include="ig_res2\Default\images\ig_tab_BottomNormal.gif" />
+    <Content Include="ig_res2\Default\images\ig_tab_BottomSelected.gif" />
+    <Content Include="ig_res2\Default\images\ig_tab_scroll0.gif" />
+    <Content Include="ig_res2\Default\images\ig_tab_scroll1.gif" />
+    <Content Include="ig_res2\Default\images\ig_tab_scroll2.gif" />
+    <Content Include="ig_res2\Default\images\ig_tab_scroll3.gif" />
+    <Content Include="ig_res2\Default\images\ig_tab_scrollXP0.gif" />
+    <Content Include="ig_res2\Default\images\ig_tab_scrollXP1.gif" />
+    <Content Include="ig_res2\Default\images\ig_tab_scrollXP2.gif" />
+    <Content Include="ig_res2\Default\images\ig_tab_scrollXP3.gif" />
+    <Content Include="ig_res2\Default\images\ig_tab_TopHover.gif" />
+    <Content Include="ig_res2\Default\images\ig_tab_TopNormal.gif" />
+    <Content Include="ig_res2\Default\images\ig_tab_TopSelected.gif" />
+    <Content Include="ig_res2\Default\images\ig_tblBlank.gif" />
+    <Content Include="ig_res2\Default\images\ig_tblFilter.gif" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterApplied.gif" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterContains.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterDoesNotContain.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterDoesNotEndWith.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterDoesNotMatch.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterDoesNotMatch2.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterDoesNotStartWith.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterEndsWith.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterEqual.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterGreaterThan.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterGreaterThanOrEqualTo.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterLessThan.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterLessThanOrEqualTo.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterLike.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterMatch.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterMatch2.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterNotEqual.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterNotLike.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFilterStartsWith.png" />
+    <Content Include="ig_res2\Default\images\ig_tblFixedOff.gif" />
+    <Content Include="ig_res2\Default\images\ig_tblFixedOn.gif" />
+    <Content Include="ig_res2\Default\images\ig_tblGroupBy.gif" />
+    <Content Include="ig_res2\Default\images\ig_tblMinus.gif" />
+    <Content Include="ig_res2\Default\images\ig_tblNewrow.gif" />
+    <Content Include="ig_res2\Default\images\ig_tblPimgDn.gif" />
+    <Content Include="ig_res2\Default\images\ig_tblPimgUp.gif" />
+    <Content Include="ig_res2\Default\images\ig_tblPlus.gif" />
+    <Content Include="ig_res2\Default\images\ig_tblSortAsc.gif" />
+    <Content Include="ig_res2\Default\images\ig_tblSortDesc.gif" />
+    <Content Include="ig_res2\Default\images\ig_tblTri.gif" />
+    <Content Include="ig_res2\Default\images\ig_tblTriEdit.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeBlack_box.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeDownArrow.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeF.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeFminus.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeFplus.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeI.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeL.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeLminus.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeLplus.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeMinus.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeMinus2.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeMminus.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeMplus.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeMsdn_minus.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeMsdn_plus.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeOminus.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeOplus.gif" />
+    <Content Include="ig_res2\Default\images\ig_treePlus.gif" />
+    <Content Include="ig_res2\Default\images\ig_treePlus2.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeRightArrow.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeS.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeT.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeTri.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeUpArrow.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeWhite.gif" />
+    <Content Include="ig_res2\Default\images\ig_treeXPMinus.GIF" />
+    <Content Include="ig_res2\Default\images\ig_treeXPPlus.GIF" />
+    <Content Include="ig_res2\Default\images\ItemBackground.gif" />
+    <Content Include="ig_res2\Default\images\next_disabled.gif" />
+    <Content Include="ig_res2\Default\images\next_down.gif" />
+    <Content Include="ig_res2\Default\images\next_hover.gif" />
+    <Content Include="ig_res2\Default\images\next_up.gif" />
+    <Content Include="ig_res2\Default\images\officeBlue.jpg" />
+    <Content Include="ig_res2\Default\images\office_grid_header.jpg" />
+    <Content Include="ig_res2\Default\images\page_bg.jpg" />
+    <Content Include="ig_res2\Default\images\prev_disabled.gif" />
+    <Content Include="ig_res2\Default\images\prev_down.gif" />
+    <Content Include="ig_res2\Default\images\prev_hover.gif" />
+    <Content Include="ig_res2\Default\images\prev_up.gif" />
+    <Content Include="ig_res2\Default\images\rew_disabled.gif" />
+    <Content Include="ig_res2\Default\images\rew_down.gif" />
+    <Content Include="ig_res2\Default\images\rew_hover.gif" />
+    <Content Include="ig_res2\Default\images\rew_up.gif" />
+    <Content Include="ig_res2\Default\images\SelectedRowSelector.gif" />
+    <Content Include="ig_res2\Default\images\start_disabled.gif" />
+    <Content Include="ig_res2\Default\images\start_down.gif" />
+    <Content Include="ig_res2\Default\images\start_hover.gif" />
+    <Content Include="ig_res2\Default\images\start_up.gif" />
+    <Content Include="ig_res2\Default\images\submit_disable.gif" />
+    <Content Include="ig_res2\Default\images\submit_disabled.gif" />
+    <Content Include="ig_res2\Default\images\submit_down.gif" />
+    <Content Include="ig_res2\Default\images\submit_hover.gif" />
+    <Content Include="ig_res2\Default\images\submit_up.gif" />
+    <Content Include="ig_res2\Default\images\tabBG.jpg" />
+    <Content Include="ig_res2\Default\images\tabbottom_hover.jpg" />
+    <Content Include="ig_res2\Default\images\tabbottom_hover_F.jpg" />
+    <Content Include="ig_res2\Default\images\tabbottom_normal.jpg" />
+    <Content Include="ig_res2\Default\images\tabbottom_normal_F.jpg" />
+    <Content Include="ig_res2\Default\images\tabbottom_selected.jpg" />
+    <Content Include="ig_res2\Default\images\tabbottom_selected_f.jpg" />
+    <Content Include="ig_res2\Default\images\tabtob_selected_f.jpg" />
+    <Content Include="ig_res2\Default\images\tabtop_hover_F.jpg" />
+    <Content Include="ig_res2\Default\images\tabtop_normal_F.jpg" />
+    <Content Include="ig_res2\Default\images\tab_bottom.gif" />
+    <Content Include="ig_res2\Default\images\tab_bottom_f.gif" />
+    <Content Include="ig_res2\Default\images\tab_bottom_hover.gif" />
+    <Content Include="ig_res2\Default\images\tab_left.gif" />
+    <Content Include="ig_res2\Default\images\tab_left_f.gif" />
+    <Content Include="ig_res2\Default\images\tab_left_hover.gif" />
+    <Content Include="ig_res2\Default\images\tab_left_hover_f.gif" />
+    <Content Include="ig_res2\Default\images\tab_left_normal.gif" />
+    <Content Include="ig_res2\Default\images\tab_left_normal_f.gif" />
+    <Content Include="ig_res2\Default\images\tab_right.gif" />
+    <Content Include="ig_res2\Default\images\tab_right_f.gif" />
+    <Content Include="ig_res2\Default\images\tab_right_hover.gif" />
+    <Content Include="ig_res2\Default\images\tab_right_hover_f.gif" />
+    <Content Include="ig_res2\Default\images\tab_right_normal.gif" />
+    <Content Include="ig_res2\Default\images\tab_right_normal_f.gif" />
+    <Content Include="ig_res2\Default\images\tab_top.gif" />
+    <Content Include="ig_res2\Default\images\tab_top_f.gif" />
+    <Content Include="ig_res2\Default\images\tab_top_hover.gif" />
+    <Content Include="ig_res2\Default\images\uparrows_white.gif" />
+    <Content Include="ig_res2\RedPlanet\ig_calendar.css" />
+    <Content Include="ig_res2\RedPlanet\ig_calendarview.css" />
+    <Content Include="ig_res2\RedPlanet\ig_combo.css" />
+    <Content Include="ig_res2\RedPlanet\ig_dataGrid.css" />
+    <Content Include="ig_res2\RedPlanet\ig_datamenu.css" />
+    <Content Include="ig_res2\RedPlanet\ig_datatree.css" />
+    <Content Include="ig_res2\RedPlanet\ig_datechooser.css" />
+    <Content Include="ig_res2\RedPlanet\ig_dayview.css" />
+    <Content Include="ig_res2\RedPlanet\ig_dialogwindow.css" />
+    <Content Include="ig_res2\RedPlanet\ig_dropDown.css" />
+    <Content Include="ig_res2\RedPlanet\ig_grid.css" />
+    <Content Include="ig_res2\RedPlanet\ig_grid_opt.css" />
+    <Content Include="ig_res2\RedPlanet\ig_imageViewer.css" />
+    <Content Include="ig_res2\RedPlanet\ig_listbar.css" />
+    <Content Include="ig_res2\RedPlanet\ig_menu.css" />
+    <Content Include="ig_res2\RedPlanet\ig_monthview.css" />
+    <Content Include="ig_res2\RedPlanet\ig_navbar.css" />
+    <Content Include="ig_res2\RedPlanet\ig_panel.css" />
+    <Content Include="ig_res2\RedPlanet\ig_progressbar.css" />
+    <Content Include="ig_res2\RedPlanet\ig_shared.css" />
+    <Content Include="ig_res2\RedPlanet\ig_slider.css" />
+    <Content Include="ig_res2\RedPlanet\ig_spellCheckerDialog.css" />
+    <Content Include="ig_res2\RedPlanet\ig_splitter.css" />
+    <Content Include="ig_res2\RedPlanet\ig_tab.css" />
+    <Content Include="ig_res2\RedPlanet\ig_textedit.css" />
+    <Content Include="ig_res2\RedPlanet\ig_toolbar.css" />
+    <Content Include="ig_res2\RedPlanet\ig_tree.css" />
+    <Content Include="ig_res2\RedPlanet\ig_weekview.css" />
+    <Content Include="ig_res2\RedPlanet\images\ActiveDayHeader_bg.png" />
+    <Content Include="ig_res2\RedPlanet\images\ActiveRowSelector.gif" />
+    <Content Include="ig_res2\RedPlanet\images\addnewrow_image.gif" />
+    <Content Include="ig_res2\RedPlanet\images\add_disabled.gif" />
+    <Content Include="ig_res2\RedPlanet\images\add_down.gif" />
+    <Content Include="ig_res2\RedPlanet\images\add_hover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\add_up.gif" />
+    <Content Include="ig_res2\RedPlanet\images\bg.gif" />
+    <Content Include="ig_res2\RedPlanet\images\body_back.gif" />
+    <Content Include="ig_res2\RedPlanet\images\buttonBG.png" />
+    <Content Include="ig_res2\RedPlanet\images\button_bg.jpg" />
+    <Content Include="ig_res2\RedPlanet\images\button_bg.png" />
+    <Content Include="ig_res2\RedPlanet\images\button_bg1.png" />
+    <Content Include="ig_res2\RedPlanet\images\button_bg2.png" />
+    <Content Include="ig_res2\RedPlanet\images\button_silver.gif" />
+    <Content Include="ig_res2\RedPlanet\images\day_bg.gif" />
+    <Content Include="ig_res2\RedPlanet\images\del_disabled.gif" />
+    <Content Include="ig_res2\RedPlanet\images\del_down.gif" />
+    <Content Include="ig_res2\RedPlanet\images\del_hover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\del_up.gif" />
+    <Content Include="ig_res2\RedPlanet\images\downarrows_white.gif" />
+    <Content Include="ig_res2\RedPlanet\images\DWheader.gif" />
+    <Content Include="ig_res2\RedPlanet\images\end_disabled.gif" />
+    <Content Include="ig_res2\RedPlanet\images\end_down.gif" />
+    <Content Include="ig_res2\RedPlanet\images\end_hover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\end_up.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ff_disabled.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ff_down.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ff_hover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ff_up.gif" />
+    <Content Include="ig_res2\RedPlanet\images\gridBG.gif" />
+    <Content Include="ig_res2\RedPlanet\images\gridSelected.gif" />
+    <Content Include="ig_res2\RedPlanet\images\header.gif" />
+    <Content Include="ig_res2\RedPlanet\images\header_hover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\header_hover2.gif" />
+    <Content Include="ig_res2\RedPlanet\images\header_hover3.gif" />
+    <Content Include="ig_res2\RedPlanet\images\header_large.gif" />
+    <Content Include="ig_res2\RedPlanet\images\header_large2.gif" />
+    <Content Include="ig_res2\RedPlanet\images\header_silver.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdd_DropDownButton.png" />
+    <Content Include="ig_res2\RedPlanet\images\igdd_DropDownListContainerBG.png" />
+    <Content Include="ig_res2\RedPlanet\images\igdd_ListItemHover.png" />
+    <Content Include="ig_res2\RedPlanet\images\igdd_PgBg.png" />
+    <Content Include="ig_res2\RedPlanet\images\igdm_ControlBackground.png" />
+    <Content Include="ig_res2\RedPlanet\images\igdm_ItemHover.png" />
+    <Content Include="ig_res2\RedPlanet\images\igdm_RootHover.png" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_Blank.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_First.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_FirstMinus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_FirstPlus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_Last.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_LastMinus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_LastPlus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_Leaf.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_Line.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_Middle.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_MiddleMinus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_MiddlePlus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_Minus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_Plus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_Single.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_SingleMinus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdt_SinglePlus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_BodyCornerTopLeft.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_BodyCornerTopRight.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_BodyEdgeTop.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_Bottom.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_BottomLeft.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_BottomRight.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_Close.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_CloseHover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_CloseMouseDown.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_EdgeBottom.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_EdgeLeft.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_EdgeRight.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_EdgeTop.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_Maximize.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_MaximizeHover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_MaximizeMouseDown.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_Minimize.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_MinimizeHover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_MinimizeMouseDown.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_Pin.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_PinHover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_PinMouseDown.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_ResizingHandle.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_Restore.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_RestoreHover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_RestoreMouseDown.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_top.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_topHidden.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_TopLeft.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_TopLeftHidden.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_TopRight.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_TopRightHidden.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_Unpin.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_UnpinHover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igdw_UnpinMouseDown.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igg_addnewrow.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igg_BottomDragIndicator.png" />
+    <Content Include="ig_res2\RedPlanet\images\igg_Control.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igg_Filter.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igg_FilterApplied.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igg_filterrow.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igg_Footer.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igg_header.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igg_Item.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igg_MiddleDragIndicator.png" />
+    <Content Include="ig_res2\RedPlanet\images\igg_Selected.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igg_sortAsc.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igg_sortDesc.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igg_TopDragIndicator.png" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_CornerBottomLeft.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_CornerBottomLeft_Vert.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_CornerBottomRight.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_CornerBottomRight_Vert.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_CornerTopLeft.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_CornerTopLeft_Vert.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_CornerTopRight.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_CornerTopRight_Vert.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_EdgeBottom.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_EdgeBottom_Vert.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_EdgeLeft.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_EdgeLeft_Vert.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_EdgeRight.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_EdgeRight_Vert.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_EdgeTop.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_EdgeTop_Vert.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_HeaderContent.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_H_NextButton.png" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_H_NextButtonDisabled.png" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_H_NextButtonHover.png" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_H_NextButtonPressed.png" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_H_PrevButton.png" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_H_PrevButtonDisabled.png" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_H_PrevButtonHover.png" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_H_PrevButtonPressed.png" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_V_NextButton.png" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_V_NextButtonDisabled.png" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_V_NextButtonHover.png" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_V_NextButtonPressed.png" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_V_PrevButton.png" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_V_PrevButtonDisabled.png" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_V_PrevButtonHover.png" />
+    <Content Include="ig_res2\RedPlanet\images\igiv_V_PrevButtonPressed.png" />
+    <Content Include="ig_res2\RedPlanet\images\igpb_horizontalBg.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igpb_horizontalFill.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igpb_VerticalBg.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igpb_VerticalFill.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igpnl_dwn.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igpnl_up.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsch_xpbluedn.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsch_xpblueup.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_MinusDisableH.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_MinusDisableV.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_MinusFocusH.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_MinusFocusV.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_MinusH.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_MinusHoverH.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_MinusHoverV.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_MinusPressH.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_MinusPressV.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_MinusV.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_PlusDisableH.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_PlusDisableV.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_PlusFocusH.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_PlusFocusV.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_PlusH.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_PlusHoverH.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_PlusHoverV.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_PlusPressH.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_PlusPressV.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_PlusV.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_ThumbDisableH.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_ThumbDisableV.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_ThumbFocusH.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_ThumbFocusV.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_ThumbH.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_ThumbHoverH.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_ThumbHoverV.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_ThumbPressH.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_ThumbPressV.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_ThumbV.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_TrackEdges.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igsli_TrackFill.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_CollapseDown.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_CollapseDownHover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_CollapseLeft.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_CollapseLeftHover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_CollapseRight.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_CollapseRightHover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_CollapseUp.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_CollapseUpHover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_ExpandDown.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_ExpandDownHover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_ExpandLeft.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_ExpandLeftHover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_ExpandRight.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_ExpandRightHover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_ExpandUp.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_ExpandUpHover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_splitHoriz.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_splitHorizHover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_splitHorizPressed.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_splitVerPressed.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_splitVert.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_splitVertHover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\igspl_splitVertPressed.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_cal_next.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_cal_prev.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_checkbox_off.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_checkbox_on.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_checkbox_partial.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_cmboDown1.bmp" />
+    <Content Include="ig_res2\RedPlanet\images\ig_cmboDown1.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_cmboDown2.bmp" />
+    <Content Include="ig_res2\RedPlanet\images\ig_cmboDown2.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_cmboDownXP1.bmp" />
+    <Content Include="ig_res2\RedPlanet\images\ig_cmboDownXP1.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_cmboDownXP2.bmp" />
+    <Content Include="ig_res2\RedPlanet\images\ig_cmboDownXP2.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_edit_0.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_edit_01.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_edit_1.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_edit_11.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_edit_2.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_edit_21.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_menutri.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_menu_scrolldown.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_menu_scrolldown_disabled.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_menu_scrollup.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_menu_scrollup_disabled.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_progressIndicator.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_sched_next.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_sched_prev.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_sched_recurrence.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_sched_reminder.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_sched_variance.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tab_scroll0.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tab_scroll1.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tab_scroll2.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tab_scroll3.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tab_scrollXP0.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tab_scrollXP1.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tab_scrollXP2.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tab_scrollXP3.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblBlank.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilter.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterApplied.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterContains.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterDoesNotContain.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterDoesNotEndWith.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterDoesNotMatch.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterDoesNotMatch2.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterDoesNotStartWith.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterEndsWith.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterEqual.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterGreaterThan.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterGreaterThanOrEqualTo.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterLessThan.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterLessThanOrEqualTo.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterLike.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterMatch.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterMatch2.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterNotEqual.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterNotLike.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFilterStartsWith.png" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFixedOff.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblFixedOn.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblGroupBy.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblMinus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblNewrow.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblPimgDn.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblPimgUp.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblPlus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblSortAsc.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblSortDesc.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblTri.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_tblTriEdit.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeBlack_box.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeDownArrow.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeF.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeFminus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeFplus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeI.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeL.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeLminus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeLplus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeMinus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeMinus2.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeMminus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeMplus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeMsdn_minus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeMsdn_plus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeOminus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeOplus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treePlus.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treePlus2.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeRightArrow.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeS.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeT.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeTri.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeUpArrow.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeWhite.gif" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeXPMinus.GIF" />
+    <Content Include="ig_res2\RedPlanet\images\ig_treeXPPlus.GIF" />
+    <Content Include="ig_res2\RedPlanet\images\ItemBackground.gif" />
+    <Content Include="ig_res2\RedPlanet\images\item_back.gif" />
+    <Content Include="ig_res2\RedPlanet\images\label.gif" />
+    <Content Include="ig_res2\RedPlanet\images\menuHeader.gif" />
+    <Content Include="ig_res2\RedPlanet\images\MonthHeaderCaption_bg.png" />
+    <Content Include="ig_res2\RedPlanet\images\next_disabled.gif" />
+    <Content Include="ig_res2\RedPlanet\images\next_down.gif" />
+    <Content Include="ig_res2\RedPlanet\images\next_hover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\next_up.gif" />
+    <Content Include="ig_res2\RedPlanet\images\prev_disabled.gif" />
+    <Content Include="ig_res2\RedPlanet\images\prev_down.gif" />
+    <Content Include="ig_res2\RedPlanet\images\prev_hover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\prev_up.gif" />
+    <Content Include="ig_res2\RedPlanet\images\radiofly.jpg" />
+    <Content Include="ig_res2\RedPlanet\images\rew_disabled.gif" />
+    <Content Include="ig_res2\RedPlanet\images\rew_down.gif" />
+    <Content Include="ig_res2\RedPlanet\images\rew_hover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\rew_up.gif" />
+    <Content Include="ig_res2\RedPlanet\images\right.gif" />
+    <Content Include="ig_res2\RedPlanet\images\SelectedRowSelector.gif" />
+    <Content Include="ig_res2\RedPlanet\images\start_disabled.gif" />
+    <Content Include="ig_res2\RedPlanet\images\start_down.gif" />
+    <Content Include="ig_res2\RedPlanet\images\start_hover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\start_up.gif" />
+    <Content Include="ig_res2\RedPlanet\images\submit_disabled.gif" />
+    <Content Include="ig_res2\RedPlanet\images\submit_down.gif" />
+    <Content Include="ig_res2\RedPlanet\images\submit_hover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\submit_up.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_bottom.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_bottom_f.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_bottom_hover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_bottom_hover_f.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_bottom_normal.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_bottom_normal_f.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_hover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_left.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_left_f.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_left_hover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_left_hover_f.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_left_normal.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_left_normal_f.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_right.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_right_f.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_right_hover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_right_hover_f.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_right_normal.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_right_normal_f.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_top.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_top_f.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_top_hover.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_top_hover_f.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_top_normal.gif" />
+    <Content Include="ig_res2\RedPlanet\images\tab_top_normal_f.gif" />
+    <Content Include="ig_res2\RedPlanet\images\TodayHeader_bg.png" />
+    <Content Include="ig_res2\RedPlanet\images\uparrows_white.gif" />
+    <Content Include="ig_res\RedPlanet\ig_calendar.css" />
+    <Content Include="ig_res\RedPlanet\ig_calendarview.css" />
+    <Content Include="ig_res\RedPlanet\ig_combo.css" />
+    <Content Include="ig_res\RedPlanet\ig_dataGrid.css" />
+    <Content Include="ig_res\RedPlanet\ig_datamenu.css" />
+    <Content Include="ig_res\RedPlanet\ig_datatree.css" />
+    <Content Include="ig_res\RedPlanet\ig_datechooser.css" />
+    <Content Include="ig_res\RedPlanet\ig_dayview.css" />
+    <Content Include="ig_res\RedPlanet\ig_dialogwindow.css" />
+    <Content Include="ig_res\RedPlanet\ig_dropDown.css" />
+    <Content Include="ig_res\RedPlanet\ig_grid.css" />
+    <Content Include="ig_res\RedPlanet\ig_grid_opt.css" />
+    <Content Include="ig_res\RedPlanet\ig_imageViewer.css" />
+    <Content Include="ig_res\RedPlanet\ig_listbar.css" />
+    <Content Include="ig_res\RedPlanet\ig_menu.css" />
+    <Content Include="ig_res\RedPlanet\ig_monthview.css" />
+    <Content Include="ig_res\RedPlanet\ig_navbar.css" />
+    <Content Include="ig_res\RedPlanet\ig_panel.css" />
+    <Content Include="ig_res\RedPlanet\ig_progressbar.css" />
+    <Content Include="ig_res\RedPlanet\ig_shared.css" />
+    <Content Include="ig_res\RedPlanet\ig_slider.css" />
+    <Content Include="ig_res\RedPlanet\ig_spellCheckerDialog.css" />
+    <Content Include="ig_res\RedPlanet\ig_splitter.css" />
+    <Content Include="ig_res\RedPlanet\ig_tab.css" />
+    <Content Include="ig_res\RedPlanet\ig_textedit.css" />
+    <Content Include="ig_res\RedPlanet\ig_toolbar.css" />
+    <Content Include="ig_res\RedPlanet\ig_tree.css" />
+    <Content Include="ig_res\RedPlanet\ig_weekview.css" />
+    <Content Include="ig_res\RedPlanet\images\ActiveDayHeader_bg.png" />
+    <Content Include="ig_res\RedPlanet\images\ActiveRowSelector.gif" />
+    <Content Include="ig_res\RedPlanet\images\addnewrow_image.gif" />
+    <Content Include="ig_res\RedPlanet\images\add_disabled.gif" />
+    <Content Include="ig_res\RedPlanet\images\add_down.gif" />
+    <Content Include="ig_res\RedPlanet\images\add_hover.gif" />
+    <Content Include="ig_res\RedPlanet\images\add_up.gif" />
+    <Content Include="ig_res\RedPlanet\images\bg.gif" />
+    <Content Include="ig_res\RedPlanet\images\body_back.gif" />
+    <Content Include="ig_res\RedPlanet\images\buttonBG.png" />
+    <Content Include="ig_res\RedPlanet\images\button_bg.jpg" />
+    <Content Include="ig_res\RedPlanet\images\button_bg.png" />
+    <Content Include="ig_res\RedPlanet\images\button_bg1.png" />
+    <Content Include="ig_res\RedPlanet\images\button_bg2.png" />
+    <Content Include="ig_res\RedPlanet\images\button_silver.gif" />
+    <Content Include="ig_res\RedPlanet\images\Copy of header.gif" />
+    <Content Include="ig_res\RedPlanet\images\day_bg.gif" />
+    <Content Include="ig_res\RedPlanet\images\del_disabled.gif" />
+    <Content Include="ig_res\RedPlanet\images\del_down.gif" />
+    <Content Include="ig_res\RedPlanet\images\del_hover.gif" />
+    <Content Include="ig_res\RedPlanet\images\del_up.gif" />
+    <Content Include="ig_res\RedPlanet\images\downarrows_white.gif" />
+    <Content Include="ig_res\RedPlanet\images\DWheader.gif" />
+    <Content Include="ig_res\RedPlanet\images\end_disabled.gif" />
+    <Content Include="ig_res\RedPlanet\images\end_down.gif" />
+    <Content Include="ig_res\RedPlanet\images\end_hover.gif" />
+    <Content Include="ig_res\RedPlanet\images\end_up.gif" />
+    <Content Include="ig_res\RedPlanet\images\ff_disabled.gif" />
+    <Content Include="ig_res\RedPlanet\images\ff_down.gif" />
+    <Content Include="ig_res\RedPlanet\images\ff_hover.gif" />
+    <Content Include="ig_res\RedPlanet\images\ff_up.gif" />
+    <Content Include="ig_res\RedPlanet\images\gridBG.gif" />
+    <Content Include="ig_res\RedPlanet\images\gridSelected.gif" />
+    <Content Include="ig_res\RedPlanet\images\header.gif" />
+    <Content Include="ig_res\RedPlanet\images\header_hover.gif" />
+    <Content Include="ig_res\RedPlanet\images\header_hover2.gif" />
+    <Content Include="ig_res\RedPlanet\images\header_hover3.gif" />
+    <Content Include="ig_res\RedPlanet\images\header_large.gif" />
+    <Content Include="ig_res\RedPlanet\images\header_large2.gif" />
+    <Content Include="ig_res\RedPlanet\images\header_silver.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdd_DropDownButton.png" />
+    <Content Include="ig_res\RedPlanet\images\igdd_DropDownListContainerBG.png" />
+    <Content Include="ig_res\RedPlanet\images\igdd_ListItemHover.png" />
+    <Content Include="ig_res\RedPlanet\images\igdd_PgBg.png" />
+    <Content Include="ig_res\RedPlanet\images\igdm_ControlBackground.png" />
+    <Content Include="ig_res\RedPlanet\images\igdm_ItemHover.png" />
+    <Content Include="ig_res\RedPlanet\images\igdm_RootHover.png" />
+    <Content Include="ig_res\RedPlanet\images\igdt_Blank.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdt_First.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdt_FirstMinus.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdt_FirstPlus.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdt_Last.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdt_LastMinus.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdt_LastPlus.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdt_Leaf.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdt_Line.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdt_Middle.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdt_MiddleMinus.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdt_MiddlePlus.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdt_Minus.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdt_Plus.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdt_Single.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdt_SingleMinus.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdt_SinglePlus.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_BodyCornerTopLeft.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_BodyCornerTopRight.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_BodyEdgeTop.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_Bottom.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_BottomLeft.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_BottomRight.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_Close.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_CloseHover.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_CloseMouseDown.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_EdgeBottom.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_EdgeLeft.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_EdgeRight.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_EdgeTop.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_Maximize.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_MaximizeHover.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_MaximizeMouseDown.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_Minimize.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_MinimizeHover.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_MinimizeMouseDown.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_Pin.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_PinHover.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_PinMouseDown.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_ResizingHandle.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_Restore.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_RestoreHover.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_RestoreMouseDown.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_top.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_topHidden.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_TopLeft.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_TopLeftHidden.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_TopRight.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_TopRightHidden.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_Unpin.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_UnpinHover.gif" />
+    <Content Include="ig_res\RedPlanet\images\igdw_UnpinMouseDown.gif" />
+    <Content Include="ig_res\RedPlanet\images\igg_addnewrow.gif" />
+    <Content Include="ig_res\RedPlanet\images\igg_BottomDragIndicator.png" />
+    <Content Include="ig_res\RedPlanet\images\igg_Control.gif" />
+    <Content Include="ig_res\RedPlanet\images\igg_Filter.gif" />
+    <Content Include="ig_res\RedPlanet\images\igg_FilterApplied.gif" />
+    <Content Include="ig_res\RedPlanet\images\igg_filterrow.gif" />
+    <Content Include="ig_res\RedPlanet\images\igg_Footer.gif" />
+    <Content Include="ig_res\RedPlanet\images\igg_header.gif" />
+    <Content Include="ig_res\RedPlanet\images\igg_Item.gif" />
+    <Content Include="ig_res\RedPlanet\images\igg_MiddleDragIndicator.png" />
+    <Content Include="ig_res\RedPlanet\images\igg_Selected.gif" />
+    <Content Include="ig_res\RedPlanet\images\igg_sortAsc.gif" />
+    <Content Include="ig_res\RedPlanet\images\igg_sortDesc.gif" />
+    <Content Include="ig_res\RedPlanet\images\igg_TopDragIndicator.png" />
+    <Content Include="ig_res\RedPlanet\images\igiv_CornerBottomLeft.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_CornerBottomLeft_Vert.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_CornerBottomRight.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_CornerBottomRight_Vert.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_CornerTopLeft.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_CornerTopLeft_Vert.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_CornerTopRight.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_CornerTopRight_Vert.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_EdgeBottom.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_EdgeBottom_Vert.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_EdgeLeft.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_EdgeLeft_Vert.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_EdgeRight.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_EdgeRight_Vert.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_EdgeTop.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_EdgeTop_Vert.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_HeaderContent.gif" />
+    <Content Include="ig_res\RedPlanet\images\igiv_H_NextButton.png" />
+    <Content Include="ig_res\RedPlanet\images\igiv_H_NextButtonDisabled.png" />
+    <Content Include="ig_res\RedPlanet\images\igiv_H_NextButtonHover.png" />
+    <Content Include="ig_res\RedPlanet\images\igiv_H_NextButtonPressed.png" />
+    <Content Include="ig_res\RedPlanet\images\igiv_H_PrevButton.png" />
+    <Content Include="ig_res\RedPlanet\images\igiv_H_PrevButtonDisabled.png" />
+    <Content Include="ig_res\RedPlanet\images\igiv_H_PrevButtonHover.png" />
+    <Content Include="ig_res\RedPlanet\images\igiv_H_PrevButtonPressed.png" />
+    <Content Include="ig_res\RedPlanet\images\igiv_V_NextButton.png" />
+    <Content Include="ig_res\RedPlanet\images\igiv_V_NextButtonDisabled.png" />
+    <Content Include="ig_res\RedPlanet\images\igiv_V_NextButtonHover.png" />
+    <Content Include="ig_res\RedPlanet\images\igiv_V_NextButtonPressed.png" />
+    <Content Include="ig_res\RedPlanet\images\igiv_V_PrevButton.png" />
+    <Content Include="ig_res\RedPlanet\images\igiv_V_PrevButtonDisabled.png" />
+    <Content Include="ig_res\RedPlanet\images\igiv_V_PrevButtonHover.png" />
+    <Content Include="ig_res\RedPlanet\images\igiv_V_PrevButtonPressed.png" />
+    <Content Include="ig_res\RedPlanet\images\igpb_horizontalBg.gif" />
+    <Content Include="ig_res\RedPlanet\images\igpb_horizontalFill.gif" />
+    <Content Include="ig_res\RedPlanet\images\igpb_VerticalBg.gif" />
+    <Content Include="ig_res\RedPlanet\images\igpb_VerticalFill.gif" />
+    <Content Include="ig_res\RedPlanet\images\igpnl_dwn.gif" />
+    <Content Include="ig_res\RedPlanet\images\igpnl_up.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsch_xpbluedn.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsch_xpblueup.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_MinusDisableH.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_MinusDisableV.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_MinusFocusH.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_MinusFocusV.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_MinusH.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_MinusHoverH.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_MinusHoverV.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_MinusPressH.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_MinusPressV.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_MinusV.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_PlusDisableH.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_PlusDisableV.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_PlusFocusH.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_PlusFocusV.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_PlusH.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_PlusHoverH.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_PlusHoverV.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_PlusPressH.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_PlusPressV.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_PlusV.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_ThumbDisableH.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_ThumbDisableV.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_ThumbFocusH.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_ThumbFocusV.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_ThumbH.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_ThumbHoverH.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_ThumbHoverV.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_ThumbPressH.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_ThumbPressV.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_ThumbV.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_TrackEdges.gif" />
+    <Content Include="ig_res\RedPlanet\images\igsli_TrackFill.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_CollapseDown.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_CollapseDownHover.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_CollapseLeft.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_CollapseLeftHover.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_CollapseRight.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_CollapseRightHover.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_CollapseUp.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_CollapseUpHover.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_ExpandDown.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_ExpandDownHover.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_ExpandLeft.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_ExpandLeftHover.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_ExpandRight.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_ExpandRightHover.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_ExpandUp.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_ExpandUpHover.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_splitHoriz.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_splitHorizHover.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_splitHorizPressed.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_splitVerPressed.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_splitVert.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_splitVertHover.gif" />
+    <Content Include="ig_res\RedPlanet\images\igspl_splitVertPressed.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_cal_next.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_cal_prev.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_checkbox_off.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_checkbox_on.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_checkbox_partial.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_cmboDown1.bmp" />
+    <Content Include="ig_res\RedPlanet\images\ig_cmboDown1.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_cmboDown2.bmp" />
+    <Content Include="ig_res\RedPlanet\images\ig_cmboDown2.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_cmboDownXP1.bmp" />
+    <Content Include="ig_res\RedPlanet\images\ig_cmboDownXP1.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_cmboDownXP2.bmp" />
+    <Content Include="ig_res\RedPlanet\images\ig_cmboDownXP2.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_edit_0.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_edit_01.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_edit_1.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_edit_11.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_edit_2.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_edit_21.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_menutri.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_menu_scrolldown.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_menu_scrolldown_disabled.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_menu_scrollup.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_menu_scrollup_disabled.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_progressIndicator.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_sched_next.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_sched_prev.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_sched_recurrence.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_sched_reminder.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_sched_variance.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tab_scroll0.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tab_scroll1.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tab_scroll2.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tab_scroll3.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tab_scrollXP0.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tab_scrollXP1.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tab_scrollXP2.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tab_scrollXP3.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblBlank.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilter.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterApplied.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterContains.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterDoesNotContain.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterDoesNotEndWith.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterDoesNotMatch.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterDoesNotMatch2.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterDoesNotStartWith.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterEndsWith.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterEqual.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterGreaterThan.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterGreaterThanOrEqualTo.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterLessThan.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterLessThanOrEqualTo.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterLike.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterMatch.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterMatch2.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterNotEqual.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterNotLike.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFilterStartsWith.png" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFixedOff.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblFixedOn.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblGroupBy.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblMinus.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblNewrow.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblPimgDn.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblPimgUp.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblPlus.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblSortAsc.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblSortDesc.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblTri.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_tblTriEdit.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeBlack_box.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeDownArrow.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeF.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeFminus.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeFplus.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeI.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeL.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeLminus.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeLplus.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeMinus.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeMinus2.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeMminus.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeMplus.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeMsdn_minus.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeMsdn_plus.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeOminus.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeOplus.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treePlus.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treePlus2.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeRightArrow.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeS.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeT.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeTri.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeUpArrow.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeWhite.gif" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeXPMinus.GIF" />
+    <Content Include="ig_res\RedPlanet\images\ig_treeXPPlus.GIF" />
+    <Content Include="ig_res\RedPlanet\images\ItemBackground.gif" />
+    <Content Include="ig_res\RedPlanet\images\item_back.gif" />
+    <Content Include="ig_res\RedPlanet\images\label.gif" />
+    <Content Include="ig_res\RedPlanet\images\menuHeader.gif" />
+    <Content Include="ig_res\RedPlanet\images\MonthHeaderCaption_bg.png" />
+    <Content Include="ig_res\RedPlanet\images\next_disabled.gif" />
+    <Content Include="ig_res\RedPlanet\images\next_down.gif" />
+    <Content Include="ig_res\RedPlanet\images\next_hover.gif" />
+    <Content Include="ig_res\RedPlanet\images\next_up.gif" />
+    <Content Include="ig_res\RedPlanet\images\prev_disabled.gif" />
+    <Content Include="ig_res\RedPlanet\images\prev_down.gif" />
+    <Content Include="ig_res\RedPlanet\images\prev_hover.gif" />
+    <Content Include="ig_res\RedPlanet\images\prev_up.gif" />
+    <Content Include="ig_res\RedPlanet\images\radiofly.jpg" />
+    <Content Include="ig_res\RedPlanet\images\rew_disabled.gif" />
+    <Content Include="ig_res\RedPlanet\images\rew_down.gif" />
+    <Content Include="ig_res\RedPlanet\images\rew_hover.gif" />
+    <Content Include="ig_res\RedPlanet\images\rew_up.gif" />
+    <Content Include="ig_res\RedPlanet\images\right.gif" />
+    <Content Include="ig_res\RedPlanet\images\SelectedRowSelector.gif" />
+    <Content Include="ig_res\RedPlanet\images\start_disabled.gif" />
+    <Content Include="ig_res\RedPlanet\images\start_down.gif" />
+    <Content Include="ig_res\RedPlanet\images\start_hover.gif" />
+    <Content Include="ig_res\RedPlanet\images\start_up.gif" />
+    <Content Include="ig_res\RedPlanet\images\submit_disabled.gif" />
+    <Content Include="ig_res\RedPlanet\images\submit_down.gif" />
+    <Content Include="ig_res\RedPlanet\images\submit_hover.gif" />
+    <Content Include="ig_res\RedPlanet\images\submit_up.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_bottom.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_bottom_f.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_bottom_hover.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_bottom_hover_f.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_bottom_normal.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_bottom_normal_f.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_hover.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_left.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_left_f.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_left_hover.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_left_hover_f.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_left_normal.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_left_normal_f.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_right.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_right_f.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_right_hover.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_right_hover_f.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_right_normal.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_right_normal_f.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_top.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_top_f.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_top_hover.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_top_hover_f.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_top_normal.gif" />
+    <Content Include="ig_res\RedPlanet\images\tab_top_normal_f.gif" />
+    <Content Include="ig_res\RedPlanet\images\TodayHeader_bg.png" />
+    <Content Include="ig_res\RedPlanet\images\uparrows_white.gif" />
+    <Content Include="Imagenes\bgvoucher.gif" />
+    <Content Include="Imagenes\bk.gif" />
+    <Content Include="Imagenes\cargando.gif" />
+    <Content Include="Imagenes\cargando2.gif" />
+    <Content Include="Imagenes\Cargando3.gif" />
+    <Content Include="Imagenes\edtCalendarNextMonth.gif" />
+    <Content Include="Imagenes\edtCalendarPrevMonth.gif" />
+    <Content Include="Imagenes\header.gif" />
+    <Content Include="Imagenes\help.gif" />
+    <Content Include="Imagenes\help2.gif" />
+    <Content Include="Imagenes\Information.gif" />
+    <Content Include="Imagenes\Information2.gif" />
+    <Content Include="Imagenes\information2_.jpg" />
+    <Content Include="Imagenes\Information_.gif" />
+    <Content Include="Imagenes\information_.jpg" />
+    <Content Include="Imagenes\Inicio.png" />
+    <Content Include="Imagenes\lamosa2.jpg" />
+    <Content Include="Imagenes\lamosaP_2.jpg" />
+    <Content Include="Imagenes\pantallaLamD.png" />
+    <Content Include="Imagenes\pantallaLamosa.png" />
+    <Content Include="Imagenes\pantalla_01.jpg" />
+    <Content Include="Imagenes\pantalla_02.jpg" />
+    <Content Include="Imagenes\pantalla_03.png" />
+    <Content Include="Imagenes\pantalla_04.jpg" />
+    <Content Include="Imagenes\pantalla_04_porce.jpg" />
+    <Content Include="Imagenes\pantalla_change.png" />
+    <Content Include="Imagenes\pantalla_porecelanite.jpg" />
+    <Content Include="Imagenes\pantalla_test.jpg" />
+    <Content Include="Imagenes\pedido_01.png" />
+    <Content Include="Imagenes\Simulacion\bk.gif" />
+    <Content Include="Imagenes\tbfilter.gif" />
+    <Content Include="Imagenes\vertical.gif" />
+    <Content Include="Login.aspx" />
+    <Content Include="Menu.aspx" />
+    <Content Include="PaginaEspera.aspx" />
+    <Content Include="Sucursales.aspx" />
+    <Content Include="Usuario\CallWebServiceMethods.js" />
+    <Content Include="Usuario\WebService.asmx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CargaArchivos\CargaAtributos.aspx.cs">
+      <DependentUpon>CargaAtributos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CargaArchivos\CargaAtributos.aspx.designer.cs">
+      <DependentUpon>CargaAtributos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CargaArchivos\CargaDatos.aspx.cs">
+      <DependentUpon>CargaDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CargaArchivos\CargaDatos.aspx.designer.cs">
+      <DependentUpon>CargaDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CargaArchivos\getLogAtributos.aspx.cs">
+      <DependentUpon>getLogAtributos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CargaArchivos\getLogAtributos.aspx.designer.cs">
+      <DependentUpon>getLogAtributos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CargaArchivos\getLogDatos.aspx.cs">
+      <DependentUpon>getLogDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CargaArchivos\getLogDatos.aspx.designer.cs">
+      <DependentUpon>getLogDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CargaArchivos\webDialog.aspx.cs">
+      <DependentUpon>webDialog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CargaArchivos\webDialog.aspx.designer.cs">
+      <DependentUpon>webDialog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\getLog.aspx.cs">
+      <DependentUpon>getLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\getLog.aspx.designer.cs">
+      <DependentUpon>getLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\RelacionCP.aspx.cs">
+      <DependentUpon>RelacionCP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\RelacionCP.aspx.designer.cs">
+      <DependentUpon>RelacionCP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\webDialog.aspx.cs">
+      <DependentUpon>webDialog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\webDialog.aspx.designer.cs">
+      <DependentUpon>webDialog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionLP.cs" />
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="directLogin.aspx.cs">
+      <DependentUpon>directLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="directLogin.aspx.designer.cs">
+      <DependentUpon>directLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaEspera.aspx.cs">
+      <DependentUpon>PaginaEspera.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaEspera.aspx.designer.cs">
+      <DependentUpon>PaginaEspera.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PedidoSugeridoLamosa.Master.cs">
+      <DependentUpon>PedidoSugeridoLamosa.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PedidoSugeridoLamosa.Master.designer.cs">
+      <DependentUpon>PedidoSugeridoLamosa.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ArtSinPedido.aspx.cs">
+      <DependentUpon>ArtSinPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\ArtSinPedido.aspx.designer.cs">
+      <DependentUpon>ArtSinPedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\MonitorSimulacion.aspx.cs">
+      <DependentUpon>MonitorSimulacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\MonitorSimulacion.aspx.designer.cs">
+      <DependentUpon>MonitorSimulacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Usuario.aspx.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\Usuario.aspx.designer.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\vClientes.aspx.cs">
+      <DependentUpon>vClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\vClientes.aspx.designer.cs">
+      <DependentUpon>vClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\vSeleccionCliente.aspx.cs">
+      <DependentUpon>vSeleccionCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\vSeleccionCliente.aspx.designer.cs">
+      <DependentUpon>vSeleccionCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\vSeleccionEntrega.aspx.cs">
+      <DependentUpon>vSeleccionEntrega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\vSeleccionEntrega.aspx.designer.cs">
+      <DependentUpon>vSeleccionEntrega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\webDialog.aspx.cs">
+      <DependentUpon>webDialog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\webDialog.aspx.designer.cs">
+      <DependentUpon>webDialog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityConstants.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service References\com.lamosa.sap.services.backorder\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\com.lamosa.sap.services.history\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\com.lamosa.sap.services.itemmasterupdate\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\com.lamosa.sap.services.itemmaster\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\com.lamosa.sap.services.simulationAct\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\com.lamosa.sap.services.simulation\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Servicio\voucherServicio.aspx.cs">
+      <DependentUpon>voucherServicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Servicio\voucherServicio.aspx.designer.cs">
+      <DependentUpon>voucherServicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Simulacion\ArtDesc.aspx.cs">
+      <DependentUpon>ArtDesc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Simulacion\ArtDesc.aspx.designer.cs">
+      <DependentUpon>ArtDesc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Simulacion\ConsultaHistorico.ascx.cs">
+      <DependentUpon>ConsultaHistorico.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Simulacion\ConsultaHistorico.ascx.designer.cs">
+      <DependentUpon>ConsultaHistorico.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Simulacion\dsPedidoSugeridoReport.cs">
+      <DependentUpon>dsPedidoSugeridoReport.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Simulacion\dsPedidoSugeridoReport.Designer.cs">
+      <DependentUpon>dsPedidoSugeridoReport.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Simulacion\PedidosSugeridosComentarios.aspx.cs">
+      <DependentUpon>PedidosSugeridosComentarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Simulacion\PedidosSugeridosComentarios.aspx.designer.cs">
+      <DependentUpon>PedidosSugeridosComentarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Simulacion\PedidoSugerido.cs">
+      <DependentUpon>PedidoSugerido.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Simulacion\PedidoSugerido2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PedidoSugerido2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Simulacion\PedidoSugerido3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PedidoSugerido3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Simulacion\PopUp.aspx.cs">
+      <DependentUpon>PopUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Simulacion\PopUp.aspx.designer.cs">
+      <DependentUpon>PopUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Simulacion\VentasPedidos.aspx.cs">
+      <DependentUpon>VentasPedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Simulacion\VentasPedidos.aspx.designer.cs">
+      <DependentUpon>VentasPedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Simulacion\webDialog.aspx.cs">
+      <DependentUpon>webDialog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Simulacion\webDialog.aspx.designer.cs">
+      <DependentUpon>webDialog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sucursales.aspx.cs">
+      <DependentUpon>Sucursales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sucursales.aspx.designer.cs">
+      <DependentUpon>Sucursales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioInf.cs" />
+    <Compile Include="Usuario\AltaUsr.aspx.cs">
+      <DependentUpon>AltaUsr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\AltaUsr.aspx.designer.cs">
+      <DependentUpon>AltaUsr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\UsuarioEntrega.aspx.cs">
+      <DependentUpon>UsuarioEntrega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\UsuarioEntrega.aspx.designer.cs">
+      <DependentUpon>UsuarioEntrega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\vClientes.aspx.cs">
+      <DependentUpon>vClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\vClientes.aspx.designer.cs">
+      <DependentUpon>vClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\vSeleccionCliente.aspx.cs">
+      <DependentUpon>vSeleccionCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\vSeleccionCliente.aspx.designer.cs">
+      <DependentUpon>vSeleccionCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\WebService.asmx.cs">
+      <DependentUpon>WebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Simulacion\PedidoSugerido.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PedidoSugerido.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Simulacion\PedidoSugerido2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PedidoSugerido2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Simulacion\PedidoSugerido3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PedidoSugerido3.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="calendar\ArchivoTemplate\Archivo_atributos.xls" />
+    <None Include="calendar\ArchivoTemplate\Archivo_atributosAZULEJOS Y COMPLEMENTOS  S.A.20110919213415.xls" />
+    <None Include="calendar\ArchivoTemplate\Inv_Existente.xls" />
+    <None Include="calendar\ArchivoTemplate\Inv_ExistenteAZULEJOS Y COMPLEMENTOS  S.A.20110919213444.xls" />
+    <None Include="calendar\ArchivoTemplate\Inv_ExistenteAZULEJOS Y COMPLEMENTOS  S.A.20110919213502.xls" />
+    <None Include="calendar\ArchivoTemplate\relacionAP.xls" />
+    <None Include="ig_res2\Default\images\Thumbs.db" />
+    <None Include="ig_res2\RedPlanet\images\Thumbs.db" />
+    <None Include="ig_res\RedPlanet\images\Thumbs.db" />
+    <None Include="Imagenes\Simulacion\Thumbs.db" />
+    <None Include="Imagenes\Thumbs.db" />
+    <None Include="ManualUsr\MANUAL DE USUARIO LAMOSA.docx" />
+    <None Include="ManualUsr\ManualDeUsuario.pdf" />
+    <None Include="ManualUsr\Manual_de_Usuario-Portal_Pedido_Sugerido.pdf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\com.lamosa.sap.services.backorder\PedidoSugeridoLamosa.com.lamosa.sap.services.backorder.DT_BackOrder_response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\com.lamosa.sap.services.backorder\SI_BackOrder_Outbound.wsdl" />
+    <None Include="Service References\com.lamosa.sap.services.history\PedidoSugeridoLamosa.com.lamosa.sap.services.history.DT_History_respose.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\com.lamosa.sap.services.history\SI_History_Outbound.wsdl" />
+    <None Include="Service References\com.lamosa.sap.services.itemmasterupdate\PedidoSugeridoLamosa.com.lamosa.sap.services.itemmasterupdate.DT_ItemMasterUpdate_response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\com.lamosa.sap.services.itemmasterupdate\SI_ItemMasterUpdate_Outbound1.wsdl" />
+    <None Include="Service References\com.lamosa.sap.services.itemmaster\PedidoSugeridoLamosa.com.lamosa.sap.services.itemmaster.DT_ItemMaster_response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\com.lamosa.sap.services.itemmaster\SI_ItemMaster_Outbound.wsdl" />
+    <None Include="Service References\com.lamosa.sap.services.simulationAct\PedidoSugeridoLamosa.com.lamosa.sap.services.simulationAct.DT_Simulation_response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\com.lamosa.sap.services.simulationAct\SI_Simulation_Outbound.wsdl" />
+    <None Include="Service References\com.lamosa.sap.services.simulation\PedidoSugeridoLamosa.com.lamosa.sap.services.simulation.DT_Simulation_response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\com.lamosa.sap.services.simulation\SI_Simulation_Outbound.wsdl" />
+    <None Include="Simulacion\archivos\PedidoSugeridoLayout.xlsx" />
+    <None Include="Simulacion\dsPedidoSugeridoReport.xsc">
+      <DependentUpon>dsPedidoSugeridoReport.xsd</DependentUpon>
+    </None>
+    <None Include="Simulacion\dsPedidoSugeridoReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPedidoSugeridoReport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Simulacion\dsPedidoSugeridoReport.xss">
+      <DependentUpon>dsPedidoSugeridoReport.xsd</DependentUpon>
+    </None>
+    <Content Include="calendar\calendar-blue.css" />
+    <Content Include="calendar\calendar-setup.js" />
+    <Content Include="calendar\calendar-sp.js" />
+    <Content Include="calendar\calendar.js" />
+    <Content Include="calendar\date.js" />
+    <Content Include="CargaArchivos\CargaAtributos.aspx" />
+    <Content Include="CargaArchivos\CargaDatos.aspx" />
+    <Content Include="CargaArchivos\closemessage.htm" />
+    <Content Include="CargaArchivos\getLogAtributos.aspx" />
+    <Content Include="CargaArchivos\getLogDatos.aspx" />
+    <Content Include="CargaArchivos\webDialog.aspx" />
+    <Content Include="Catalogos\CallWebServiceMethodsCat.js" />
+    <Content Include="Catalogos\closemessage.htm" />
+    <Content Include="Catalogos\getLog.aspx" />
+    <Content Include="Catalogos\RelacionCP.aspx" />
+    <Content Include="Catalogos\webDialog.aspx" />
+    <Content Include="directLogin.aspx" />
+    <Content Include="ig_res2\IG\ig_captcha.css" />
+    <Content Include="ig_res2\IG\ig_dataGrid.css" />
+    <Content Include="ig_res2\IG\ig_datamenu.css" />
+    <Content Include="ig_res2\IG\ig_datatree.css" />
+    <Content Include="ig_res2\IG\ig_dayview.css" />
+    <Content Include="ig_res2\IG\ig_dialogwindow.css" />
+    <Content Include="ig_res2\IG\ig_dropDown.css" />
+    <Content Include="ig_res2\IG\ig_explorerbar.css" />
+    <Content Include="ig_res2\IG\ig_hierarchicalDataGrid.css" />
+    <Content Include="ig_res2\IG\ig_imageViewer.css" />
+    <Content Include="ig_res2\IG\ig_monthcalendar.css" />
+    <Content Include="ig_res2\IG\ig_monthview.css" />
+    <Content Include="ig_res2\IG\ig_progressbar.css" />
+    <Content Include="ig_res2\IG\ig_rating.css" />
+    <Content Include="ig_res2\IG\ig_shared.css" />
+    <Content Include="ig_res2\IG\ig_slider.css" />
+    <Content Include="ig_res2\IG\ig_spellCheckerDialog.css" />
+    <Content Include="ig_res2\IG\ig_splitter.css" />
+    <Content Include="ig_res2\IG\ig_texteditor.css" />
+    <Content Include="ig_res2\IG\ig_webschedule.css" />
+    <Content Include="ig_res2\IG\ig_webtab.css" />
+    <Content Include="ig_res2\IG\ig_weekview.css" />
+    <Content Include="ig_res2\IG\images\addnewrow_image.gif" />
+    <Content Include="ig_res2\IG\images\caption_bg.jpg" />
+    <Content Include="ig_res2\IG\images\igc_AudioButton.gif" />
+    <Content Include="ig_res2\IG\images\igc_DefautImage.gif" />
+    <Content Include="ig_res2\IG\images\igc_RefreshButton.gif" />
+    <Content Include="ig_res2\IG\images\igc_Sprite.png" />
+    <Content Include="ig_res2\IG\images\igc_submitButtonBg.png" />
+    <Content Include="ig_res2\IG\images\igdd_DropDownButton.png" />
+    <Content Include="ig_res2\IG\images\igdd_DropDownButtonDisabled.png" />
+    <Content Include="ig_res2\IG\images\igdd_DropDownButtonHover.png" />
+    <Content Include="ig_res2\IG\images\igdd_DropDownButtonPressed.png" />
+    <Content Include="ig_res2\IG\images\igdd_Sprite.png" />
+    <Content Include="ig_res2\IG\images\igdm_ControlBackground.png" />
+    <Content Include="ig_res2\IG\images\igdm_ItemHover.png" />
+    <Content Include="ig_res2\IG\images\igdm_ItemHoverParent.png" />
+    <Content Include="ig_res2\IG\images\igdm_RootHover.png" />
+    <Content Include="ig_res2\IG\images\igdt_bgDT_over.gif" />
+    <Content Include="ig_res2\IG\images\igdt_bgDT_selected.gif" />
+    <Content Include="ig_res2\IG\images\igdt_Blank.gif" />
+    <Content Include="ig_res2\IG\images\igdt_dragMarkupBg.gif" />
+    <Content Include="ig_res2\IG\images\igdt_DropIndicatorBg.jpg" />
+    <Content Include="ig_res2\IG\images\igdt_Empty.gif" />
+    <Content Include="ig_res2\IG\images\igdt_First.gif" />
+    <Content Include="ig_res2\IG\images\igdt_FirstMinus.gif" />
+    <Content Include="ig_res2\IG\images\igdt_FirstPlus.gif" />
+    <Content Include="ig_res2\IG\images\igdt_folder.gif" />
+    <Content Include="ig_res2\IG\images\igdt_folder_open.gif" />
+    <Content Include="ig_res2\IG\images\igdt_Last.gif" />
+    <Content Include="ig_res2\IG\images\igdt_LastMinus.gif" />
+    <Content Include="ig_res2\IG\images\igdt_LastPlus.gif" />
+    <Content Include="ig_res2\IG\images\igdt_Leaf.gif" />
+    <Content Include="ig_res2\IG\images\igdt_Line.gif" />
+    <Content Include="ig_res2\IG\images\igdt_Middle.gif" />
+    <Content Include="ig_res2\IG\images\igdt_MiddleMinus.gif" />
+    <Content Include="ig_res2\IG\images\igdt_MiddlePlus.gif" />
+    <Content Include="ig_res2\IG\images\igdt_Minus.gif" />
+    <Content Include="ig_res2\IG\images\igdt_Plus.gif" />
+    <Content Include="ig_res2\IG\images\igdt_Single.gif" />
+    <Content Include="ig_res2\IG\images\igdt_SingleMinus.gif" />
+    <Content Include="ig_res2\IG\images\igdt_SinglePlus.gif" />
+    <Content Include="ig_res2\IG\images\igdt_Sprite.png" />
+    <Content Include="ig_res2\IG\images\igdv_CaptionHeaderBg.gif" />
+    <Content Include="ig_res2\IG\images\igdw_BodyContentArea.gif" />
+    <Content Include="ig_res2\IG\images\igdw_BodyCornerBottomLeft.gif" />
+    <Content Include="ig_res2\IG\images\igdw_BodyCornerBottomRight.gif" />
+    <Content Include="ig_res2\IG\images\igdw_BodyCornerTopLeft.gif" />
+    <Content Include="ig_res2\IG\images\igdw_BodyCornerTopRight.gif" />
+    <Content Include="ig_res2\IG\images\igdw_BodyEdgeBottom.gif" />
+    <Content Include="ig_res2\IG\images\igdw_BodyEdgeTop.gif" />
+    <Content Include="ig_res2\IG\images\igdw_Close.gif" />
+    <Content Include="ig_res2\IG\images\igdw_CloseHover.gif" />
+    <Content Include="ig_res2\IG\images\igdw_CloseMouseDown.gif" />
+    <Content Include="ig_res2\IG\images\igdw_EdgeLeft.gif" />
+    <Content Include="ig_res2\IG\images\igdw_EdgeRight.gif" />
+    <Content Include="ig_res2\IG\images\igdw_HeaderContent.gif" />
+    <Content Include="ig_res2\IG\images\igdw_HeaderCornerLeft.gif" />
+    <Content Include="ig_res2\IG\images\igdw_HeaderCornerRight.gif" />
+    <Content Include="ig_res2\IG\images\igdw_Maximize.gif" />
+    <Content Include="ig_res2\IG\images\igdw_MaximizeHover.gif" />
+    <Content Include="ig_res2\IG\images\igdw_MaximizeMouseDown.gif" />
+    <Content Include="ig_res2\IG\images\igdw_Minimize.gif" />
+    <Content Include="ig_res2\IG\images\igdw_MinimizeHover.gif" />
+    <Content Include="ig_res2\IG\images\igdw_MinimizeMouseDown.gif" />
+    <Content Include="ig_res2\IG\images\igdw_Pin.gif" />
+    <Content Include="ig_res2\IG\images\igdw_PinHover.gif" />
+    <Content Include="ig_res2\IG\images\igdw_PinMouseDown.gif" />
+    <Content Include="ig_res2\IG\images\igdw_ResizingHandle.gif" />
+    <Content Include="ig_res2\IG\images\igdw_Restore.gif" />
+    <Content Include="ig_res2\IG\images\igdw_RestoreHover.gif" />
+    <Content Include="ig_res2\IG\images\igdw_RestoreMouseDown.gif" />
+    <Content Include="ig_res2\IG\images\igdw_Unpin.gif" />
+    <Content Include="ig_res2\IG\images\igdw_UnpinHover.gif" />
+    <Content Include="ig_res2\IG\images\igdw_UnpinMouseDown.gif" />
+    <Content Include="ig_res2\IG\images\igeb_Bullet.png" />
+    <Content Include="ig_res2\IG\images\igeb_ExpanderExpanded.png" />
+    <Content Include="ig_res2\IG\images\igeb_ExpanderExpandedHover.png" />
+    <Content Include="ig_res2\IG\images\igeb_ExpanderNormal.png" />
+    <Content Include="ig_res2\IG\images\igeb_ExpanderNormalHover.png" />
+    <Content Include="ig_res2\IG\images\igeb_Sprite.png" />
+    <Content Include="ig_res2\IG\images\igg_BottomDragIndicator.png" />
+    <Content Include="ig_res2\IG\images\igg_Filter.gif" />
+    <Content Include="ig_res2\IG\images\igg_FilterApplied.gif" />
+    <Content Include="ig_res2\IG\images\igg_Fix.gif" />
+    <Content Include="ig_res2\IG\images\igg_FixHover.gif" />
+    <Content Include="ig_res2\IG\images\igg_FixPressed.gif" />
+    <Content Include="ig_res2\IG\images\igg_SelectedCellBg.png" />
+    <Content Include="ig_res2\IG\images\igg_sortAsc.gif" />
+    <Content Include="ig_res2\IG\images\igg_sortDesc.gif" />
+    <Content Include="ig_res2\IG\images\igg_Sprite.png" />
+    <Content Include="ig_res2\IG\images\igg_Sum.gif" />
+    <Content Include="ig_res2\IG\images\igg_SumHover.gif" />
+    <Content Include="ig_res2\IG\images\igg_SumPressed.gif" />
+    <Content Include="ig_res2\IG\images\igg_TopDragIndicator.png" />
+    <Content Include="ig_res2\IG\images\igg_Unfix.gif" />
+    <Content Include="ig_res2\IG\images\igg_UnfixHover.gif" />
+    <Content Include="ig_res2\IG\images\igg_UnfixPressed.gif" />
+    <Content Include="ig_res2\IG\images\ighg_BottomDragIndicator.gif" />
+    <Content Include="ig_res2\IG\images\ighg_Collapse.gif" />
+    <Content Include="ig_res2\IG\images\ighg_CollapseHover.gif" />
+    <Content Include="ig_res2\IG\images\ighg_CollapsePressed.gif" />
+    <Content Include="ig_res2\IG\images\ighg_Expand.gif" />
+    <Content Include="ig_res2\IG\images\ighg_ExpandHover.gif" />
+    <Content Include="ig_res2\IG\images\ighg_ExpandPressed.gif" />
+    <Content Include="ig_res2\IG\images\ighg_GroupAreaBg.png" />
+    <Content Include="ig_res2\IG\images\ighg_GroupedBandBg.png" />
+    <Content Include="ig_res2\IG\images\ighg_GroupedColumnBg.png" />
+    <Content Include="ig_res2\IG\images\ighg_GroupedColumnLeftEdgeBg.gif" />
+    <Content Include="ig_res2\IG\images\ighg_GroupedColumnRightEdgeBg.png" />
+    <Content Include="ig_res2\IG\images\ighg_GroupedColumnRightEdgeEndBg.gif" />
+    <Content Include="ig_res2\IG\images\ighg_GroupedRowBg.png" />
+    <Content Include="ig_res2\IG\images\ighg_MiddleDragIndicator.gif" />
+    <Content Include="ig_res2\IG\images\ighg_Remove.gif" />
+    <Content Include="ig_res2\IG\images\ighg_RemoveHover.gif" />
+    <Content Include="ig_res2\IG\images\ighg_RemovePressed.gif" />
+    <Content Include="ig_res2\IG\images\ighg_TopDragIndicator.gif" />
+    <Content Include="ig_res2\IG\images\igiv_CornerBottomLeft.gif" />
+    <Content Include="ig_res2\IG\images\igiv_CornerBottomLeft_Vert.gif" />
+    <Content Include="ig_res2\IG\images\igiv_CornerBottomRight.gif" />
+    <Content Include="ig_res2\IG\images\igiv_CornerBottomRight_Vert.gif" />
+    <Content Include="ig_res2\IG\images\igiv_CornerTopLeft.gif" />
+    <Content Include="ig_res2\IG\images\igiv_CornerTopLeft.png" />
+    <Content Include="ig_res2\IG\images\igiv_CornerTopLeft_Vert.gif" />
+    <Content Include="ig_res2\IG\images\igiv_CornerTopRight.gif" />
+    <Content Include="ig_res2\IG\images\igiv_CornerTopRight.png" />
+    <Content Include="ig_res2\IG\images\igiv_CornerTopRight_Vert.gif" />
+    <Content Include="ig_res2\IG\images\igiv_EdgeBottom.gif" />
+    <Content Include="ig_res2\IG\images\igiv_EdgeBottom_Vert.gif" />
+    <Content Include="ig_res2\IG\images\igiv_EdgeLeft.gif" />
+    <Content Include="ig_res2\IG\images\igiv_EdgeLeft_Vert.gif" />
+    <Content Include="ig_res2\IG\images\igiv_EdgeRight.gif" />
+    <Content Include="ig_res2\IG\images\igiv_EdgeRight_Vert.gif" />
+    <Content Include="ig_res2\IG\images\igiv_EdgeTop.gif" />
+    <Content Include="ig_res2\IG\images\igiv_EdgeTop.png" />
+    <Content Include="ig_res2\IG\images\igiv_EdgeTop_Vert.gif" />
+    <Content Include="ig_res2\IG\images\igiv_H_NextButton.png" />
+    <Content Include="ig_res2\IG\images\igiv_H_NextButtonDisabled.png" />
+    <Content Include="ig_res2\IG\images\igiv_H_NextButtonHover.png" />
+    <Content Include="ig_res2\IG\images\igiv_H_NextButtonPressed.png" />
+    <Content Include="ig_res2\IG\images\igiv_H_PrevButton.png" />
+    <Content Include="ig_res2\IG\images\igiv_H_PrevButtonDisabled.png" />
+    <Content Include="ig_res2\IG\images\igiv_H_PrevButtonHover.png" />
+    <Content Include="ig_res2\IG\images\igiv_H_PrevButtonPressed.png" />
+    <Content Include="ig_res2\IG\images\igiv_V_NextButton.png" />
+    <Content Include="ig_res2\IG\images\igiv_V_NextButtonDisabled.png" />
+    <Content Include="ig_res2\IG\images\igiv_V_NextButtonHover.png" />
+    <Content Include="ig_res2\IG\images\igiv_V_NextButtonPressed.png" />
+    <Content Include="ig_res2\IG\images\igiv_V_PrevButton.png" />
+    <Content Include="ig_res2\IG\images\igiv_V_PrevButtonDisabled.png" />
+    <Content Include="ig_res2\IG\images\igiv_V_PrevButtonHover.png" />
+    <Content Include="ig_res2\IG\images\igiv_V_PrevButtonPressed.png" />
+    <Content Include="ig_res2\IG\images\igmc_dayselected.gif" />
+    <Content Include="ig_res2\IG\images\igmc_footerSprite.png" />
+    <Content Include="ig_res2\IG\images\igmc_next.gif" />
+    <Content Include="ig_res2\IG\images\igmc_nextHover.gif" />
+    <Content Include="ig_res2\IG\images\igmc_nextPress.gif" />
+    <Content Include="ig_res2\IG\images\igmc_prev.gif" />
+    <Content Include="ig_res2\IG\images\igmc_prevHover.gif" />
+    <Content Include="ig_res2\IG\images\igmc_prevPress.gif" />
+    <Content Include="ig_res2\IG\images\igmc_sprite.png" />
+    <Content Include="ig_res2\IG\images\igmc_weekbg.gif" />
+    <Content Include="ig_res2\IG\images\igpb_horizontalBg.png" />
+    <Content Include="ig_res2\IG\images\igpb_horizontalFill.gif" />
+    <Content Include="ig_res2\IG\images\igpb_horizontalSprite.png" />
+    <Content Include="ig_res2\IG\images\igpb_verticalBg.png" />
+    <Content Include="ig_res2\IG\images\igpb_VerticalFill.gif" />
+    <Content Include="ig_res2\IG\images\igpb_verticalSprite.png" />
+    <Content Include="ig_res2\IG\images\igpnl_dwn.gif" />
+    <Content Include="ig_res2\IG\images\igpnl_up.gif" />
+    <Content Include="ig_res2\IG\images\igr_RatingSprite.png" />
+    <Content Include="ig_res2\IG\images\igsli_MinusDisableH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_MinusDisableV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_MinusFocusH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_MinusFocusV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_MinusH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_MinusHoverH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_MinusHoverV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_MinusPressH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_MinusPressV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_MinusV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_PlusDisableH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_PlusDisableV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_PlusFocusH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_PlusFocusV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_PlusH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_PlusHoverH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_PlusHoverV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_PlusPressH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_PlusPressV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_PlusV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_ThumbDisableH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_ThumbDisableV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_ThumbFocusH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_ThumbFocusV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_ThumbH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_ThumbHoverH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_ThumbHoverV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_ThumbPressH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_ThumbPressV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_ThumbV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_TrackEdges.gif" />
+    <Content Include="ig_res2\IG\images\igsli_TrackEdgesH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_TrackEdgesV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_TrackFill.gif" />
+    <Content Include="ig_res2\IG\images\igsli_TrackFillV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_TrackValueEdgesH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_TrackValueEdgesV.gif" />
+    <Content Include="ig_res2\IG\images\igsli_TrackValueFill2H.gif" />
+    <Content Include="ig_res2\IG\images\igsli_TrackValueFill2V.gif" />
+    <Content Include="ig_res2\IG\images\igsli_TrackValueFillH.gif" />
+    <Content Include="ig_res2\IG\images\igsli_TrackValueFillV.gif" />
+    <Content Include="ig_res2\IG\images\igspl_CollapseDown.gif" />
+    <Content Include="ig_res2\IG\images\igspl_CollapseDownHover.gif" />
+    <Content Include="ig_res2\IG\images\igspl_CollapseLeft.gif" />
+    <Content Include="ig_res2\IG\images\igspl_CollapseLeftHover.gif" />
+    <Content Include="ig_res2\IG\images\igspl_CollapseRight.gif" />
+    <Content Include="ig_res2\IG\images\igspl_CollapseRightHover.gif" />
+    <Content Include="ig_res2\IG\images\igspl_CollapseUp.gif" />
+    <Content Include="ig_res2\IG\images\igspl_CollapseUpHover.gif" />
+    <Content Include="ig_res2\IG\images\igspl_ExpandDown.gif" />
+    <Content Include="ig_res2\IG\images\igspl_ExpandDownHover.gif" />
+    <Content Include="ig_res2\IG\images\igspl_ExpandLeft.gif" />
+    <Content Include="ig_res2\IG\images\igspl_ExpandLeftHover.gif" />
+    <Content Include="ig_res2\IG\images\igspl_ExpandRight.gif" />
+    <Content Include="ig_res2\IG\images\igspl_ExpandRightHover.gif" />
+    <Content Include="ig_res2\IG\images\igspl_ExpandUp.gif" />
+    <Content Include="ig_res2\IG\images\igspl_ExpandUpHover.gif" />
+    <Content Include="ig_res2\IG\images\igspl_splitHoriz.gif" />
+    <Content Include="ig_res2\IG\images\igspl_splitHorizHover.gif" />
+    <Content Include="ig_res2\IG\images\igspl_splitHorizPressed.gif" />
+    <Content Include="ig_res2\IG\images\igspl_splitVert.gif" />
+    <Content Include="ig_res2\IG\images\igspl_splitVertHover.gif" />
+    <Content Include="ig_res2\IG\images\igspl_splitVertPressed.gif" />
+    <Content Include="ig_res2\IG\images\igtab_add.gif" />
+    <Content Include="ig_res2\IG\images\igtab_addHov.gif" />
+    <Content Include="ig_res2\IG\images\igtab_BHContentBackground.png" />
+    <Content Include="ig_res2\IG\images\igtab_BHSprite.png" />
+    <Content Include="ig_res2\IG\images\igtab_BRoundCorners.png" />
+    <Content Include="ig_res2\IG\images\igtab_BRoundFill.gif" />
+    <Content Include="ig_res2\IG\images\igtab_BRoundLeftRight.gif" />
+    <Content Include="ig_res2\IG\images\igtab_BRoundLeftRight.png" />
+    <Content Include="ig_res2\IG\images\igtab_BRoundTopBot.gif" />
+    <Content Include="ig_res2\IG\images\igtab_BRoundTopBot.png" />
+    <Content Include="ig_res2\IG\images\igtab_BVSprite.png" />
+    <Content Include="ig_res2\IG\images\igtab_close.gif" />
+    <Content Include="ig_res2\IG\images\igtab_closeHov.gif" />
+    <Content Include="ig_res2\IG\images\igtab_HolderBorder.gif" />
+    <Content Include="ig_res2\IG\images\igtab_HolderBorder.png" />
+    <Content Include="ig_res2\IG\images\igtab_LHSprite.png" />
+    <Content Include="ig_res2\IG\images\igtab_LVContentBackground.png" />
+    <Content Include="ig_res2\IG\images\igtab_LVSprite.png" />
+    <Content Include="ig_res2\IG\images\igtab_RHSprite.png" />
+    <Content Include="ig_res2\IG\images\igtab_RVContentBackground.png" />
+    <Content Include="ig_res2\IG\images\igtab_RVSprite.png" />
+    <Content Include="ig_res2\IG\images\igtab_scrollDown.gif" />
+    <Content Include="ig_res2\IG\images\igtab_scrollDownDis.gif" />
+    <Content Include="ig_res2\IG\images\igtab_scrollDownHov.gif" />
+    <Content Include="ig_res2\IG\images\igtab_scrollDownPres.gif" />
+    <Content Include="ig_res2\IG\images\igtab_scrollLeft.gif" />
+    <Content Include="ig_res2\IG\images\igtab_scrollLeftDis.gif" />
+    <Content Include="ig_res2\IG\images\igtab_scrollLeftHov.gif" />
+    <Content Include="ig_res2\IG\images\igtab_scrollLeftPres.gif" />
+    <Content Include="ig_res2\IG\images\igtab_scrollRight.gif" />
+    <Content Include="ig_res2\IG\images\igtab_scrollRightDis.gif" />
+    <Content Include="ig_res2\IG\images\igtab_scrollRightHov.gif" />
+    <Content Include="ig_res2\IG\images\igtab_scrollRightPres.gif" />
+    <Content Include="ig_res2\IG\images\igtab_scrollUp.gif" />
+    <Content Include="ig_res2\IG\images\igtab_scrollUpDis.gif" />
+    <Content Include="ig_res2\IG\images\igtab_scrollUpHov.gif" />
+    <Content Include="ig_res2\IG\images\igtab_scrollUpPres.gif" />
+    <Content Include="ig_res2\IG\images\igtab_THBorder.gif" />
+    <Content Include="ig_res2\IG\images\igtab_THContentBackground.png" />
+    <Content Include="ig_res2\IG\images\igtab_THSprite.png" />
+    <Content Include="ig_res2\IG\images\igtab_TRoundCorners.png" />
+    <Content Include="ig_res2\IG\images\igtab_TRoundFill.gif" />
+    <Content Include="ig_res2\IG\images\igtab_TRoundLeftRight.gif" />
+    <Content Include="ig_res2\IG\images\igtab_TRoundLeftRight.png" />
+    <Content Include="ig_res2\IG\images\igtab_TRoundTopBot.gif" />
+    <Content Include="ig_res2\IG\images\igtab_TRoundTopBot.png" />
+    <Content Include="ig_res2\IG\images\igtab_TVBorder.gif" />
+    <Content Include="ig_res2\IG\images\igtab_TVSprite.png" />
+    <Content Include="ig_res2\IG\images\igte_custom.gif" />
+    <Content Include="ig_res2\IG\images\igte_customDisable.gif" />
+    <Content Include="ig_res2\IG\images\igte_customHover.gif" />
+    <Content Include="ig_res2\IG\images\igte_customPress.gif" />
+    <Content Include="ig_res2\IG\images\igte_lower.gif" />
+    <Content Include="ig_res2\IG\images\igte_lowerDisable.gif" />
+    <Content Include="ig_res2\IG\images\igte_lowerHover.gif" />
+    <Content Include="ig_res2\IG\images\igte_lowerPress.gif" />
+    <Content Include="ig_res2\IG\images\igte_Sprite.png" />
+    <Content Include="ig_res2\IG\images\igte_upper.gif" />
+    <Content Include="ig_res2\IG\images\igte_upperDisable.gif" />
+    <Content Include="ig_res2\IG\images\igte_upperHover.gif" />
+    <Content Include="ig_res2\IG\images\igte_upperPress.gif" />
+    <Content Include="ig_res2\IG\images\igwdm_Sprite.png" />
+    <Content Include="ig_res2\IG\images\igwdm_SubMenuIndicator.gif" />
+    <Content Include="ig_res2\IG\images\igwdm_SubMenuIndicatorHover.gif" />
+    <Content Include="ig_res2\IG\images\igwdm_VerticalBackground.png" />
+    <Content Include="ig_res2\IG\images\igws_active_day.gif" />
+    <Content Include="ig_res2\IG\images\igws_alldayeventbg.gif" />
+    <Content Include="ig_res2\IG\images\igws_alldayeventbg1.gif" />
+    <Content Include="ig_res2\IG\images\igws_arrowLeft.gif" />
+    <Content Include="ig_res2\IG\images\igws_arrowRight.gif" />
+    <Content Include="ig_res2\IG\images\igws_dayheader.jpg" />
+    <Content Include="ig_res2\IG\images\igws_dayheaderbg.gif" />
+    <Content Include="ig_res2\IG\images\igws_groupbyheader.gif" />
+    <Content Include="ig_res2\IG\images\igws_header.gif" />
+    <Content Include="ig_res2\IG\images\igws_OtherMonthDayHeader.gif" />
+    <Content Include="ig_res2\IG\images\igws_r10bg.png" />
+    <Content Include="ig_res2\IG\images\igws_r1bg.png" />
+    <Content Include="ig_res2\IG\images\igws_r2bg.png" />
+    <Content Include="ig_res2\IG\images\igws_r3bg.png" />
+    <Content Include="ig_res2\IG\images\igws_r4bg.png" />
+    <Content Include="ig_res2\IG\images\igws_r5bg.png" />
+    <Content Include="ig_res2\IG\images\igws_r6bg.png" />
+    <Content Include="ig_res2\IG\images\igws_r7bg.png" />
+    <Content Include="ig_res2\IG\images\igws_r8bg.png" />
+    <Content Include="ig_res2\IG\images\igws_r9bg.png" />
+    <Content Include="ig_res2\IG\images\igws_resourcebtnfocus.gif" />
+    <Content Include="ig_res2\IG\images\igws_resourcebtnhover.gif" />
+    <Content Include="ig_res2\IG\images\igws_todayheaderbg.gif" />
+    <Content Include="ig_res2\IG\images\igws_WeekNumber.gif" />
+    <Content Include="ig_res2\IG\images\ig_ajaxIndicator.gif" />
+    <Content Include="ig_res2\IG\images\ig_checkbox_off.gif" />
+    <Content Include="ig_res2\IG\images\ig_checkbox_on.gif" />
+    <Content Include="ig_res2\IG\images\ig_checkbox_partial.gif" />
+    <Content Include="ig_res2\IG\images\ig_sched_next.gif" />
+    <Content Include="ig_res2\IG\images\ig_sched_prev.gif" />
+    <Content Include="ig_res2\IG\images\ig_sched_recurrence.gif" />
+    <Content Include="ig_res2\IG\images\ig_sched_reminder.gif" />
+    <Content Include="ig_res2\IG\images\ig_sched_variance.gif" />
+    <Content Include="ig_res2\IG\images\selectedrowselector.gif" />
+    <Content Include="ig_res2\IG\images\spellchecker_back.jpg" />
+    <Content Include="ig_res2\IG\images\spellchecker_button.png" />
+    <Content Include="Imagenes\back.jpg" />
+    <Content Include="Imagenes\calendar.gif" />
+    <Content Include="PedidoSugeridoLamosa.Master" />
+    <Content Include="Reportes\ArtSinPedido.aspx" />
+    <Content Include="Reportes\MonitorSimulacion.aspx" />
+    <Content Include="Reportes\Usuario.aspx" />
+    <Content Include="Reportes\vClientes.aspx" />
+    <Content Include="Reportes\vSeleccionCliente.aspx" />
+    <Content Include="Reportes\vSeleccionEntrega.aspx" />
+    <Content Include="Reportes\webDialog.aspx" />
+    <None Include="Service References\com.lamosa.sap.services.itemmaster\configuration91.svcinfo" />
+    <None Include="Service References\com.lamosa.sap.services.itemmaster\configuration.svcinfo" />
+    <None Include="Service References\com.lamosa.sap.services.itemmaster\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\com.lamosa.sap.services.backorder\configuration91.svcinfo" />
+    <None Include="Service References\com.lamosa.sap.services.backorder\configuration.svcinfo" />
+    <None Include="Service References\com.lamosa.sap.services.backorder\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\com.lamosa.sap.services.itemmasterupdate\configuration91.svcinfo" />
+    <None Include="Service References\com.lamosa.sap.services.itemmasterupdate\configuration.svcinfo" />
+    <None Include="Service References\com.lamosa.sap.services.itemmasterupdate\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\com.lamosa.sap.services.simulation\configuration91.svcinfo" />
+    <None Include="Service References\com.lamosa.sap.services.simulation\configuration.svcinfo" />
+    <None Include="Service References\com.lamosa.sap.services.simulation\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\com.lamosa.sap.services.simulationAct\configuration91.svcinfo" />
+    <None Include="Service References\com.lamosa.sap.services.simulationAct\configuration.svcinfo" />
+    <None Include="Service References\com.lamosa.sap.services.simulationAct\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\com.lamosa.sap.services.history\configuration91.svcinfo" />
+    <None Include="Service References\com.lamosa.sap.services.history\configuration.svcinfo" />
+    <None Include="Service References\com.lamosa.sap.services.history\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Servicio\voucherServicio.aspx" />
+    <Content Include="Simulacion\ArtDesc.aspx" />
+    <Content Include="Simulacion\ConsultaHistorico.ascx" />
+    <Content Include="Simulacion\PedidosSugeridosComentarios.aspx" />
+    <Content Include="Simulacion\PopUp.aspx" />
+    <Content Include="Simulacion\VentasPedidos.aspx" />
+    <Content Include="Simulacion\webDialog.aspx" />
+    <Content Include="Usuario\AltaUsr.aspx" />
+    <Content Include="Usuario\UsuarioEntrega.aspx" />
+    <Content Include="Usuario\vClientes.aspx" />
+    <Content Include="Usuario\vSeleccionCliente.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{7B5F2208-02B1-4382-BF62-6C369CED86C4}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <Private>True</Private>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\com.lamosa.sap.services.backorder\" />
+    <WCFMetadataStorage Include="Service References\com.lamosa.sap.services.history\" />
+    <WCFMetadataStorage Include="Service References\com.lamosa.sap.services.itemmasterupdate\" />
+    <WCFMetadataStorage Include="Service References\com.lamosa.sap.services.itemmaster\" />
+    <WCFMetadataStorage Include="Service References\com.lamosa.sap.services.simulationAct\" />
+    <WCFMetadataStorage Include="Service References\com.lamosa.sap.services.simulation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1104</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

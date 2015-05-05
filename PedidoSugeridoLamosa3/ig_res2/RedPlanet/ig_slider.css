@@ -1,0 +1,599 @@
+.igsli_RedPlanetControl  
+{
+	background-color:Transparent;
+	border-style:none;
+	overflow: hidden;
+}
+
+
+.igsli_RedPlanetTicksHolderT
+{
+	font-size:1px;
+	border-bottom:solid 0px #990033;
+	margin-bottom:2px;
+	position: relative;
+	width: 100%;
+	height: 5px;
+}
+
+
+.igsli_RedPlanetTicksHolderB
+{
+	font-size:1px;
+	border-top:solid 0px Blue;
+	margin-top:2px;
+	position: relative;
+	width: 100%;
+	height: 5px;
+}
+
+
+.igsli_RedPlanetTickMinorT
+{
+	font-size:1px;
+	border-left:solid 1px #999999;
+	margin-top:2px;
+	position: absolute;
+	height: 3px;
+}
+
+
+.igsli_RedPlanetTickMajorT
+{
+	font-size:1px;
+	border-left:solid 2px #990033;
+	position: absolute;
+	height: 5px;
+}
+
+
+.igsli_RedPlanetTickLastT
+{
+	margin-left:-1px;
+	width: 1px;
+}
+
+
+.igsli_RedPlanetTickMinorB
+{
+	font-size:1px;
+	border-left:solid 1px #999999;
+	position: absolute;
+	height: 3px;
+}
+
+
+.igsli_RedPlanetTickMajorB
+{
+	font-size:1px;
+	border-left:solid 2px #990033;
+	position: absolute;
+	height: 5px;
+}
+
+
+.igsli_RedPlanetTickLastB
+{
+	margin-left:-1px;
+	width: 1px;
+}
+
+
+.igsli_RedPlanetMarginH
+{
+	font-size:1px;
+	width: 10px;
+	height: 100%;
+}
+
+
+.igsli_RedPlanetLabelsHolderH
+{
+	font-size:10px;
+	font-family: verdana;
+	position: relative;
+	width: 100%;
+}
+
+
+/* it should be after margin */
+/* if labels are on edges, then position and margin are disabled by inline style */
+.igsli_RedPlanetLabelEdgeH
+{
+	font-size:10px;
+	font-family: verdana;
+	overflow: hidden;
+	width: 26px;
+	height: 14px;
+	white-space: nowrap;
+	color:#666666;
+	text-align:center;
+}
+
+
+.igsli_RedPlanetLabelT
+{
+	font-size:10px;
+	font-family: verdana;
+	margin-left:-23px;
+	position: absolute;
+	overflow: hidden;
+	width: 46px;
+	height: 14px;
+	white-space: nowrap;
+	color:#666666;
+	text-align:center;
+}
+
+
+.igsli_RedPlanetLabelB
+{
+	font-size:10px;
+	font-family: verdana;
+	margin-left:-23px;
+	position: absolute;
+	overflow: hidden;
+	width: 46px;
+	height: 14px;
+	white-space: nowrap;
+	color:#666666;
+	text-align:center;
+}
+
+
+.igsli_RedPlanetTrackH
+{
+	background-color:#D1D5D7;
+	font-size:1px;
+	border:solid 1px #999999;
+	margin-left:-1px;
+	position: relative;
+	width: 100%;
+	height: 5px;
+	filter: alpha(opacity : 80);
+	opacity: 0.8;
+	text-align:left;
+}
+
+
+.igsli_RedPlanetTrackValueH
+{
+	background-color:#EA004D;
+	position: absolute;
+	height: 5px;
+}
+
+
+.igsli_RedPlanetTrackValue2H
+{
+	background-color:#B20000;
+	position: absolute;
+	height: 5px;
+}
+
+
+.igsli_RedPlanetButton
+{
+	margin:2px;
+	cursor:pointer;
+}
+
+
+.igsli_RedPlanetThumbsHolderH
+{
+	font-size:1px;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+}
+
+
+.igsli_RedPlanetThumbH
+{
+	margin-top:-14px;
+	margin-left:-4px;
+	position: absolute;
+	z-index: 2;
+	cursor:hand;
+}
+
+
+.igsli_RedPlanetValueLabel
+{
+	font-size:10px;
+	font-family: verdana;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 46px;
+	color:Gray;
+	text-align:center;
+}
+
+
+.igsli_RedPlanetValueLabelFloatT
+{
+	background-color:White;
+	border:solid 1px #A9A9A9;
+	margin-top:-31px;
+	margin-left:-23px;
+	padding-right:1px;
+	padding-left:1px;
+	position: absolute;
+	filter: alpha(opacity : 0);
+	opacity: 0;
+	height: 13px;
+	overflow: visible;
+	width: auto;
+	min-width: 28px;
+	color:Gray;
+}
+
+
+.igsli_RedPlanetValueLabelFloatB
+{
+	background-color:White;
+	border:solid 1px #A9A9A9;
+	margin-top:10px;
+	margin-left:-23px;
+	padding-right:1px;
+	padding-left:1px;
+	position: absolute;
+	overflow: visible;
+	width: auto;
+	min-width: 28px;
+	filter: alpha(opacity : 0);
+	opacity: 0;
+	height: 13px;
+	color:Gray;
+}
+
+
+.igsli_RedPlanetTicksHolderL
+{
+	font-size:1px;
+	border-right:solid 0px Blue;
+	margin-right:2px;
+	position: relative;
+	height: 100%;
+	width: 5px;
+	text-align:left;
+}
+
+
+.igsli_RedPlanetTicksHolderR
+{
+	font-size:1px;
+	border-left:solid 0px Blue;
+	margin-left:2px;
+	position: relative;
+	height: 100%;
+	width: 5px;
+	text-align:left;
+}
+
+
+.igsli_RedPlanetTickMinorL
+{
+	font-size:1px;
+	border-top:solid 1px Black;
+	margin-left:2px;
+	position: absolute;
+	width: 3px;
+}
+
+
+.igsli_RedPlanetTickMajorL
+{
+	font-size:1px;
+	border-top:solid 1px Black;
+	position: absolute;
+	width: 5px;
+}
+
+
+.igsli_RedPlanetTickLastL
+{
+	margin-top:-1px;
+	height: 1px;
+}
+
+
+.igsli_RedPlanetTickMinorR
+{
+	font-size:1px;
+	border-top:solid 1px Black;
+	position: absolute;
+	width: 3px;
+}
+
+
+.igsli_RedPlanetTickMajorR
+{
+	font-size:1px;
+	border-top:solid 1px Black;
+	position: absolute;
+	width: 5px;
+}
+
+
+.igsli_RedPlanetTickLastR
+{
+	margin-top:-1px;
+	height: 1px;
+}
+
+
+.igsli_RedPlanetMarginV
+{
+	font-size:1px;
+	height: 10px;
+}
+
+
+/* it should be after margin */
+/* if labels are on edges, then position and margin are disabled by inline style */
+.igsli_RedPlanetLabelEdgeV
+{
+	font-size:10px;
+	font-family: verdana;
+	overflow: hidden;
+	white-space: nowrap;
+	width: auto;
+	height: 14px;
+	color:#666666;
+	text-align:center;
+}
+
+
+.igsli_RedPlanetLabelL
+{
+	font-size:10px;
+	font-family: verdana;
+	margin-top:-7px;
+	margin-left:-25px;
+	position: absolute;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 40px;
+	height: 14px;
+	color:#666666;
+	text-align:right;
+}
+
+
+.igsli_RedPlanetLabelR
+{
+	font-size:10px;
+	font-family: verdana;
+	margin-top:-7px;
+	margin-left:5px;
+	position: absolute;
+	overflow: visible;
+	white-space: nowrap;
+	width: 40px;
+	height: 14px;
+	color:#666666;
+}
+
+
+.igsli_RedPlanetLabelsHolderV
+{
+	font-size:10px;
+	font-family: verdana;
+	position: relative;
+	height: 100%;
+	width: 20px;
+	text-align:left;
+}
+
+
+.igsli_RedPlanetTrackV
+{
+	background-color:#D1D5D7;
+	font-size:1px;
+	border:solid 1px #999999;
+	margin-top:-1px;
+	position: relative;
+	height: 100%;
+	width: 5px;
+	text-align:left;
+}
+
+
+.igsli_RedPlanetTrackValueV
+{
+	background-color:#EA004D;
+	position: absolute;
+	width: 100%;
+}
+
+
+.igsli_RedPlanetTrackValue2V
+{
+	background-color:#B20000;
+	position: absolute;
+	width: 100%;
+}
+
+
+.igsli_RedPlanetThumbsHolderV
+{
+	font-size:1px;
+	position: relative;
+	z-index: 1;
+	height: 100%;
+}
+
+
+.igsli_RedPlanetThumbV
+{
+	margin-top:-6px;
+	margin-left:-15px;
+	position: absolute;
+	z-index: 2;
+}
+
+
+.igsli_RedPlanetValueLabelFloatL
+{
+	background-color:White;
+	border:solid 1px #A9A9A9;
+	margin-top:-7px;
+	margin-left:-46px;
+	padding-right:1px;
+	padding-left:1px;
+	position: absolute;
+	overflow: visible;
+	filter: alpha(opacity : 0);
+	opacity: 0;
+	height: 13px;
+	width: auto;
+	min-width: 28px;
+	color:Gray;
+	text-align:right;
+}
+
+
+.igsli_RedPlanetValueLabelFloatR
+{
+	background-color:White;
+	border:solid 1px #A9A9A9;
+	margin-top:-7px;
+	margin-left:8px;
+	padding-right:1px;
+	padding-left:1px;
+	position: absolute;
+	overflow: visible;
+	filter: alpha(opacity : 0);
+	opacity: 0;
+	height: 13px;
+	min-width: 28px;
+	width: auto;
+	color:Gray;
+	text-align:left;
+}
+
+
+.igsli_RedPlanetValueLabelFloatHover
+{
+	filter: alpha(opacity : 100);
+	opacity: 1.0;
+}
+
+
+/* applied to control when it has focus and when rounded corners are disabled */
+.igsli_RedPlanetFocus
+{
+}
+
+
+/* applied to control when mouse moved over it and when rounded corners are disabled */
+.igsli_RedPlanetHover
+{
+}
+
+
+/* applied to control when it is disabled and when rounded corners are disabled */
+.igsli_RedPlanetDisabled
+{
+	background-color:#C0C0C0;
+}
+
+
+/* applied to track bar when control focus and when rounded corners of track are disabled */
+.igsli_RedPlanetTrackFocus
+{
+	filter: alpha(opacity : 100);
+	opacity: 1;
+}
+
+
+/* applied to track bar when mouse is moved over control and when rounded corners of track are disabled */
+.igsli_RedPlanetTrackHover
+{
+	filter: alpha(opacity : 100);
+	opacity: 1;
+}
+
+
+/* applied to track bar when control is disabled and when rounded corners of track are disabled */
+.igsli_RedPlanetTrackDisabled
+{
+	background-color:#A0A0A0;
+}
+
+
+/* applied to left edge of horizontal track bar */
+.igsli_RedPlanetTrackEdgeL
+{
+	background-image: url(images/igsli_redplanettrackedges.gif);
+	position: absolute;
+	width: 6px;
+	height: 100%;
+	top: 0px;
+	left: -5px;
+}
+
+
+/* applied to right edge of horizontal track bar */
+.igsli_RedPlanetTrackEdgeR
+{
+	background-position:top right ;
+	background-image: url(images/igsli_redplanettrackedges.gif);
+	position: absolute;
+	width: 7px;
+	height: 100%;
+	top: 0px;
+	left: 100%;
+}
+
+
+/* applied to top edge of vertical track bar */
+.igsli_RedPlanetTrackEdgeT
+{
+	background-image:none;
+	position: absolute;
+	width: 100%;
+	height: 0px;
+	top: -0px;
+	left: 0px;
+}
+
+
+/* applied to left edge of vertical track bar */
+.igsli_RedPlanetTrackEdgeB
+{
+	background-position:left bottom ;
+	background-image:none;
+	position: absolute;
+	width: 100%;
+	height: 0px;
+	top: 100%;
+	left: 0px;
+}
+
+
+/* applied to left edge of horizontal track bar when TrackValue is enabled */
+.igsli_RedPlanetTrackValueEdgeL
+{
+	background-image:none;
+}
+
+
+/* applied to bottom edge of vertical track bar when TrackValue is enabled */
+.igsli_RedPlanetTrackValueEdgeB
+{
+	background-image:none;
+}
+
+
+.igsli_RedPlanetTrackValue2EdgeL
+{
+}
+
+
+.igsli_RedPlanetTrackValue2EdgeB
+{
+}
+
+

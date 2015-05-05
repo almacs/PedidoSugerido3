@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="http://lamosa.com/A2A/PedidoSugerido" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_Simulation_Outbound" targetNamespace="http://lamosa.com/A2A/PedidoSugerido" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_Simulation_Outbound" />
+  <wsdl:types>
+    <xsd:schema xmlns="http://lamosa.com/A2A/PedidoSugerido" targetNamespace="http://lamosa.com/A2A/PedidoSugerido" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_Simulation_request" type="p1:DT_Simulation_request" />
+      <xsd:element name="MT_Simulation_response" type="p1:DT_Simulation_response" />
+      <xsd:complexType name="DT_Simulation_response">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">c1f2fdb3693111e49cfb0000005f609a</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="CompayId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">19d5a29153f711e3c070d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="CompanyName" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">19d5a29253f711e3a060d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="CompanyAddress" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">19d5d82a53f711e3ab7dd4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="CustomerId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">19d5d82b53f711e3b529d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="CustomerName" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">19d5d82c53f711e3aacdd4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="CustomerAddress" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">19d5d82d53f711e3b18dd4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="Stores">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">19d5ed9153f711e3cd8ed4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" name="Store">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">19d5ed9053f711e38230d4bed9766645</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element name="StoreId" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">19d5d82e53f711e3c716d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="StoreName" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">19d5d82f53f711e3ae3ad4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="StoreAddress" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">19d5ed8f53f711e388efd4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="CustomerUnitOfMeasure" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">19d5ed9253f711e38f84d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="Items">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">19d64d2f53f711e39110d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" name="Item">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">19d60ea553f711e3c2c8d4bed9766645</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element name="ItemId" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">19d5ed9353f711e3ad9fd4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="ItemCustomerId" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">19d5ed9453f711e3c9d5d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="ItemDesc" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">19d5ed9553f711e38d8fd4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="InventoryPending" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">19d5ed9653f711e3c875d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="IsDiscontinued" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">e4720b44693311e4b791d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="BackOrder">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">19d60e9f53f711e3bc7ad4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:complexType>
+                          <xsd:sequence>
+                            <xsd:element name="Pending" type="xsd:string">
+                              <xsd:annotation>
+                                <xsd:appinfo source="http://sap.com/xi/TextID">19d5ed9753f711e3a3d9d4bed9766645</xsd:appinfo>
+                              </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element name="NoCredit" type="xsd:string">
+                              <xsd:annotation>
+                                <xsd:appinfo source="http://sap.com/xi/TextID">19d5ed9853f711e3b032d4bed9766645</xsd:appinfo>
+                              </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element name="PendingToAssign" type="xsd:string">
+                              <xsd:annotation>
+                                <xsd:appinfo source="http://sap.com/xi/TextID">19d5ed9953f711e3ac46d4bed9766645</xsd:appinfo>
+                              </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element name="PendingToAssingNoInventory" type="xsd:string">
+                              <xsd:annotation>
+                                <xsd:appinfo source="http://sap.com/xi/TextID">19d60e9c53f711e3c992d4bed9766645</xsd:appinfo>
+                              </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element name="Assigned" type="xsd:string">
+                              <xsd:annotation>
+                                <xsd:appinfo source="http://sap.com/xi/TextID">19d60e9d53f711e393a4d4bed9766645</xsd:appinfo>
+                              </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element name="InTransit" type="xsd:string">
+                              <xsd:annotation>
+                                <xsd:appinfo source="http://sap.com/xi/TextID">19d60e9e53f711e3a258d4bed9766645</xsd:appinfo>
+                              </xsd:annotation>
+                            </xsd:element>
+                          </xsd:sequence>
+                        </xsd:complexType>
+                      </xsd:element>
+                      <xsd:element name="History">
+                        <xsd:complexType>
+                          <xsd:sequence>
+                            <xsd:element name="Month_H1" type="xsd:string" />
+                            <xsd:element name="Month_H2" type="xsd:string" />
+                            <xsd:element name="Month_H3" type="xsd:string" />
+                          </xsd:sequence>
+                        </xsd:complexType>
+                      </xsd:element>
+                      <xsd:element name="BillPrice" type="xsd:string" />
+                      <xsd:element name="UnitOfMeasure" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">19d60ea053f711e3bad3d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="ConvertionValue" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">19d60ea153f711e3c4e8d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="ItemZone" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">19d60ea253f711e3bc34d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="ItemLeadTime" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">19d60ea353f711e3b92cd4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="PalleteMT2" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">19d60ea453f711e3a58ed4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_Simulation_request">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">73e7f37c53f411e3a12c0000005f609a</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="CompayId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">b26171e453f411e3af65d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="CustomerId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">b26171e553f411e3a775d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="Stores">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">b26171e853f411e39aa8d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" name="Store">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b26171e753f411e38696d4bed9766645</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element name="StoreId" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">b26171e653f411e3b8d4d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="Items">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">b2618d0253f411e393d8d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" name="Item">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b2618d0153f411e3a899d4bed9766645</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element name="ItemId" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">b2618d0053f411e3c270d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_Simulation_request">
+    <wsdl:documentation />
+    <wsdl:part name="MT_Simulation_request" element="p1:MT_Simulation_request" />
+  </wsdl:message>
+  <wsdl:message name="MT_Simulation_response">
+    <wsdl:documentation />
+    <wsdl:part name="MT_Simulation_response" element="p1:MT_Simulation_response" />
+  </wsdl:message>
+  <wsdl:portType name="SI_Simulation_Outbound">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_Simulation_Outbound">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_Simulation_Outbound" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_Simulation_request" />
+      <wsdl:output message="p1:MT_Simulation_response" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_Simulation_OutboundBinding" type="p1:SI_Simulation_Outbound">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_Simulation_Outbound">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_Simulation_OutboundService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_Simulation_OutboundBinding">
+      <address location="http://lapddc01.lamosa.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=PED_SU_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_Simulation_Outbound&amp;interfaceNamespace=http%3A%2F%2Flamosa.com%2FA2A%2FPedidoSugerido" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_Simulation_OutboundBinding">
+      <address location="https://lapddc01.lamosa.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=PED_SU_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_Simulation_Outbound&amp;interfaceNamespace=http%3A%2F%2Flamosa.com%2FA2A%2FPedidoSugerido" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

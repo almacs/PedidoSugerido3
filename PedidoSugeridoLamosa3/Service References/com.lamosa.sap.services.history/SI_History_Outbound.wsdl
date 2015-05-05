@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="http://lamosa.com/A2A/PedidoSugerido" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_History_Outbound" targetNamespace="http://lamosa.com/A2A/PedidoSugerido" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_History_Outbound" />
+  <wsdl:types>
+    <xsd:schema xmlns="http://lamosa.com/A2A/PedidoSugerido" targetNamespace="http://lamosa.com/A2A/PedidoSugerido" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_History_request" type="p1:DT_History_request" />
+      <xsd:element name="MT_History_respose" type="p1:DT_History_respose" />
+      <xsd:complexType name="DT_History_request">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">34bc17c766ca11e48b390000005f609a</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="CompayId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">b26171e453f411e3af65d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="CustomerId" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">b26171e553f411e3a775d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_History_respose">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">5d1f5e0866cb11e4b3d10000005f609a</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="Items">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">fa17094f66cf11e4bc16d4bed9766645</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="Item">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">fa17094e66cf11e493f0d4bed9766645</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element name="ItemID" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">fa16d1bf66cf11e4cef1d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="ItemCustomerID" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">fa16d1c066cf11e48b7ad4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="ItemDesc" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">fa17094c66cf11e4b729d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="UnitOfMeasure" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">fa17094d66cf11e4b1b9d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="Month_H1" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">13a49b2566d011e4c7a6d4bed9766645</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="Month_H2" type="xsd:string" />
+                      <xsd:element name="Month_H3" type="xsd:string" />
+                      <xsd:element name="Month_H4" type="xsd:string" />
+                      <xsd:element name="Month_H5" type="xsd:string" />
+                      <xsd:element name="Month_H6" type="xsd:string" />
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_History_request">
+    <wsdl:documentation />
+    <wsdl:part name="MT_History_request" element="p1:MT_History_request" />
+  </wsdl:message>
+  <wsdl:message name="MT_History_respose">
+    <wsdl:documentation />
+    <wsdl:part name="MT_History_respose" element="p1:MT_History_respose" />
+  </wsdl:message>
+  <wsdl:portType name="SI_History_Outbound">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_History_Outbound">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_History_Outbound" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_History_request" />
+      <wsdl:output message="p1:MT_History_respose" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_History_OutboundBinding" type="p1:SI_History_Outbound">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_History_Outbound">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_History_OutboundService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_History_OutboundBinding">
+      <address location="http://lapddc01.lamosa.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=PED_SU_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_History_Outbound&amp;interfaceNamespace=http%3A%2F%2Flamosa.com%2FA2A%2FPedidoSugerido" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_History_OutboundBinding">
+      <address location="https://lapddc01.lamosa.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=PED_SU_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_History_Outbound&amp;interfaceNamespace=http%3A%2F%2Flamosa.com%2FA2A%2FPedidoSugerido" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,70 @@
+﻿body
+{
+}
+table.tabs
+{
+	width:100%;
+	border-width:0px;
+	border-style:none;
+}
+td.tabhidden
+{
+	visibility:hidden;
+	display:none;
+
+}
+td.tabselect
+{
+	background-color:Silver;
+	border-left-style:solid;
+	border-left-width:1px;
+	border-right-style:solid;
+	border-right-width:1px;
+	border-top-style:solid;
+	border-top-width:1px;
+	border-bottom-style:none;
+	cursor:default;
+}
+td.tab
+{
+	background-color:#000000;
+	color: #ffffff;
+	border-left-style:solid;
+	border-left-width:1px;
+	border-right-style:solid;
+	border-right-width:1px;
+	border-top-style:solid;
+	border-top-width:1px;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	cursor:pointer;
+}
+td.tab:hover
+{
+	background-color:#ffffff;
+	color: #000000;
+}
+div.tabselect
+{
+	display:block;
+
+	background-color:Silver;
+	border-left-style:solid;
+	border-left-width:1px;
+	border-right-style:solid;
+	border-right-width:1px;
+	border-top-style:solid;
+	border-top-width:1px;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	width:100%;
+	overflow:inherit;
+	padding:3px 3px 3px 3px;
+}
+div.tab
+{
+	width:100%;
+	padding:3px 3px 3px 3px;
+	display:none;
+}
+

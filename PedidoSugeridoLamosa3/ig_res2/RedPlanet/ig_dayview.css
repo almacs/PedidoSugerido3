@@ -1,0 +1,194 @@
+.igdv_RedPlanetControl
+{
+	border:solid 1px Silver;
+}
+
+
+.igdv_RedPlanetCaptionHeader
+{
+	background-color:White;
+	background-repeat:repeat-x;
+	background-position:bottom ;
+	background-image: url(images/button_bg2.png);
+	font-weight:bold;
+	font-size:8pt;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 16px;
+	height: 30px;
+	color:Black;
+	text-align:center;
+}
+
+
+.igdv_RedPlanetDayHeader
+{
+	background-color:#DAEAFF;
+	background-image: url(images/header_hover.gif);
+	font-size:8pt;
+	font-family: Arial, Helvetica, sans-serif;
+	border:solid 1px #F4F4F4;
+	border-right-color:#999999;
+	padding-left:2px;
+	height: 20px;
+	white-space: nowrap;
+	color:Black;
+	text-align:center;
+	vertical-align:middle;
+}
+
+
+.igdv_RedPlanetNonWorkingTimeSlot
+{
+	background-color:#F0F0F0;
+	border-right:solid 1px #999999;
+	border-bottom:solid 1px #A5A5A5;
+	height: 20px;
+}
+
+
+.igdv_RedPlanetWorkingTimeSlot
+{
+	background-color:White;
+	border-right:solid 1px #999999;
+	border-bottom:solid 1px #E6EDF7;
+	height: 20px;
+}
+
+
+.igdv_RedPlanetAllDayEventArea
+{
+	background-color:#FAFAFA;
+}
+
+
+.igdv_RedPlanetAllDayEvent
+{
+	background-color:WhiteSmoke;
+	font-size:10px;
+	font-family: Verdana;
+	border-color:#6EDF73;
+	padding-left:3px;
+	height: 25px;
+	white-space: nowrap;
+	color:#A10000;
+	text-align:center;
+}
+
+
+.igdv_RedPlanetAppointment
+{
+	background-color:White;
+	font-size:8pt;
+	font-family: Tahoma,Verdana;
+	border:solid 1px #999999;
+}
+
+
+.igdv_RedPlanetActivityEdge
+{
+	font-size:1px;
+	height: 4px;
+	cursor:n-resize;
+}
+
+
+.igdv_RedPlanetActivityEdgeLeft
+{
+	font-size:2px;
+	width: 6px;
+	cursor:move;
+}
+
+
+.igdv_RedPlanetTodayHeader
+{
+	background-color:Black;
+	background-repeat:repeat-x;
+	background-position:top ;
+	background-image: url(images/header_large.gif);
+	border-width:0px;
+	height: 17px;
+	color:White;
+}
+
+
+.igdv_RedPlanetTimeSlotLabel
+{
+	background-color:#FCFCFC;
+	background-repeat:repeat-x;
+	font-size:12px;
+	border-right:solid 1px Gainsboro;
+	border-bottom:solid 1px Gainsboro;
+	width: 60px;
+	color:DimGray;
+	text-align:center;
+	vertical-align:middle;
+}
+
+
+.igdv_RedPlanetTimeSlotLabelMinutes
+{
+	font-size:8pt;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.igdv_RedPlanetAllDayEventSelected
+{
+	background-color:#D0D0D0;
+	border-top-width:2px;
+	border-bottom-width:2px;
+}
+
+
+.igdv_RedPlanetAllDayEventAreaSelected
+{
+	background-color:White;
+}
+
+
+.igdv_RedPlanetActivityHover
+{
+	z-index: 10000;
+}
+
+
+.igdv_RedPlanetActivityEdgeBusy
+{
+	background-color:#E6EDF7;
+}
+
+
+.igdv_RedPlanetActivityEdgeTentative
+{
+	background-color:#90C0FF;
+}
+
+
+.igdv_RedPlanetActivityEdgeOutofOffice
+{
+	background-color:#900090;
+}
+
+
+.igdv_RedPlanetActivityEdgeFree
+{
+	background-color:#F0F0F0;
+}
+
+
+.igdv_RedPlanetNavigationButton
+{
+	background-color:Transparent;
+	border-width:0px;
+	width: 17px;
+	vertical-align:middle;
+}
+
+
+.igdv_RedPlanetSelectedAppointment
+{
+	z-index: 9999;
+}
+
+

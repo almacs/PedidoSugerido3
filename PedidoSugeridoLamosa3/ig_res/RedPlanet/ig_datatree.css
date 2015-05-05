@@ -1,0 +1,81 @@
+.igdt_RedPlanetControl {
+	background-color:transparent;
+	border:1px solid transparent;
+	color:#000000;
+	font-size: xx-small;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.igdt_RedPlanetControlActive {
+}
+
+.igdt_RedPlanetNode
+{
+	cursor:hand;
+	color:#696969;
+	text-decoration:none;	
+	padding:1px 3px 1px 3px;
+	line-height:15px;
+	
+}
+
+.igdt_RedPlanetNodeRoot {
+	font-weight:bold;
+	color:#000000;
+
+}
+
+.igdt_RedPlanetNodeImage {	
+	vertical-align: middle;
+}
+
+.igdt_RedPlanetNodeSelected {
+	background-color:#CC0000;
+	color:#ffffff;
+	}
+
+.igdt_RedPlanetNodeActive 
+{
+	border:solid 1px #000000;
+	padding: 0px 3px 0px 2px;
+}
+
+.igdt_RedPlanetNodeHover {
+	background-color:#D8D8D8;
+	
+}
+
+.igdt_RedPlanetNodeDisabled
+{
+	color:Gray;
+}
+
+.igdt_RedPlanetInternalNodeEditor
+{
+	border:1px solid #000000;
+	padding-left: 2px;
+}
+
+
+/* //////////////////// GROUP STYLES //////////////////// */
+.igdt_RedPlanetNodeGroup {
+	list-style :none;	
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+.igdt_RedPlanetNodeHolder {
+	white-space:nowrap;
+	/*margin-left: 0px;
+	padding-left: 0px;
+	margin-top: 0px;
+	padding-top: 0px;
+	margin-bottom: 0px;*/
+}
+
+
+.igdt_RedPlanetNodeHolder img {
+	vertical-align: middle;
+}
+
+/* //////////////////// GROUP STYLES //////////////////// */

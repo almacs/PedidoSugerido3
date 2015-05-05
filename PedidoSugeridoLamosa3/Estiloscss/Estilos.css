@@ -1,0 +1,105 @@
+.fondoLogin
+{ 
+    background-image: url('../Imagenes/bk.gif');
+    background-repeat:repeat;
+}
+.textos_Login
+{
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight:bold;
+    color: #000000;
+    text-align: left;
+}
+.TxtLogin
+{
+    border-style:solid;
+    border-width:1px;
+    height:17px;
+    width:150px;
+    font-family: Arial;
+    font-size: 13px;
+    font-style: normal;
+    color: #000000;
+    text-align: left;
+}
+.CmbLogin
+{
+    border-style:solid;
+    border-width:1px;
+    height:20px;
+    width:150px;
+    font-family: Arial;
+    font-size: 13px;
+    font-style: normal;
+    color: #000000;
+    text-align: left;
+}
+.lblTitulo1
+{
+    color: #B88A00 ;
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    background: #eee;
+}
+
+.textos_01
+{
+    font-family: Arial;
+    font-size: 12px;
+    font-style: normal;
+    color: #000000;
+    height: 13px;
+    text-align: left;
+}
+
+
+.Boton_01
+{
+    font-family: Arial;
+    font-size: 10pt;
+    font-style: normal;
+    font-weight: bold;
+    color: White;
+    background-color:  #cc9933;
+    height: 25px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100px;
+    margin: 0px;
+}
+
+.mayus
+{
+	text-transform:uppercase;
+}
+
+.TextosMayusculas
+{
+	text-transform:capitalize;
+}
+
+.hidden
+{
+    display: none;
+}
+.AreaBox_02
+{
+    background-color: #CCCCCC;
+    height: 20px;
+    font-family: Arial;
+    font-size: 12px;
+    border-right: gray 1px solid;
+    border-top: gray 1px solid;
+    border-left: gray 1px solid;
+    border-bottom: gray 1px solid;
+}
+
+.style7
+{
+	color:#FFF;
+    font-family: Arial;
+    font-size: 10px;
+}

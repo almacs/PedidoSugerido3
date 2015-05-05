@@ -1,0 +1,344 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PedidoSugeridoLamosa.master.cs" Inherits="PedidoSugeridoLamosa.PedidoSugeridoLamosa" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head id="Head1" runat="server">
+    
+        <title>Herramienta de Abasto</title>
+        
+        <meta name="verify-v1" content="n3Dpx4NklZjg5p/Tq7h1q+Oj6Ml83crtkO/PwepVQ6Y="/>
+        <asp:ContentPlaceHolder id="contentPlaceHeader" runat="server">
+            <%=EmularIE7%>
+            <%=MenuProl.Value%>
+            <%=Menu.Value%>
+            <%=FuncionesJSScript%>
+        </asp:ContentPlaceHolder>
+        
+        <link href="Estiloscss/EstiloTooltip.css" rel="Stylesheet" type="text/css" />
+        <link href="~/Estiloscss/Estilos.css" rel="stylesheet" type="text/css" />
+        
+        <!--<link href="/aspnet_client/System_Web/2_0_50727/CrystalReportWebFormViewer3/css/default.css" rel="stylesheet" type="text/css" />
+        
+        <script src="../FuncionesJS/jquery-1.4.2.js" type="text/javascript">
+        </script>
+        
+        <script src="../FuncionesJS/menu.js" type="text/javascript" language="javascript" >
+        </script>-->
+        
+        <script type="text/javascript" language="javascript">
+        </script>
+    
+    </head>
+
+    <body>
+        <form id="form2" runat="server">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td >
+                        <table border="0" cellpadding="0" cellspacing="0" width= "100%" >
+                            <tr>
+                                <td rowspan ="3"  id="HeaderSistem" class= "Header1" align="right">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class= "Header3" valign="top">
+                                    <table width= "100%" border= "0" cellpadding= "0" cellspacing= "0" 
+                                        style="margin-left: 4px">
+                                        <tr>
+                                            <td>
+                                                <table align= "left" border= "0" cellpadding= "0" cellspacing= "0" >
+                                                    <tr>
+                                                        <td class="HeaderText">
+                                                            Clave cliente:
+                                                        </td>
+                                                        <td>
+                                                            <label id="lblClave"  class=" hidden" runat="server"></label>
+                                                            <asp:Label ID="LblClavecli" runat="server" Text="Clave cliente" CssClass="HeaderText"></asp:Label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="HeaderText">
+                                                            Nombre cliente:
+                                                        </td>
+                                                        <td>
+                                                            <label id="lblNombre" class=" hidden" runat="server"></label>
+                                                            <asp:Label ID="LblNomcliente" runat="server" Text="Nombre cliente" CssClass="HeaderText"></asp:Label>
+                                                            <select id="cmbCliente" class="HeaderText" style="width:200px" runat="server" onchange="cmbCliente_onchange();">
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="HeaderText">
+                                                            Direcci&oacute;n entrega:  
+                                                        </td>
+                                                        <td>
+                                                            <label id="lblEntrega" class=" hidden" runat="server"></label>
+                                                            <asp:Label ID="LblEntSuc" runat="server" Text="Clave entrega" CssClass="HeaderText"></asp:Label>
+                                                        </td> 
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="HeaderText">
+                                                            Sucursal:
+                                                        </td>
+                                                        <td>
+                                                            <input id="sss" type="button" value="ocultar" class="hidden" onclick="ocultar()" /> <!-- Prueba quitar-->
+                                                            <asp:Label ID="LblSuc" runat="server" Text="Sucursal" CssClass="HeaderText"></asp:Label>
+                                                            <label id="lblSucuarsal" class=" hidden" runat="server"></label>
+                                                            <select id="cmbEntrega"  class="HeaderText"  style="width:200px"  runat="server">
+                                                            </select><a href="javascript:setClienteEntrega();" id="lnkClienteEntrega" runat="server">Actualizar</a>
+                                                        </td> 
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="HeaderText" >
+                                                             <asp:HyperLink ID="lnkManualUsr" runat="server"  target="_blank" Width="100px">Manual de usuario</asp:HyperLink>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="height: 20px">
+                        <asp:ContentPlaceHolder id="ContentPlaceMenu" runat="server">
+                        <div id="pro_linedrop">
+                            <ul class="select">
+                                <li><a href="<%=sDirectorioAplicacion%>/Menu.aspx">Inicio</a></li>
+                                <li class="line" id="Cliente_Cata" onclick="btnProcesar_oculta()"><a href="<%=sDirectorioAplicacion%>/Catalogos/RelacionCP.aspx">Cat&aacute;logos</a>
+                                    <ul class="sub">
+                                    </ul>
+                                </li>
+                                 <li class="line" id="Cliente_Carga"><a href="#nogo">Carga Datos</a>
+                                     <ul class="sub">
+                                          <li id="Cliente_Carga_Attr"><a href="<%=sDirectorioAplicacion%>/CargaArchivos/CargaAtributos.aspx"><span> Carga de Atributos de Artículos</span></a></li>
+                                          <li><a href="<%=sDirectorioAplicacion%>/CargaArchivos/CargaDatos.aspx"><span>Carga de Inventario Existente</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="line" id="Cliente_Sim" onclick="btnProcesar_oculta()"><a href="<%=sDirectorioAplicacion%>/Simulacion/VentasPedidos.aspx">Simulaci&oacute;n</a>
+                                    <ul class="sub">
+                                        <%--<li><a href="<%=sDirectorioAplicacion%>/PaginaEspera.aspx">Espera</a></li>--%>
+                                    </ul>
+                                </li>
+                                <li class="line" id="Cliente_SimC" onclick="btnProcesar_oculta()" style="display:none;"><a href="<%=sDirectorioAplicacion%>/Simulacion/VentasPedidos.aspx">Simulaci&oacute;n</a>
+                                    <ul class="sub">
+                                        <%--<li><a href="<%=sDirectorioAplicacion%>/PaginaEspera.aspx">Espera</a></li>--%>
+                                    </ul>
+                                </li>
+                                 <li class="line" id="Adm_Conf"><a href="<%=sDirectorioAplicacion%>/Usuario/AltaUsr.aspx">Configuraci&oacute;n</a>
+                                   <ul class="sub">
+                                   </ul>
+                                </li>
+                                <li class="line" id="Reportes"><a href="#">Reportes</a>
+                                   <ul class="sub">
+                                          <li><a href="<%=sDirectorioAplicacion%>/Reportes/ArtSinPedido.aspx"><span>Inventario de Clientes</span></a></li>
+                                          <li><a href="<%=sDirectorioAplicacion%>/Reportes/MonitorSimulacion.aspx"><span>Monitoreo de Simulaciones</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="line" id="liServicio"><a href="<%=sDirectorioAplicacion%>/Servicio/voucherServicio.aspx">Servicio</a>
+                                    <ul class="sub">
+                                    </ul>
+                                </li>
+                                <li class="line"><asp:LinkButton ID="LinkButton1" PostBackUrl="~/Login.aspx" runat="server">Cerrar Sesi&oacute;n</asp:LinkButton>
+                                   <ul class="sub">
+                                   </ul>
+                                </li>
+                              </ul>
+                        </div>
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+            
+            <asp:HiddenField ID="MenuProl" runat="server" />
+            <asp:HiddenField ID="Menu" runat="server" />
+            <asp:HiddenField ID="Cliente" runat="server" />
+            <asp:HiddenField ID="UsuarioTipo"  runat="server" />
+            <asp:ContentPlaceHolder id="ContentPlaceScript" runat="server">
+            <script language="javascript" type="text/javascript">
+
+                var PAGE_arr_entrega = new Array();
+                var PAGE_arr_cliente = new Array();
+                var int_entregas = 0;
+                var int_clientes = 0;
+
+
+                function oentregacliente() {
+
+                }
+                
+                function addCliente(id_cliente, nom_cliente)
+                {
+                    var ocliente = new oentregacliente;
+                    ocliente.id_cliente = id_cliente;
+                    ocliente.nom_cliente = nom_cliente;
+                    PAGE_arr_cliente[int_clientes] = ocliente;
+                    int_clientes++;
+                }
+
+                
+
+                function addEntrega(id_cliente, id_entrega, nom_entrega) {
+                    var oentrega = new oentregacliente;
+                    oentrega.id_cliente = id_cliente;
+                    oentrega.id_entrega = id_entrega;
+                    oentrega.nom_entrega = nom_entrega;
+                    PAGE_arr_entrega[int_entregas] = oentrega;
+                    int_entregas++;
+                }
+
+                function loadCombosEntrega(id_cliente,id_sucursal) 
+                {
+
+                    var optsCliente = "";
+                    var optsEntrega = "";
+                    
+                    for (var int_reg = 0; int_reg < PAGE_arr_cliente.length; int_reg++) 
+                    {
+                        optsCliente += "<option value=\"" + PAGE_arr_cliente[int_reg].id_cliente + "\">" + PAGE_arr_cliente[int_reg].nom_cliente + "</option>";
+                    }
+                    $("#ctl00_cmbCliente").html(optsCliente);
+                    document.getElementById("ctl00_cmbCliente").value = id_cliente;
+                    for (var int_reg = 0; int_reg < PAGE_arr_entrega.length; int_reg++) 
+                    {
+                        if (document.getElementById("ctl00_cmbCliente").value == PAGE_arr_entrega[int_reg].id_cliente)
+                            optsEntrega += "<option value=\"" + PAGE_arr_entrega[int_reg].id_entrega + "\">" + PAGE_arr_entrega[int_reg].nom_entrega + "</option>";
+                    }
+                    $("#ctl00_cmbEntrega").html(optsEntrega);
+                    document.getElementById("ctl00_cmbEntrega").value = id_sucursal;
+
+                }
+
+                function cmbCliente_onchange() 
+                {
+
+                    var optsEntrega = "";
+                    for (var int_reg = 0; int_reg < PAGE_arr_entrega.length; int_reg++) {
+                        if (document.getElementById("ctl00_cmbCliente").value == PAGE_arr_entrega[int_reg].id_cliente)
+                            optsEntrega += "<option value=\"" + PAGE_arr_entrega[int_reg].id_entrega + "\">" + PAGE_arr_entrega[int_reg].nom_entrega + "</option>";
+                    }
+
+
+                    $("#ctl00_cmbEntrega").html(optsEntrega);
+                }
+                
+                function setClienteEntrega()
+                {
+                    document.getElementById("<%=txtClienteSel.ClientID%>").value = document.getElementById("ctl00_cmbCliente").value;
+                    document.getElementById("<%=txtEntregaSel.ClientID%>").value = document.getElementById("ctl00_cmbEntrega").value;
+                    btnProcesar_oculta();
+                    document.getElementById("<%=btnClienteEntrega.ClientID%>").click();
+                }
+                
+                function ocultar() {
+                    document.getElementById("Adm_Conf").style.display = "none";
+                    document.getElementById("Reportes").style.display = "none";
+                }
+
+                function ocultarMenu() {
+                    document.getElementById("Cliente_Cata").style.display = "none";
+                    document.getElementById("Cliente_Carga").style.display = "none";
+                    document.getElementById("Cliente_Sim").style.display = "none";
+                    document.getElementById("liServicio").style.display = "none";
+                }
+
+                function ocultar_c() {
+                    document.getElementById("Cliente_Cata").style.display = "none";
+                    document.getElementById("Adm_Conf").style.display = "none";
+                    document.getElementById("Reportes").style.display = "none";
+                    document.getElementById("Cliente_Carga_Attr").style.display = "none";
+                    document.getElementById("Cliente_Sim").style.display = "none";
+                    document.getElementById("Cliente_SimC").style.display = "";
+
+                }
+                function ocultar_a() {
+                    document.getElementById("Cliente_Cata").style.display = "none";
+                    document.getElementById("Adm_Conf").style.display = "none";
+                    document.getElementById("Reportes").style.display = "none";
+                    document.getElementById("Cliente_Carga").style.display = "none";
+                    document.getElementById("Cliente_Sim").style.display = "none";
+                    document.getElementById("Cliente_SimC").style.display = "";
+
+                }
+
+                if ('<%=Cliente.Value%>' == 'TRUE') {
+                    ocultar();
+                }
+
+                if ('<%=Cliente.Value%>' == 'FALSE') {
+                    ocultarMenu();
+                }
+
+                if ('<%=Cliente.Value%>' == 'TRUE-C') {
+                    ocultar_c();
+                }
+
+                if ('<%=Cliente.Value%>' == 'TRUE-A') {
+                    ocultar_a();
+                }
+
+                if ('<%=sConsolidado%>' == 'CON') {
+                    document.getElementById("liServicio").style.display = "none";
+                }
+                
+                function btnProcesar_oculta() {
+                    //debugger;
+                    //grid_Detalle
+                    document.getElementById("tblCargandoMaster").style.visibility = "visible";
+                    document.getElementById("tblCargandoMaster").style.display = "block";
+                    document.getElementById("Principal1").style.display = "none";
+                }
+                
+            </script>
+            </asp:ContentPlaceHolder>
+           <asp:Literal ID="litClientesAsesor" runat="server"></asp:Literal>
+            <table id="Principal1" border="0" style="background:white;" width="100%" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td align="left" style="width:100%" >
+                        <asp:ContentPlaceHolder ID="Principal" runat="server" >
+                        
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+            
+            <div id="">
+                <center>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td valign="bottom" style= "font-size:12px; font-family:Arial" >
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlanceFinal" runat="server">
+            <table id="tblCargandoMaster" style="visibility:hidden;display:none; width:100%; height:100%">
+                <tr style="width:100%; height:100%">
+                    <td align="center" valign="middle" style="width:100%; height:100%">
+                        <img src="<%=sDirectorioAplicacion%>/Imagenes/cargando3.gif" alt="cargando" />
+                        <span style="width:100%; height:100%">
+                        </span>
+                    </td>
+                </tr>
+            </table>
+            </asp:ContentPlaceHolder>
+            <div style="visibility:hidden;display:none;">
+                <asp:TextBox ID="txtClienteSel" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtEntregaSel" runat="server"></asp:TextBox>
+                <asp:Button ID="btnClienteEntrega" runat="server" Text="Set Cliente Entrega" 
+                    onclick="btnClienteEntrega_Click" />
+            </div>
+            
+        </form>
+    </body>
+    
+</html>
+
+

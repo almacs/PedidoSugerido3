@@ -1,0 +1,464 @@
+.igg_RedPlanetControl
+{
+	font-size:11px;
+	font-family: Verdana;
+	border:solid 1px #696969;
+}
+
+
+.igg_RedPlanetHeader
+{
+	background-color:#7D0000;
+	background-repeat:repeat-x;
+	background-image: url(images/igg_header.gif);
+	height: 25px;
+	color:White;
+}
+
+
+.igg_RedPlanetHeaderCaption
+{
+	padding-left:8px;
+	overflow: hidden;
+	text-align:left;
+}
+
+
+.igg_RedPlanetFooter
+{
+	background-color:Transparent;
+	height: 25px;
+}
+
+
+.igg_RedPlanetFooterCaption
+{
+	font-weight:normal;
+	font-size:10px;
+	padding-left:8px;
+	overflow: hidden;
+	text-align:left;
+}
+
+
+tbody.igg_RedPlanetItem>tr>td
+{
+	background-color:White;
+	background-repeat:repeat-x;
+	background-position:bottom ;
+	background-image: url(images/igg_item.gif);
+	border-top:solid 1px #D8D8D8;
+	padding:5px 8px 5px 8px;
+	overflow: hidden;
+	height: 20px;
+	text-align:left;
+	vertical-align:middle;
+}
+
+
+.igg_RedPlanetScrollbarIntersection
+{
+}
+
+
+.igg_RedPlanetRowSelector
+{
+	background-color:White;
+	border-top:solid 1px #D8D8D8;
+	border-right:solid 1px #D8D8D8;
+	width: 35px;
+	color:#7D0000;
+	text-align:center;
+	vertical-align:middle;
+}
+
+
+.igg_RedPlanetPager
+{
+	background-repeat:repeat-x;
+	background-image: url(images/igg_footer.gif);
+	padding-right:10px;
+	padding-bottom:10px;
+	text-align:right;
+}
+
+
+.igg_RedPlanetPageLink
+{
+	margin-right:10px;
+	cursor:hand;
+	color:DimGray;
+	text-decoration:underline;
+}
+
+
+.igg_RedPlanetFilterRuleDropDown
+{
+	background-color:White;
+	border:solid 1px #696969;
+	overflow: auto;
+	width: 150px;
+	max-height: 150px;
+	height: auto !important;
+	height: 150px;
+}
+
+
+.igg_RedPlanetFilterButton
+{
+	background-color:Transparent;
+	border-style:solid;
+	border-width:0px;
+	height: 18px;
+}
+
+
+.igg_RedPlanetResizeIndicator
+{
+	background-color:#BD0000;
+	width: 2px;
+}
+
+
+tbody>tr.igg_RedPlanetAlt>td
+{
+	background-color:White;
+	padding:5px 8px 5px 8px;
+	text-align:left;
+	vertical-align:middle;
+}
+
+
+.igg_RedPlanetHeaderRowSelector
+{
+	background-color:Transparent;
+	background-image: none;
+	border:solid 0px #FFFFFF;
+}
+
+
+.igg_RedPlanetFooterRowSelector
+{
+	background-color:Transparent;
+	background-image: none;
+	border:solid 0px #FFFFFF;
+}
+
+
+.igg_RedPlanetSelectedHeader
+{
+}
+
+
+.igg_RedPlanetPageCurrent
+{
+	margin-right:10px;
+}
+
+
+tr.igg_RedPlanetAddNewRow>td
+{
+	overflow: hidden;
+}
+
+
+.igg_RedPlanetAddNewRowSelectorImageCssClass
+{
+	background-color:Transparent;
+	background-repeat:no-repeat;
+	background-position:center ;
+	background-image: url(images/addnewrow_image.gif);
+}
+
+
+.igg_RedPlanetAddNewRowSelectorCssClass
+{
+	background-color:#F7F7F7;
+	border-top:solid 1px #CCCCCC;
+	border-right:solid 1px #CCCCCC;
+	border-bottom:solid 0px #CCCCCC;
+	border-left:solid 0px #CCCCCC;
+}
+
+
+.igg_RedPlanetFilterRow
+{
+	font-size:10px;
+	font-family: Verdana;
+	border-top:solid 0px #CCCCCC;
+	border-right:solid 0px #CCCCCC;
+	border-bottom:solid 1px #CCCCCC;
+	border-left:solid 1px #CCCCCC;
+	height: 22px;
+}
+
+
+.igg_RedPlanetFilterRuleDropDownItem
+{
+	font-size:11px;
+	font-family: Verdana;
+	padding:1px 3px 1px 3px;
+}
+
+
+.igg_RedPlanetFilterRowSelectorImage
+{
+}
+
+
+.igg_RedPlanetFilterRowSelectorCssClass
+{
+	background-color:White;
+	background-repeat:repeat-x;
+	background-image: url(images/igg_filterrow.gif);
+	border-top:solid 1px #CCCCCC;
+	border-right:solid 1px #CCCCCC;
+	border-bottom:solid 0px #CCCCCC;
+	border-left:solid 0px #CCCCCC;
+}
+
+
+tr.igg_RedPlanetFilterRow>td
+{
+	background-color:White;
+	background-repeat:repeat-x;
+	background-image: url(images/igg_filterrow.gif);
+	border-top:solid 1px #CCCCCC;
+	border-right:solid 1px #CCCCCC;
+	border-bottom:solid 0px #CCCCCC;
+	border-left:solid 0px #CCCCCC;
+	color:Black;
+}
+
+
+.igg_RedPlanetHeaderScrollbarIntersection
+{
+}
+
+
+.igg_RedPlanetFooterScrollbarIntersection
+{
+}
+
+
+.igg_RedPlanetSelectedRowSelector
+{
+	background-position:left center ;
+	background-image: url(images/selectedrowselector.gif);
+	background-color: #333333;
+}
+
+
+.igg_RedPlanetSelectedRowSelectorImage
+{
+}
+
+
+TR.igg_RedPlanetAddNewRowTop>TD
+{
+}
+
+
+TR.igg_RedPlanetAddNewRowBottom>TD
+{
+}
+
+
+.igg_RedPlanetFilterRowTop
+{
+}
+
+
+.igg_RedPlanetFilterRowBottom
+{
+}
+
+
+.igg_RedPlanetFilterRuleDropDownSelectedItem
+{
+	background-color:#7D0000;
+	background-image: url(images/igg_header.gif);
+	font-size:11px;
+	font-family: Verdana;
+	padding:1px 3px 1px 3px;
+	color:White;
+}
+
+
+tr.igg_RedPlanetFilterRowTop>td
+{
+}
+
+
+tr.igg_RedPlanetFilterRowBottom>td
+{
+}
+
+
+tbody>tr>td.igg_RedPlanetSelectedCell
+{
+	background-color:#515151;
+	background-repeat:repeat-x;
+	background-position:bottom ;
+	background-image: url(images/igg_selected.gif);
+	color:White;
+}
+
+
+.igg_RedPlanetAddNewRowScrollbarIntersection
+{
+	background-color:#F7F7F7;
+	border-top:solid 1px #CCCCCC;
+	border-right:solid 0px #CCCCCC;
+	border-bottom:solid 0px #CCCCCC;
+	border-left:solid 0px #CCCCCC;
+}
+
+
+.igg_RedPlanetFilterDisabled
+{
+}
+
+
+.igg_RedPlanetFilterScrollbarIntersection
+{
+	background-color:#EEEEEE;
+	background-repeat:repeat-x;
+	background-image: url(images/igg_filterrow.gif);
+	border-top:solid 1px #CCCCCC;
+	border-right:solid 0px #CCCCCC;
+	border-bottom:solid 0px #CCCCCC;
+	border-left:solid 0px #CCCCCC;
+}
+
+
+tbody>tr>td.igg_RedPlanetActiveCell
+{
+}
+
+
+.igg_RedPlanetActiveRow
+{
+}
+
+
+.igg_RedPlanetActiveColumn
+{
+}
+
+
+.igg_RedPlanetActiveRowSelectorImage
+{
+	color:White;
+}
+
+
+.igg_RedPlanetActiveRowSelector
+{
+	background-position:left center ;
+	background-image: url(images/selectedrowselector.gif);
+	background-color: #333333;
+}
+
+
+.igg_RedPlanetFilterRuleDropDownHoverItem
+{
+	background-color:#7D0000;
+	background-image: url(images/igg_header.gif);
+	font-size:11px;
+	font-family: Verdana;
+	padding:1px 3px 1px 3px;
+	color:White;
+}
+
+
+.igg_RedPlanetEditCell
+{
+	background-color:White;
+	border:solid 1px #AAAAAA;
+}
+
+
+.igg_RedPlanetAddNewRowTop
+{
+}
+
+
+.igg_RedPlanetFilterButton>td
+{
+	border-top:solid 0px Transparent;
+	border-right:solid 0px Transparent;
+	border-bottom:solid 0px Transparent;
+	border-left:solid 0px Transparent;
+}
+
+
+.igg_RedPlanetVirtualScrollTooltip
+{
+	background-color:#BD0000;
+	font-size:10px;
+	font-family: Verdana;
+	border:solid 1px #696969;
+	padding:3px;
+	color:White;
+	text-align:center;
+}
+
+
+.igg_RedPlanetAddNewRowBottom>td
+{
+}
+
+
+.igg_RedPlanetAddNewRowTop>td
+{
+}
+
+
+.igg_RedPlanetAddNewRowBottom
+{
+}
+
+
+.igg_RedPlanetAddNewRow>td
+{
+	background-color:#F7F7F7;
+	font-size:10px;
+	font-family: Verdana;
+	border-top:solid 1px #CCCCCC;
+	border-right:solid 1px #CCCCCC;
+	border-bottom:solid 0px #CCCCCC;
+	border-left:solid 0px #CCCCCC;
+	padding-left:7px;
+	height: 22px;
+}
+
+
+.igg_RedPlanetTopDragIndicator
+{
+      background-image:url("images/igg_TopDragIndicator.png");
+      background-repeat: no-repeat;
+      width:11px; 
+      height:6px;
+      margin-top: 2px;
+      z-index: 100;
+}
+
+.igg_RedPlanetMiddleDragIndicator
+{
+      background-image:url("images/igg_MiddleDragIndicator.png");
+      background-repeat: repeat-y;
+      background-position: center;
+      width:11px; 
+}
+
+.igg_RedPlanetBottomDragIndicator
+{
+      background-image:url("images/igg_BottomDragIndicator.png");
+      background-repeat: no-repeat;
+      width:11px; 
+      height:6px;
+      position: absolute;
+      margin-top: -2px;
+      z-index: 100;   
+}

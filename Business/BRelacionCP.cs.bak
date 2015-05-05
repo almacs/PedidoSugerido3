@@ -1,0 +1,216 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using ExceptionHandler;
+using System.Data;
+using System.Data.SqlClient;
+using System.ComponentModel;
+using System.Web;
+using System.Web.UI.WebControls;
+
+
+
+namespace Business
+{
+  public class BRelacionCP
+    {
+        SqlConnection conection;
+        private Exceptions exHandler;
+
+        public BRelacionCP(SqlConnection con)
+        {
+            conection = con; 
+            exHandler = new Exceptions();
+        }
+
+        public DataSet ObtenCatalogoArticulos(String id_cliente, string comp)
+        { 
+            SqlConnection sqlC = conection;
+            try
+            {
+                DataSet ds = new DataSet();
+                SqlCommand sql = new SqlCommand("Catalogo_articulos", sqlC);
+                sql.CommandType = CommandType.StoredProcedure;
+                SqlParameter opar = new SqlParameter("@pCliente", id_cliente);
+                sql.Parameters.Add(opar);
+                SqlParameter opar2 = new SqlParameter("@compani", comp);
+                sql.Parameters.Add(opar2);
+                SqlDataAdapter data = new SqlDataAdapter(sql);
+                //data.SelectCommand = sql;
+                data.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                // return null;
+                throw ex;
+            }
+            finally
+            {
+                sqlC.Close();
+            }
+        }
+
+        public DataSet GuardaSeleccionArticulos(string id_cliente, string id_comp, string Xml, string id_usuario)
+        {
+            SqlConnection sqlC = conection; 
+            try
+            {
+                DataSet ds = new DataSet();
+                SqlCommand sql = new SqlCommand("SpGuardaArtRelacion", sqlC);
+                sql.CommandType = CommandType.StoredProcedure;
+                SqlParameter opar = new SqlParameter("@xml", Xml);
+                sql.Parameters.Add(opar);
+                SqlParameter opar2 = new SqlParameter("@id_usuario", id_usuario);
+                sql.Parameters.Add(opar2);
+                SqlParameter opar3 = new SqlParameter("@id_cliente", id_cliente);
+                sql.Parameters.Add(opar3);
+                SqlParameter opar4 = new SqlParameter("@id_comp", id_comp);
+                sql.Parameters.Add(opar4);
+            
+                SqlDataAdapter data = new SqlDataAdapter(sql);
+                //data.SelectCommand = sql;
+                data.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                // return null;
+                throw ex;
+            }
+            finally
+            {
+                sqlC.Close();
+            }
+        }
+
+        public DataSet ObtenArticulosXDesc(String id_cliente, string desc, string comp) 
+        {
+            SqlConnection sqlC = conection;
+            try
+            {
+               
+
+                DataSet ds = new DataSet();
+                SqlCommand sql = new SqlCommand("Busqueda_articulos_Desc", sqlC);
+                sql.CommandType = CommandType.StoredProcedure;
+                SqlParameter opar = new SqlParameter("@pCliente", id_cliente);
+                sql.Parameters.Add(opar);
+                SqlParameter opar2 = new SqlParameter("@compani", comp);
+                sql.Parameters.Add(opar2);
+                SqlParameter opar3 = new SqlParameter("@pDesc", desc);
+                sql.Parameters.Add(opar3);
+                SqlDataAdapter data = new SqlDataAdapter(sql);
+                //data.SelectCommand = sql;
+                data.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                // return null;
+                throw ex;
+            }
+            finally
+            {
+                sqlC.Close();
+            }
+        }
+      //
+        public string GuardaArtCliente(String art_generico, String art_cliente, String desc, String id_cliente) 
+        {        
+            SqlConnection sqlC = conection;
+            SqlDataReader dr = null;
+            try
+            {
+                sqlC = conection;
+                SqlCommand command = new SqlCommand();
+                command.Connection = sqlC;
+                sqlC.Open();
+                command.CommandText = "SpGuardaRelacionTIITM012";
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add(new SqlParameter("@pCve_Art_Generico", art_generico));
+                command.Parameters.Add(new SqlParameter("@pCve_Cliente", id_cliente));
+                command.Parameters.Add(new SqlParameter("@pCve_Art_Cliente", art_cliente));
+                dr = command.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                // return null;
+                throw ex;
+
+            }
+            finally
+            {
+                sqlC.Close();
+                dr.Close();
+            }
+            return "Ok";
+        }
+
+        public string ActualizaArtCliente(String art_generico, String art_cliente, String id_cliente) 
+        {
+            //private UsuarioInf usrinf;
+
+            SqlConnection sqlC = conection;
+            SqlDataReader dr = null;
+            try
+            {
+                sqlC = conection;
+                SqlCommand command = new SqlCommand();
+                command.Connection = sqlC;
+                sqlC.Open();
+                command.CommandText = "SpUpdateaRelacion_1X1_TIITM012";
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add(new SqlParameter("@id_cliente", id_cliente));
+                command.Parameters.Add(new SqlParameter("@pCve_Art_Generico", art_generico));
+                command.Parameters.Add(new SqlParameter("@pCve_Art_Cliente", art_cliente));
+                dr = command.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                // return null;
+                throw ex;
+
+            }
+            finally
+            {
+                sqlC.Close();
+                dr.Close();
+            }
+            return "Ok";
+        }
+
+        public DataSet ActualizaIDClienteTIITM012(string id_cliente, string comp, string Xml) 
+        {
+            SqlConnection sqlC = conection;
+            try
+            {
+                DataSet ds = new DataSet();
+                SqlCommand sql = new SqlCommand("Atualiza_Rel_Art_Cliente", sqlC);
+                sql.CommandType = CommandType.StoredProcedure;
+                SqlParameter opar = new SqlParameter("@xml", Xml);
+                sql.Parameters.Add(opar);
+                SqlParameter opar2 = new SqlParameter("@pCliente", id_cliente);
+                sql.Parameters.Add(opar2);
+                SqlParameter opar3 = new SqlParameter("@compani", comp);
+                sql.Parameters.Add(opar3);
+                SqlParameter opar4 = new SqlParameter("@xml", Xml);
+                sql.Parameters.Add(opar4);
+                SqlDataAdapter data = new SqlDataAdapter(sql);
+                //data.SelectCommand = sql;
+                data.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                // return null;
+                throw ex;
+            }
+            finally
+            {
+                sqlC.Close();
+            }
+        }
+    }
+}

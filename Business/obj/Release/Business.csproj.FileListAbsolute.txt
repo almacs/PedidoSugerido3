@@ -1,0 +1,10 @@
+C:\Documents and Settings\progress\Desktop\05_Deployment\Business\bin\Release\Business.dll
+C:\Documents and Settings\progress\Desktop\05_Deployment\Business\bin\Release\Business.pdb
+C:\Documents and Settings\progress\Desktop\05_Deployment\Business\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\progress\Desktop\05_Deployment\Business\obj\Release\Business.dll
+C:\Documents and Settings\progress\Desktop\05_Deployment\Business\obj\Release\Business.pdb
+C:\Documents and Settings\progress\Desktop\source\Business\bin\Release\Business.dll
+C:\Documents and Settings\progress\Desktop\source\Business\bin\Release\Business.pdb
+C:\Documents and Settings\progress\Desktop\source\Business\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\progress\Desktop\source\Business\obj\Release\Business.dll
+C:\Documents and Settings\progress\Desktop\source\Business\obj\Release\Business.pdb

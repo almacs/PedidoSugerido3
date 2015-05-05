@@ -1,0 +1,6 @@
+C:\Documents and Settings\progress\Desktop\source\TasksScheduler\bin\Release\TasksScheduler.exe.config
+C:\Documents and Settings\progress\Desktop\source\TasksScheduler\bin\Release\TasksScheduler.exe
+C:\Documents and Settings\progress\Desktop\source\TasksScheduler\bin\Release\TasksScheduler.pdb
+C:\Documents and Settings\progress\Desktop\source\TasksScheduler\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\progress\Desktop\source\TasksScheduler\obj\Release\TasksScheduler.exe
+C:\Documents and Settings\progress\Desktop\source\TasksScheduler\obj\Release\TasksScheduler.pdb

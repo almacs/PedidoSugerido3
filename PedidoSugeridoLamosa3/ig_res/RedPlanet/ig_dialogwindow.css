@@ -1,0 +1,174 @@
+.igdw_RedPlanetControl
+{
+	background-color:Transparent;
+}
+
+
+.igdw_RedPlanetHeaderArea
+{
+	background-color:Transparent;
+	font-weight:bold;
+	border-width:0px;
+	height: 24px;
+	cursor:default;
+	color:White;
+}
+
+
+.igdw_RedPlanetBodyContent
+{
+	border:solid 0px #999999;
+}
+
+
+.igdw_RedPlanetHeaderButton
+{
+	margin:4px 3px 3px 3px;
+	cursor:pointer;
+}
+
+
+.igdw_RedPlanetHeaderCaption
+{
+	margin-top:16px;
+	margin-left:6px;
+	padding-top:10px;
+	color:White;
+}
+
+
+.igdw_RedPlanetHeaderButtonArea
+{
+	width: 120px;
+	vertical-align:middle;
+}
+
+
+.igdw_RedPlanetHeaderImage
+{
+	cursor:default;
+}
+
+
+.igdw_RedPlanetModalBackground
+{
+	background-color:White;
+	filter: alpha(opacity : 50);
+	opacity: 0.5;
+	z-index: 99999;
+}
+
+
+.igdw_RedPlanetResizingHandle
+{
+	cursor:se-resize;
+}
+
+
+/* used only when header visible */
+.igdw_RedPlanetHeaderCornerLeft
+{
+	background-position:top left ;
+	background-image: url(images/igdw_topleft.gif);
+	width: 9px;
+}
+
+
+/* used only when header visible */
+.igdw_RedPlanetHeaderContent
+{
+	background-image: url(images/igdw_edgetop.gif);
+}
+
+
+/* used only when header visible */
+.igdw_RedPlanetHeaderCornerRight
+{
+	background-color:Transparent;
+	background-repeat:no-repeat;
+	background-position:top right ;
+	background-image: url(images/igdw_topright.gif);
+	width: 9px;
+}
+
+
+/* used only when header hidden */
+.igdw_RedPlanetBodyCornerTopLeft
+{
+	background-repeat:no-repeat;
+	background-image: url(images/igdw_bodycornertopleft.gif);
+	width: 6px;
+}
+
+
+/* used only when header hidden */
+.igdw_RedPlanetBodyEdgeTop
+{
+	background-repeat:repeat-x;
+	background-image: url(images/igdw_bodyedgetop.gif);
+}
+
+
+/* used only when header hidden */
+.igdw_RedPlanetBodyCornerTopRight
+{
+	background-repeat:no-repeat;
+	background-position:top right ;
+	background-image: url(images/igdw_bodycornertopright.gif);
+	width: 6px;
+}
+
+
+.igdw_RedPlanetBodyEdgeLeft
+{
+	background-image: url(images/igdw_edgeleft.gif);
+	border-right:solid 1px #999999;
+	width: 6px;
+}
+
+
+.igdw_RedPlanetBodyEdgeRight
+{
+	background-image: url(images/igdw_edgeright.gif);
+	border-left:solid 1px #999999;
+	width: 6px;
+}
+
+
+.igdw_RedPlanetBodyCornerBottomLeft
+{
+	background-color:IndianRed;
+	background-image: url(images/igdw_bottomleft.gif);
+	font-size:1px;
+	height: 14px;
+	width: 7px;
+}
+
+
+.igdw_RedPlanetBodyContentArea
+{
+	background-color:White;
+	vertical-align:top;
+}
+
+
+.igdw_RedPlanetBodyCornerBottomRight
+{
+	background-color:Gainsboro;
+	background-image: url(images/igdw_bottomright.gif);
+	ackground-position:right top;	
+	font-size:1px;
+	height: 14px;
+	width: 9px;
+}
+
+
+.igdw_RedPlanetBodyEdgeBottom
+{
+	background-color:Gainsboro;
+	background-image: url(images/igdw_edgebottom.gif);
+	border-top:solid 1px #999999;
+	height: 14px;
+}
+
+

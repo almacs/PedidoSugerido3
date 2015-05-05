@@ -1,0 +1,170 @@
+.ighg_IGControl
+{
+}
+
+
+.ighg_IGExpandButton
+{
+	padding-left:5px;
+	cursor:hand;
+}
+
+
+.ighg_IGExpansionColumnHeader
+{
+	width: 25px;
+}
+
+
+.ighg_IGExpansionColumn
+{
+	padding:0px !important;
+	width: 25px;
+}
+
+
+.ighg_IGExpansionColumnFooter
+{
+	width: 25px;
+}
+
+
+.ighg_IGGroupArea
+{
+	background-color:#EEEEEE;
+	background-repeat:repeat-x;
+	background-image: url(images/ighg_groupareabg.png);
+	border-bottom:solid 1px #999999;
+	padding:10px;
+	color:#333333;
+}
+
+
+/* START -- GroupBy CSS Classes */
+.ighg_IGGroupIndentHeaderCell
+{
+}
+
+
+.ighg_IGGroupIndentFooterCell
+{
+}
+
+
+.ighg_IGGroupIndentAddNewRowCell
+{
+}
+
+
+.ighg_IGGroupedColumn
+{
+	background-repeat:repeat-x;
+	background-image: url(images/ighg_groupedcolumnbg.png);
+	padding:3px 5px 0px 10px;
+	display: inline-block;
+	height: 16px;
+}
+
+
+.ighg_IGGroupedColumnRightEdge
+{
+	background-repeat:no-repeat;
+	background-image: url(images/ighg_groupedcolumnrightedgebg.png);
+	padding-top:3px;
+	display: inline-block;
+	width: 10px;
+	height: 16px;
+}
+
+
+.ighg_IGGroupedColumnRightEdgeEnd
+{
+	background-repeat:no-repeat;
+	background-image: url(images/ighg_groupedcolumnrightedgeendbg.gif);
+	padding-top:3px;
+	display: inline-block;
+	width: 10px;
+	height: 16px;
+}
+
+
+.ighg_IGGroupedBand
+{
+	background-repeat:repeat-x;
+	background-image: url(images/ighg_groupedbandbg.png);
+	border-left:solid 1px #3AB1E4;
+	padding:3px 0px 0px 10px;
+	display: inline-block;
+	height: 16px;
+}
+
+
+.ighg_IGGroupedBandRightEdge
+{
+	background-repeat:repeat-x;
+	background-image: url(images/ighg_groupedbandbg.png);
+	border-right:solid 1px #3AB1E4;
+	padding:3px 0px 0px 0px;
+	display: inline-block;
+	width: 10px;
+	height: 16px;
+}
+
+
+.ighg_IGColumnGroupingTopDragIndicator
+{
+	background-repeat:no-repeat;
+	background-image: url(images/ighg_topdragindicator.gif);
+	width: 5px;
+	height: 3px;
+	z-index: 100;
+}
+
+
+.ighg_IGColumnGroupingMiddleDragIndicator
+{
+	background-repeat:repeat-y;
+	background-position:center ;
+	background-image: url(images/ighg_middledragindicator.gif);
+	width: 3px;
+}
+
+
+.ighg_IGColumnGroupingBottomDragIndicator
+{
+	background-repeat:no-repeat;
+	background-image: url(images/ighg_bottomdragindicator.gif);
+	width: 5px;
+	height: 3px;
+	position: absolute;
+	z-index: 100;
+}
+
+
+.ighg_IGGroupedColumnLeftEdge
+{
+	background-repeat:no-repeat;
+	background-image: url(images/ighg_groupedcolumnleftedgebg.gif);
+	padding-top:3px;
+	display: inline-block;
+	width: 9px;
+	height: 16px;
+}
+
+
+TBODY>TR.{0}>TD
+{
+}
+
+
+TBODY>TR>TD.{0}
+{
+}
+
+
+TBODY>TR.
+{
+	background-repeat:repeat-x;
+	background-image: url(images/ighg_groupedrowbg.png);
+	0: #EEEEEE;
+}

@@ -1,0 +1,128 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using ExceptionHandler;
+using System.Data;
+using System.Data.SqlClient;
+using System.ComponentModel;
+using System.Web;
+using System.Web.UI.WebControls;
+
+
+namespace Business
+{
+  public class BArticulos
+    {
+        SqlConnection conection;
+        private Exceptions exHandler;
+      
+
+        public BArticulos(SqlConnection con)
+        {
+            conection = con; 
+            exHandler = new Exceptions();
+        }
+
+
+        public DataSet ObtenArticulosCliente(String id_cliente, string comp)
+        {
+            SqlConnection sqlC = conection;
+            try
+            {
+                DataSet ds = new DataSet();
+                SqlCommand sql = new SqlCommand("Seleccion_articulos", sqlC);
+                sql.CommandType = CommandType.StoredProcedure;
+                SqlParameter opar = new SqlParameter("@pCliente", id_cliente);
+                sql.Parameters.Add(opar);
+                SqlParameter opar2 = new SqlParameter("@compani", comp);
+                sql.Parameters.Add(opar2);
+                SqlDataAdapter data = new SqlDataAdapter(sql);
+                //data.SelectCommand = sql;
+                data.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                // return null;
+                throw ex;
+            }
+            finally
+            {
+                sqlC.Close();
+            }
+        }
+
+        public DataSet GuardaCarga(string id_cliente, string id_comp, string cargaXml, string archivo, string id_usuario, string strarchivousuario)
+        {
+            SqlConnection sqlC = conection; 
+            try
+            {
+                DataSet ds = new DataSet();
+                SqlCommand sql = new SqlCommand("actualiza_articulos", sqlC);
+                sql.CommandType = CommandType.StoredProcedure;
+                SqlParameter opar = new SqlParameter("@strXml", cargaXml);
+                sql.Parameters.Add(opar);
+                SqlParameter opar2 = new SqlParameter("@id_cliente", id_cliente);
+                sql.Parameters.Add(opar2);
+                SqlParameter opar3 = new SqlParameter("@id_cia", id_comp);
+                sql.Parameters.Add(opar3);
+                SqlParameter opar4 = new SqlParameter("@id_usuario", id_usuario);
+                sql.Parameters.Add(opar4);
+                SqlParameter opar5 = new SqlParameter("@archivo", archivo);
+                sql.Parameters.Add(opar5);
+                SqlParameter opar6 = new SqlParameter("@archivo_cliente", strarchivousuario);
+                sql.Parameters.Add(opar6);
+                SqlDataAdapter data = new SqlDataAdapter(sql);
+                //data.SelectCommand = sql;
+                data.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                // return null;
+                throw ex;
+            }
+            finally
+            {
+                sqlC.Close();
+            }
+        }
+        public DataSet GuardaCargaInventario(string id_cliente, string id_comp, string cargaXml, string archivo, string id_usuario, string strarchivousuario) 
+        {
+            SqlConnection sqlC = conection;
+            try
+            {
+                DataSet ds = new DataSet();
+                SqlCommand sql = new SqlCommand("Carga_inventario", sqlC);
+                sql.CommandType = CommandType.StoredProcedure;
+                SqlParameter opar = new SqlParameter("@strXml", cargaXml);
+                sql.Parameters.Add(opar);
+                SqlParameter opar2 = new SqlParameter("@id_cliente", id_cliente);
+                sql.Parameters.Add(opar2);
+                SqlParameter opar3 = new SqlParameter("@id_cia", id_comp);
+                sql.Parameters.Add(opar3);
+                SqlParameter opar4 = new SqlParameter("@id_usuario", id_usuario);
+                sql.Parameters.Add(opar4);
+                SqlParameter opar5 = new SqlParameter("@archivo", archivo);
+                sql.Parameters.Add(opar5);
+                SqlParameter opar6 = new SqlParameter("@archivo_cliente", strarchivousuario);
+                sql.Parameters.Add(opar6);
+                SqlDataAdapter data = new SqlDataAdapter(sql);
+                //data.SelectCommand = sql;
+                data.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                // return null;
+                throw ex;
+            }
+            finally
+            {
+                sqlC.Close();
+            }
+        }
+     
+    }
+}

@@ -1,0 +1,104 @@
+.ig_RedPlanetControl
+{
+	background-color:White;
+	font-size:xx-small;
+	font-family: verdana;
+	color:Black;
+}
+
+
+.ig_RedPlanetItem
+{
+	background-color:White;
+	font-size:10px;
+	font-family: verdana;
+	padding-left:1px;
+}
+
+
+.ig_RedPlanetButton
+{
+	cursor:hand;
+}
+
+
+.ig_RedPlanetButtonHover
+{
+}
+
+
+.ig_RedPlanetButtonPressed
+{
+}
+
+
+.ig_RedPlanetButtonDisabled
+{
+}
+
+
+.ig_RedPlanetHover
+{
+}
+
+
+.ig_RedPlanetSelected
+{
+}
+
+
+.ig_RedPlanetDisabled
+{
+}
+
+
+.ig_RedPlanetHeader
+{
+	background-color:Transparent;
+}
+
+
+.ig_RedPlanetFooter
+{
+}
+
+
+.ig_RedPlanetEditWithButtons
+{
+}
+
+
+.ig_RedPlanetEdit
+{
+}
+
+
+.ig_RedPlanetEditInContainer
+{
+}
+
+
+.ig_RedPlanetAlt
+{
+	border-top:solid 1px #E3EFFF;
+	border-right:solid 0px #FFFFFF;
+	border-bottom:solid 1px #E3EFFF;
+	border-left:solid 0px #FFFFFF;
+}
+
+
+.ig_RedPlanetDropDown
+{
+}
+
+
+.ig_RedPlanetEditSelected
+{
+}
+
+
+Body
+{
+}
+
+
