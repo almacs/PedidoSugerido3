@@ -32,6 +32,7 @@ namespace PedidoSugeridoLamosa
             try
             {
                 String pContrasena = Request.QueryString["p_contrasena"];
+                //String pContrasena = Server.UrlDecode(Request.QueryString.ToString().Split('&')[1].Split('=')[1]);
                 String pUser = Request.QueryString["p_user"];
 
                 Blogin de = new Blogin(new ConnectionLP().getConnection());
@@ -65,9 +66,10 @@ namespace PedidoSugeridoLamosa
             }
             else
             {
+                int prevalidado = 1;
                 // Response.Redirect("Menu.aspx");
                 Blogin de = new Blogin(new ConnectionLP().getConnection());
-                DataSet ds = de.Acceso(txtUsuario.Text, txtContrasena.Text, Request.Params["cmbSucursal"]);
+                DataSet ds = de.Acceso(txtUsuario.Text, txtContrasena.Text, Request.Params["cmbSucursal"], prevalidado);
 
 
 

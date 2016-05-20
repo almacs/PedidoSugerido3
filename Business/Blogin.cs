@@ -71,6 +71,34 @@ namespace Business
           }
       }
 
+      public DataSet Acceso(String id_usuario, String password, String entrega, int prevalidado)
+      {
+          SqlConnection slq = connection;
+          try
+          {
+              DataSet ds = new DataSet();
+              SqlCommand cmd = new SqlCommand("Acceso_login", slq);
+              cmd.CommandType = CommandType.StoredProcedure;
+              cmd.Parameters.Add(new SqlParameter("@id_cliente", id_usuario));
+              cmd.Parameters.Add(new SqlParameter("@pass", password));
+              cmd.Parameters.Add(new SqlParameter("@id_entrega", entrega));
+              cmd.Parameters.Add(new SqlParameter("@prevalidado", prevalidado));
+              SqlDataAdapter data = new SqlDataAdapter(cmd);
+
+              data.Fill(ds);
+              return ds;
+          }
+          catch (Exception ex)
+          {
+
+              throw ex;
+          }
+          finally
+          {
+              slq.Close();
+          }
+      }
+
       public DataSet CambiaContraseña(String id_usuario, string pass, string newpass)
       {
           SqlConnection slq = connection;
